@@ -1,6 +1,6 @@
 ﻿namespace ReportSystemManagement
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.AutoScrollMinSize = new System.Drawing.Size(10, 10);
-            this.ClientSize = new System.Drawing.Size(1284, 1061);
-            this.Name = "Form1";
-            this.Text = "Main";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Login";
         }
 
         #endregion
     }
 }
-
