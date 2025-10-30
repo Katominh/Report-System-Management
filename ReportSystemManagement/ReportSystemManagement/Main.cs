@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ReportSystemManagement
 {
-    public partial class Form1 : Form
+    public partial class Main_Page : Form
     {
-        public Form1()
+        public Main_Page()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
