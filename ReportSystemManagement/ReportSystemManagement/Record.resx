@@ -117,11 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="sanction_label.Text" xml:space="preserve">
+    <value>Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
+remedial sanctions (such as resubmission, etc.), failure of course, and suspension. Please note that decisions 
+on cases are made by the Academic Integrity Committee. Please provide evidence on Page 4 if you are 
+recommending a specific sanction and this will be taken into consideration by the committee.
+When contacting the student to arrange a meeting to discuss this alleged violation, please ensure the student is 
+advised of the following: (please check these boxes when completed).
+The student is advised that they may bring a support person to the meeting between the student and instructor 
+at which the Case Report Form and all evidence will be reviewed by and presented to the student. 
+The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
+to aic@tru.ca.
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="warning_image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAM0AAADZCAYAAACD+7TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAH+ZJREFUeF7tnYm/TdX7x7//ya/vt1LmBqVoJLMiUgqhkrFrViHcEBkiGVLImKFQ
+        wQAADsEBuJFr7QAAH+ZJREFUeF7tnYm/TdX7x7//ya/vt1LmBqVoJLMiUgqhkrFrViHcEBkiGVLImKFQ
         CalIxopEojJnqIhCJd9vw/69PtvrWXedZ9179l5773PuPns/z+v1fvXSs84+9+x9PmevvdYz/Ovy/7vM
         EQTBP//i/0MQhOyIaATBEhGNIFgiohEES0Q0gmCJiEYQLBHRCIIlIhpBsEREIwiWiGgEwRIRjSBYIqIR
         BEtENIJgiYimnKlydUWnzu13OK1b3e90bN/e6fTIo07Xzp2dJ7p1d3oVFTlF3Xs43Tp3cR5/9DHnkQ4d
@@ -263,7 +276,7 @@
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA3IAAAAOCAYAAABq3y7GAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAJVJREFUeF7t2rEJgDAURVG3FNzXbBHJEEkdO0ErK/HBOXCbv8GDv0wAAACiLM8D
+        wQAADsEBuJFr7QAAAJVJREFUeF7t2rEJgDAURVG3FNzXbBHJEEkdO0ErK/HBOXCbv8GDv0wAAACiLM8D
         AAAA/2bIAQAAhDHkAAAAwhhyAAAAYQw5AACAMIYcAABAGEMOAAAgzDXkxhiz7EWSJEmS9GG99/tKe+Ea
         cq21ua2rJEmSJOnDjlrvK+0Fr5UAAABhDDkAAIAwhhwAAEAYQw4AACDMCWMeVCfxUKSgAAAAAElFTkSu
         QmCC
@@ -272,7 +285,7 @@
   <data name="tru_image_page1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAb0AAAClCAYAAADI3CMGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAOOZJREFUeF7tnYfXFEXat9//5HvfDe6uCQUxY8CMATGimBOYA2DAiGBERREDKAoq
+        wQAADsEBuJFr7QAAOOZJREFUeF7tnYfXFEXat9//5HvfDe6uCQUxY8CMATGimBOYA2DAiGBERREDKAoq
         giLmBIpgwsSqgDmhICqKoq6rbuzvXL2n2HrurqoO0z0zPXNf5/yOu0xVz8wzM/3rrrrD/0SKoiiK0iX8
         j/wHRVEURelU1PQURVGUrkFNT1EUReka1PQURVGUrkFNT1EURekofvnll+jnn3+W/xyjpqcoiqJ0FNtu
         tXX0x9/9Xv5zjJqeoiiK0lF0pelxe/vdd99FKz//PProw4+ipUuWRK+8/HL0/HPPRQvmL4jmz3smmvf0

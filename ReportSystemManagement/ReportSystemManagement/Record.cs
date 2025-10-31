@@ -46,5 +46,20 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void table1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void page1_record_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
