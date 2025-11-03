@@ -30,8 +30,9 @@
         {
             this.side_bar_main = new System.Windows.Forms.GroupBox();
             this.flow_bar_main = new System.Windows.Forms.FlowLayoutPanel();
-            this.logout_btn = new System.Windows.Forms.Button();
             this.create_btn = new System.Windows.Forms.Button();
+            this.logout_btn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.side_bar_main.SuspendLayout();
             this.flow_bar_main.SuspendLayout();
             this.SuspendLayout();
@@ -56,17 +57,6 @@
             this.flow_bar_main.Size = new System.Drawing.Size(143, 431);
             this.flow_bar_main.TabIndex = 2;
             // 
-            // logout_btn
-            // 
-            this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 32);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(137, 23);
-            this.logout_btn.TabIndex = 0;
-            this.logout_btn.Text = "Log Out";
-            this.logout_btn.UseVisualStyleBackColor = true;
-            // 
             // create_btn
             // 
             this.create_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -78,11 +68,36 @@
             this.create_btn.Text = "Create new record";
             this.create_btn.UseVisualStyleBackColor = true;
             // 
+            // logout_btn
+            // 
+            this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logout_btn.Location = new System.Drawing.Point(3, 32);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(137, 23);
+            this.logout_btn.TabIndex = 0;
+            this.logout_btn.Text = "Log Out";
+            this.logout_btn.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(312, 58);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
             // Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.side_bar_main);
             this.Name = "Main_Page";
             this.Text = "Main";
@@ -99,5 +114,6 @@
         private System.Windows.Forms.FlowLayoutPanel flow_bar_main;
         private System.Windows.Forms.Button create_btn;
         private System.Windows.Forms.Button logout_btn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
