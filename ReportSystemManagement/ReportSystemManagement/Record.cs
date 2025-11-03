@@ -61,5 +61,20 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void written_statement_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sanction_label_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
