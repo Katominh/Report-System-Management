@@ -114,6 +114,7 @@
             this.page3_record = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.bring_person_checkbox = new System.Windows.Forms.CheckBox();
             this.side_bar_record.SuspendLayout();
             this.flow_bar_record.SuspendLayout();
             this.tab_control_record.SuspendLayout();
@@ -190,8 +191,9 @@
             // 
             this.page1_record.AutoScroll = true;
             this.page1_record.BackColor = System.Drawing.Color.White;
-            this.page1_record.Controls.Add(this.sanction_label);
+            this.page1_record.Controls.Add(this.bring_person_checkbox);
             this.page1_record.Controls.Add(this.label5);
+            this.page1_record.Controls.Add(this.sanction_label);
             this.page1_record.Controls.Add(this.label3);
             this.page1_record.Controls.Add(this.desc_violation_group);
             this.page1_record.Controls.Add(this.tableLayoutPanel1);
@@ -226,10 +228,10 @@
             this.sanction_label.BackColor = System.Drawing.Color.White;
             this.sanction_label.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sanction_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sanction_label.Location = new System.Drawing.Point(21, 1567);
+            this.sanction_label.Location = new System.Drawing.Point(17, 1562);
             this.sanction_label.Name = "sanction_label";
             this.sanction_label.ReadOnly = true;
-            this.sanction_label.Size = new System.Drawing.Size(1360, 258);
+            this.sanction_label.Size = new System.Drawing.Size(1360, 301);
             this.sanction_label.TabIndex = 40;
             this.sanction_label.Text = resources.GetString("sanction_label.Text");
             // 
@@ -238,7 +240,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(540, 1680);
+            this.label5.Location = new System.Drawing.Point(251, 1687);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(479, 25);
             this.label5.TabIndex = 39;
@@ -431,7 +433,7 @@
             this.groupBox6.Controls.Add(this.label52);
             this.groupBox6.Controls.Add(this.label53);
             this.groupBox6.Controls.Add(this.label54);
-            this.groupBox6.Location = new System.Drawing.Point(41, 1719);
+            this.groupBox6.Location = new System.Drawing.Point(41, 2163);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.groupBox6.Size = new System.Drawing.Size(103, 681);
@@ -1142,6 +1144,15 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "ACADEMIC INTEGRITY POLICY ED 5-0";
             // 
+            // bring_person_checkbox
+            // 
+            this.bring_person_checkbox.AutoSize = true;
+            this.bring_person_checkbox.Location = new System.Drawing.Point(1125, 1752);
+            this.bring_person_checkbox.Name = "bring_person_checkbox";
+            this.bring_person_checkbox.Size = new System.Drawing.Size(15, 14);
+            this.bring_person_checkbox.TabIndex = 41;
+            this.bring_person_checkbox.UseVisualStyleBackColor = true;
+            // 
             // Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1266,5 +1277,6 @@
         private System.Windows.Forms.RichTextBox sanction_label;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox bring_person_checkbox;
     }
 }
