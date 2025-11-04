@@ -274,6 +274,14 @@
             this.label125 = new System.Windows.Forms.Label();
             this.label126 = new System.Windows.Forms.Label();
             this.label127 = new System.Windows.Forms.Label();
+            this.page4_record = new System.Windows.Forms.TabPage();
+            this.page5_record = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.fac_comment_page4_input = new System.Windows.Forms.RichTextBox();
+            this.label128 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.student_comment_page5_input = new System.Windows.Forms.RichTextBox();
+            this.label129 = new System.Windows.Forms.Label();
             this.side_bar_record.SuspendLayout();
             this.flow_bar_record.SuspendLayout();
             this.tab_control_record.SuspendLayout();
@@ -332,6 +340,10 @@
             this.panel27.SuspendLayout();
             this.panel28.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.page4_record.SuspendLayout();
+            this.page5_record.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // side_bar_record
@@ -382,6 +394,8 @@
             this.tab_control_record.Controls.Add(this.page1_record);
             this.tab_control_record.Controls.Add(this.page2_record);
             this.tab_control_record.Controls.Add(this.page3_record);
+            this.tab_control_record.Controls.Add(this.page4_record);
+            this.tab_control_record.Controls.Add(this.page5_record);
             this.tab_control_record.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_control_record.Location = new System.Drawing.Point(149, 0);
             this.tab_control_record.Name = "tab_control_record";
@@ -3183,6 +3197,94 @@
             this.label127.TabIndex = 35;
             this.label127.Text = "copy of the file to the Office of Student Affairs in OM 1631.";
             // 
+            // page4_record
+            // 
+            this.page4_record.BackColor = System.Drawing.Color.White;
+            this.page4_record.Controls.Add(this.groupBox9);
+            this.page4_record.Location = new System.Drawing.Point(4, 22);
+            this.page4_record.Name = "page4_record";
+            this.page4_record.Padding = new System.Windows.Forms.Padding(3);
+            this.page4_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page4_record.TabIndex = 3;
+            this.page4_record.Text = "Page 4";
+            // 
+            // page5_record
+            // 
+            this.page5_record.BackColor = System.Drawing.Color.White;
+            this.page5_record.Controls.Add(this.groupBox10);
+            this.page5_record.Location = new System.Drawing.Point(4, 22);
+            this.page5_record.Name = "page5_record";
+            this.page5_record.Padding = new System.Windows.Forms.Padding(3);
+            this.page5_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page5_record.TabIndex = 4;
+            this.page5_record.Text = "Page 5";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.fac_comment_page4_input);
+            this.groupBox9.Controls.Add(this.label128);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Location = new System.Drawing.Point(3, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(1434, 1029);
+            this.groupBox9.TabIndex = 55;
+            this.groupBox9.TabStop = false;
+            // 
+            // fac_comment_page4_input
+            // 
+            this.fac_comment_page4_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.fac_comment_page4_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fac_comment_page4_input.Location = new System.Drawing.Point(11, 62);
+            this.fac_comment_page4_input.Name = "fac_comment_page4_input";
+            this.fac_comment_page4_input.Size = new System.Drawing.Size(1408, 950);
+            this.fac_comment_page4_input.TabIndex = 50;
+            this.fac_comment_page4_input.Text = "";
+            // 
+            // label128
+            // 
+            this.label128.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label128.ForeColor = System.Drawing.Color.Black;
+            this.label128.Location = new System.Drawing.Point(8, 19);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(346, 31);
+            this.label128.TabIndex = 43;
+            this.label128.Text = "Faculty Member Comments";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.student_comment_page5_input);
+            this.groupBox10.Controls.Add(this.label129);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(3, 3);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(1434, 1029);
+            this.groupBox10.TabIndex = 56;
+            this.groupBox10.TabStop = false;
+            // 
+            // student_comment_page5_input
+            // 
+            this.student_comment_page5_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.student_comment_page5_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.student_comment_page5_input.Location = new System.Drawing.Point(11, 62);
+            this.student_comment_page5_input.Name = "student_comment_page5_input";
+            this.student_comment_page5_input.Size = new System.Drawing.Size(1408, 950);
+            this.student_comment_page5_input.TabIndex = 50;
+            this.student_comment_page5_input.Text = "";
+            // 
+            // label129
+            // 
+            this.label129.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label129.AutoSize = true;
+            this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label129.ForeColor = System.Drawing.Color.Black;
+            this.label129.Location = new System.Drawing.Point(8, 19);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(246, 31);
+            this.label129.TabIndex = 43;
+            this.label129.Text = "Student Comments";
+            // 
             // Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3292,6 +3394,12 @@
             this.panel28.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.page4_record.ResumeLayout(false);
+            this.page5_record.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3543,5 +3651,13 @@
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.TabPage page4_record;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RichTextBox fac_comment_page4_input;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.TabPage page5_record;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.RichTextBox student_comment_page5_input;
+        private System.Windows.Forms.Label label129;
     }
 }
