@@ -96,5 +96,10 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void department_label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
