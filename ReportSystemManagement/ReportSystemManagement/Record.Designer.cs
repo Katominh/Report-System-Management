@@ -276,12 +276,12 @@
             this.label127 = new System.Windows.Forms.Label();
             this.page4_record = new System.Windows.Forms.TabPage();
             this.page5_record = new System.Windows.Forms.TabPage();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.fac_comment_page4_input = new System.Windows.Forms.RichTextBox();
-            this.label128 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.student_comment_page5_input = new System.Windows.Forms.RichTextBox();
             this.label129 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.fac_comment_page5_input = new System.Windows.Forms.RichTextBox();
+            this.label128 = new System.Windows.Forms.Label();
             this.side_bar_record.SuspendLayout();
             this.flow_bar_record.SuspendLayout();
             this.tab_control_record.SuspendLayout();
@@ -342,8 +342,8 @@
             this.groupBox8.SuspendLayout();
             this.page4_record.SuspendLayout();
             this.page5_record.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // side_bar_record
@@ -352,7 +352,7 @@
             this.side_bar_record.Dock = System.Windows.Forms.DockStyle.Left;
             this.side_bar_record.Location = new System.Drawing.Point(0, 0);
             this.side_bar_record.Name = "side_bar_record";
-            this.side_bar_record.Size = new System.Drawing.Size(149, 1061);
+            this.side_bar_record.Size = new System.Drawing.Size(149, 761);
             this.side_bar_record.TabIndex = 2;
             this.side_bar_record.TabStop = false;
             // 
@@ -363,15 +363,15 @@
             this.flow_bar_record.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flow_bar_record.Location = new System.Drawing.Point(3, 16);
             this.flow_bar_record.Name = "flow_bar_record";
-            this.flow_bar_record.Padding = new System.Windows.Forms.Padding(0, 450, 0, 0);
-            this.flow_bar_record.Size = new System.Drawing.Size(143, 1042);
+            this.flow_bar_record.Padding = new System.Windows.Forms.Padding(0, 275, 0, 0);
+            this.flow_bar_record.Size = new System.Drawing.Size(143, 742);
             this.flow_bar_record.TabIndex = 2;
             // 
             // save_btn
             // 
             this.save_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.save_btn.Location = new System.Drawing.Point(3, 453);
+            this.save_btn.Location = new System.Drawing.Point(3, 278);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(137, 85);
             this.save_btn.TabIndex = 1;
@@ -382,7 +382,7 @@
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 544);
+            this.logout_btn.Location = new System.Drawing.Point(3, 369);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 85);
             this.logout_btn.TabIndex = 0;
@@ -400,7 +400,7 @@
             this.tab_control_record.Location = new System.Drawing.Point(149, 0);
             this.tab_control_record.Name = "tab_control_record";
             this.tab_control_record.SelectedIndex = 0;
-            this.tab_control_record.Size = new System.Drawing.Size(1448, 1061);
+            this.tab_control_record.Size = new System.Drawing.Size(1448, 761);
             this.tab_control_record.TabIndex = 3;
             // 
             // page1_record
@@ -434,7 +434,7 @@
             this.page1_record.Location = new System.Drawing.Point(4, 22);
             this.page1_record.Name = "page1_record";
             this.page1_record.Padding = new System.Windows.Forms.Padding(3);
-            this.page1_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page1_record.Size = new System.Drawing.Size(1440, 735);
             this.page1_record.TabIndex = 0;
             this.page1_record.Text = "Page 1";
             this.page1_record.Click += new System.EventHandler(this.page1_record_Click);
@@ -582,6 +582,7 @@
             this.desc_violation_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.desc_violation_input.Location = new System.Drawing.Point(6, 78);
             this.desc_violation_input.Name = "desc_violation_input";
+            this.desc_violation_input.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.desc_violation_input.Size = new System.Drawing.Size(1360, 280);
             this.desc_violation_input.TabIndex = 26;
             this.desc_violation_input.Text = "";
@@ -1031,10 +1032,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1220, 169);
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(1213, 156);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(177, 20);
+            this.label18.Size = new System.Drawing.Size(209, 24);
             this.label18.TabIndex = 27;
             this.label18.Text = "Kamloops, BC, Canada ";
             this.label18.Click += new System.EventHandler(this.label18_Click);
@@ -1042,10 +1043,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(1221, 194);
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(1213, 188);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(73, 20);
+            this.label19.Size = new System.Drawing.Size(84, 24);
             this.label19.TabIndex = 26;
             this.label19.Text = "V2C 0C8";
             this.label19.Click += new System.EventHandler(this.label19_Click);
@@ -1053,10 +1054,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(1220, 222);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(1213, 216);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(83, 20);
+            this.label20.Size = new System.Drawing.Size(85, 24);
             this.label20.TabIndex = 25;
             this.label20.Text = "tru.ca/aic";
             this.label20.Click += new System.EventHandler(this.label20_Click);
@@ -1064,10 +1065,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(1220, 139);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(1213, 128);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(108, 20);
+            this.label21.Size = new System.Drawing.Size(125, 24);
             this.label21.TabIndex = 24;
             this.label21.Text = "805 TRU Way";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -1075,7 +1076,7 @@
             // tru_image_page1
             // 
             this.tru_image_page1.Image = ((System.Drawing.Image)(resources.GetObject("tru_image_page1.Image")));
-            this.tru_image_page1.Location = new System.Drawing.Point(876, 118);
+            this.tru_image_page1.Location = new System.Drawing.Point(871, 118);
             this.tru_image_page1.Name = "tru_image_page1";
             this.tru_image_page1.Size = new System.Drawing.Size(339, 131);
             this.tru_image_page1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1168,7 +1169,7 @@
             this.page2_record.Location = new System.Drawing.Point(4, 22);
             this.page2_record.Name = "page2_record";
             this.page2_record.Padding = new System.Windows.Forms.Padding(3);
-            this.page2_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page2_record.Size = new System.Drawing.Size(1440, 735);
             this.page2_record.TabIndex = 1;
             this.page2_record.Text = "Page 2";
             // 
@@ -1484,7 +1485,7 @@
             this.page3_record.Location = new System.Drawing.Point(4, 22);
             this.page3_record.Name = "page3_record";
             this.page3_record.Padding = new System.Windows.Forms.Padding(3);
-            this.page3_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page3_record.Size = new System.Drawing.Size(1440, 735);
             this.page3_record.TabIndex = 2;
             this.page3_record.Text = "Page 3";
             this.page3_record.Click += new System.EventHandler(this.page3_record_Click);
@@ -2556,9 +2557,12 @@
             this.chair_check_no_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chair_check_no_input.Location = new System.Drawing.Point(11, 35);
             this.chair_check_no_input.Name = "chair_check_no_input";
+            this.chair_check_no_input.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.chair_check_no_input.Size = new System.Drawing.Size(927, 63);
             this.chair_check_no_input.TabIndex = 49;
             this.chair_check_no_input.Text = "";
+            this.chair_check_no_input.TextChanged += new System.EventHandler(this.chair_check_no_input_TextChanged);
+            this.chair_check_no_input.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.chair_check_no_input_MouseWheel);
             // 
             // groupBox6
             // 
@@ -2588,6 +2592,7 @@
             this.chair_comment_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chair_comment_input.Location = new System.Drawing.Point(21, 44);
             this.chair_comment_input.Name = "chair_comment_input";
+            this.chair_comment_input.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.chair_comment_input.Size = new System.Drawing.Size(1360, 108);
             this.chair_comment_input.TabIndex = 50;
             this.chair_comment_input.Text = "";
@@ -2826,6 +2831,7 @@
             this.dean_comment_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dean_comment_input.Location = new System.Drawing.Point(21, 44);
             this.dean_comment_input.Name = "dean_comment_input";
+            this.dean_comment_input.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.dean_comment_input.Size = new System.Drawing.Size(1360, 108);
             this.dean_comment_input.TabIndex = 50;
             this.dean_comment_input.Text = "";
@@ -2874,6 +2880,7 @@
             this.dean_check_no_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dean_check_no_input.Location = new System.Drawing.Point(11, 35);
             this.dean_check_no_input.Name = "dean_check_no_input";
+            this.dean_check_no_input.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.dean_check_no_input.Size = new System.Drawing.Size(927, 63);
             this.dean_check_no_input.TabIndex = 49;
             this.dean_check_no_input.Text = "";
@@ -3204,7 +3211,7 @@
             this.page4_record.Location = new System.Drawing.Point(4, 22);
             this.page4_record.Name = "page4_record";
             this.page4_record.Padding = new System.Windows.Forms.Padding(3);
-            this.page4_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page4_record.Size = new System.Drawing.Size(1440, 735);
             this.page4_record.TabIndex = 3;
             this.page4_record.Text = "Page 4";
             // 
@@ -3215,42 +3222,9 @@
             this.page5_record.Location = new System.Drawing.Point(4, 22);
             this.page5_record.Name = "page5_record";
             this.page5_record.Padding = new System.Windows.Forms.Padding(3);
-            this.page5_record.Size = new System.Drawing.Size(1440, 1035);
+            this.page5_record.Size = new System.Drawing.Size(1440, 735);
             this.page5_record.TabIndex = 4;
             this.page5_record.Text = "Page 5";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.fac_comment_page4_input);
-            this.groupBox9.Controls.Add(this.label128);
-            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Location = new System.Drawing.Point(3, 3);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(1434, 1029);
-            this.groupBox9.TabIndex = 55;
-            this.groupBox9.TabStop = false;
-            // 
-            // fac_comment_page4_input
-            // 
-            this.fac_comment_page4_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.fac_comment_page4_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fac_comment_page4_input.Location = new System.Drawing.Point(11, 62);
-            this.fac_comment_page4_input.Name = "fac_comment_page4_input";
-            this.fac_comment_page4_input.Size = new System.Drawing.Size(1408, 950);
-            this.fac_comment_page4_input.TabIndex = 50;
-            this.fac_comment_page4_input.Text = "";
-            // 
-            // label128
-            // 
-            this.label128.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label128.AutoSize = true;
-            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label128.ForeColor = System.Drawing.Color.Black;
-            this.label128.Location = new System.Drawing.Point(8, 19);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(346, 31);
-            this.label128.TabIndex = 43;
-            this.label128.Text = "Faculty Member Comments";
             // 
             // groupBox10
             // 
@@ -3259,7 +3233,7 @@
             this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox10.Location = new System.Drawing.Point(3, 3);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(1434, 1029);
+            this.groupBox10.Size = new System.Drawing.Size(1434, 729);
             this.groupBox10.TabIndex = 56;
             this.groupBox10.TabStop = false;
             // 
@@ -3267,9 +3241,9 @@
             // 
             this.student_comment_page5_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.student_comment_page5_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student_comment_page5_input.Location = new System.Drawing.Point(11, 62);
+            this.student_comment_page5_input.Location = new System.Drawing.Point(12, 50);
             this.student_comment_page5_input.Name = "student_comment_page5_input";
-            this.student_comment_page5_input.Size = new System.Drawing.Size(1408, 950);
+            this.student_comment_page5_input.Size = new System.Drawing.Size(1408, 661);
             this.student_comment_page5_input.TabIndex = 50;
             this.student_comment_page5_input.Text = "";
             // 
@@ -3279,17 +3253,50 @@
             this.label129.AutoSize = true;
             this.label129.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label129.ForeColor = System.Drawing.Color.Black;
-            this.label129.Location = new System.Drawing.Point(8, 19);
+            this.label129.Location = new System.Drawing.Point(6, 16);
             this.label129.Name = "label129";
             this.label129.Size = new System.Drawing.Size(246, 31);
             this.label129.TabIndex = 43;
             this.label129.Text = "Student Comments";
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.fac_comment_page5_input);
+            this.groupBox9.Controls.Add(this.label128);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Location = new System.Drawing.Point(3, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(1434, 729);
+            this.groupBox9.TabIndex = 57;
+            this.groupBox9.TabStop = false;
+            // 
+            // fac_comment_page5_input
+            // 
+            this.fac_comment_page5_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.fac_comment_page5_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fac_comment_page5_input.Location = new System.Drawing.Point(12, 50);
+            this.fac_comment_page5_input.Name = "fac_comment_page5_input";
+            this.fac_comment_page5_input.Size = new System.Drawing.Size(1408, 661);
+            this.fac_comment_page5_input.TabIndex = 50;
+            this.fac_comment_page5_input.Text = "";
+            // 
+            // label128
+            // 
+            this.label128.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label128.ForeColor = System.Drawing.Color.Black;
+            this.label128.Location = new System.Drawing.Point(6, 16);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(346, 31);
+            this.label128.TabIndex = 43;
+            this.label128.Text = "Faculty Member Comments";
+            // 
             // Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1597, 1061);
+            this.ClientSize = new System.Drawing.Size(1597, 761);
             this.Controls.Add(this.tab_control_record);
             this.Controls.Add(this.side_bar_record);
             this.Name = "Record";
@@ -3396,10 +3403,10 @@
             this.groupBox8.PerformLayout();
             this.page4_record.ResumeLayout(false);
             this.page5_record.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3652,12 +3659,12 @@
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.TabPage page4_record;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox fac_comment_page4_input;
-        private System.Windows.Forms.Label label128;
         private System.Windows.Forms.TabPage page5_record;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.RichTextBox student_comment_page5_input;
         private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RichTextBox fac_comment_page5_input;
+        private System.Windows.Forms.Label label128;
     }
 }

@@ -106,5 +106,24 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void chair_check_no_input_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void chair_check_no_input_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (richTextBox1.Focused)
+            {
+                if (e.Delta > 0)
+                {
+                    this.AutoScrollPosition = new Point(0, this.AutoScrollPosition.Y - 20);
+                }
+                else
+                {
+                    this.AutoScrollPosition = new Point(0, this.AutoScrollPosition.Y + 20);
+                }
+            }
+        }
     }
 }

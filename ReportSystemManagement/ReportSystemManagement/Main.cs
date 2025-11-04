@@ -21,5 +21,11 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void create_btn_Click(object sender, EventArgs e)
+        {
+            Form newRecord = new Record();
+            newRecord.Show();
+        }
     }
 }
