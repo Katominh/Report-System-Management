@@ -193,6 +193,87 @@
             this.course_input = new System.Windows.Forms.TextBox();
             this.department_input = new System.Windows.Forms.TextBox();
             this.term_sem_input = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.chair_no_btn = new System.Windows.Forms.Button();
+            this.chair_yes_btn = new System.Windows.Forms.Button();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.chair_check_no_input = new System.Windows.Forms.RichTextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.chair_comment_input = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.date_chair_input = new System.Windows.Forms.TextBox();
+            this.date_depart_input = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.sign_chair_input = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.name_chair_input = new System.Windows.Forms.TextBox();
+            this.label97 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.date_dean_input = new System.Windows.Forms.TextBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.sign_dean_input = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.name_dean_input = new System.Windows.Forms.TextBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dean_comment_input = new System.Windows.Forms.RichTextBox();
+            this.label104 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.dean_check_no_input = new System.Windows.Forms.RichTextBox();
+            this.label105 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.dean_no_input = new System.Windows.Forms.Button();
+            this.dean_yes_input = new System.Windows.Forms.Button();
+            this.label108 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
             this.side_bar_record.SuspendLayout();
             this.flow_bar_record.SuspendLayout();
             this.tab_control_record.SuspendLayout();
@@ -233,6 +314,24 @@
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // side_bar_record
@@ -1351,6 +1450,21 @@
             // page3_record
             // 
             this.page3_record.AutoScroll = true;
+            this.page3_record.BackColor = System.Drawing.Color.White;
+            this.page3_record.Controls.Add(this.tableLayoutPanel8);
+            this.page3_record.Controls.Add(this.groupBox7);
+            this.page3_record.Controls.Add(this.tableLayoutPanel10);
+            this.page3_record.Controls.Add(this.groupBox8);
+            this.page3_record.Controls.Add(this.label120);
+            this.page3_record.Controls.Add(this.label121);
+            this.page3_record.Controls.Add(this.label122);
+            this.page3_record.Controls.Add(this.tableLayoutPanel7);
+            this.page3_record.Controls.Add(this.groupBox6);
+            this.page3_record.Controls.Add(this.tableLayoutPanel9);
+            this.page3_record.Controls.Add(this.groupBox4);
+            this.page3_record.Controls.Add(this.label94);
+            this.page3_record.Controls.Add(this.label95);
+            this.page3_record.Controls.Add(this.label96);
             this.page3_record.Controls.Add(this.label11);
             this.page3_record.Controls.Add(this.label2);
             this.page3_record.Location = new System.Drawing.Point(4, 22);
@@ -1359,7 +1473,6 @@
             this.page3_record.Size = new System.Drawing.Size(1440, 1035);
             this.page3_record.TabIndex = 2;
             this.page3_record.Text = "Page 3";
-            this.page3_record.UseVisualStyleBackColor = true;
             this.page3_record.Click += new System.EventHandler(this.page3_record_Click);
             // 
             // label11
@@ -1419,7 +1532,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 770);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 779);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1526,11 +1639,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.2311F));
             this.tableLayoutPanel4.Controls.Add(this.panel3, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel4, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(20, 858);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(20, 862);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1396, 101);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1393, 101);
             this.tableLayoutPanel4.TabIndex = 48;
             // 
             // panel3
@@ -1538,9 +1651,9 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.label58);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(865, 3);
+            this.panel3.Location = new System.Drawing.Point(863, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(528, 95);
+            this.panel3.Size = new System.Drawing.Size(527, 95);
             this.panel3.TabIndex = 49;
             // 
             // label58
@@ -1564,7 +1677,7 @@
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel4.Size = new System.Drawing.Size(856, 95);
+            this.panel4.Size = new System.Drawing.Size(854, 95);
             this.panel4.TabIndex = 48;
             // 
             // label62
@@ -1585,11 +1698,11 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.93123F));
             this.tableLayoutPanel5.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel6, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(20, 974);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(20, 960);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1396, 102);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1393, 102);
             this.tableLayoutPanel5.TabIndex = 50;
             // 
             // panel5
@@ -1598,7 +1711,7 @@
             this.panel5.Controls.Add(this.date_student_input);
             this.panel5.Controls.Add(this.label59);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(1037, 3);
+            this.panel5.Location = new System.Drawing.Point(1034, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(356, 96);
             this.panel5.TabIndex = 49;
@@ -1611,7 +1724,7 @@
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel6.Size = new System.Drawing.Size(1028, 96);
+            this.panel6.Size = new System.Drawing.Size(1025, 96);
             this.panel6.TabIndex = 48;
             // 
             // label61
@@ -1662,7 +1775,7 @@
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label68.Location = new System.Drawing.Point(19, 1079);
+            this.label68.Location = new System.Drawing.Point(19, 1065);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(985, 24);
             this.label68.TabIndex = 57;
@@ -2140,6 +2253,936 @@
             this.term_sem_input.Size = new System.Drawing.Size(322, 31);
             this.term_sem_input.TabIndex = 46;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox4.Controls.Add(this.label65);
+            this.groupBox4.Controls.Add(this.label92);
+            this.groupBox4.Controls.Add(this.label93);
+            this.groupBox4.Controls.Add(this.label82);
+            this.groupBox4.Controls.Add(this.label83);
+            this.groupBox4.Controls.Add(this.label84);
+            this.groupBox4.Controls.Add(this.label86);
+            this.groupBox4.Controls.Add(this.label87);
+            this.groupBox4.Controls.Add(this.label89);
+            this.groupBox4.Controls.Add(this.label90);
+            this.groupBox4.Controls.Add(this.label91);
+            this.groupBox4.Location = new System.Drawing.Point(16, 51);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.groupBox4.Size = new System.Drawing.Size(1396, 364);
+            this.groupBox4.TabIndex = 45;
+            this.groupBox4.TabStop = false;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label83.Location = new System.Drawing.Point(45, 388);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(0, 25);
+            this.label83.TabIndex = 25;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label84.Location = new System.Drawing.Point(19, 179);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(299, 25);
+            this.label84.TabIndex = 24;
+            this.label84.Text = "2. Answer the question below.";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label86.Location = new System.Drawing.Point(45, 312);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(0, 25);
+            this.label86.TabIndex = 23;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label87.Location = new System.Drawing.Point(19, 145);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(1123, 25);
+            this.label87.TabIndex = 22;
+            this.label87.Text = "1. Check to ensure that both the student and Faculty Member have entered their si" +
+    "gnatures or signed a printed form.";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label89.Location = new System.Drawing.Point(19, 110);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(748, 25);
+            this.label89.TabIndex = 19;
+            this.label89.Text = "When you receive this form from the Faculty Member, complete the following:";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label90.Location = new System.Drawing.Point(18, 75);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(357, 25);
+            this.label90.TabIndex = 16;
+            this.label90.Text = "Department Chair (or designate):";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label91.Location = new System.Drawing.Point(19, 23);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(1208, 25);
+            this.label91.TabIndex = 13;
+            this.label91.Text = "All cases in which the Academic Integrity Policy is alleged to have been breached" +
+    " shall be reviewed by the Department Chair.";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.Color.Black;
+            this.label94.Location = new System.Drawing.Point(451, 12);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(244, 31);
+            this.label94.TabIndex = 42;
+            this.label94.Text = "Department Chair";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.ForeColor = System.Drawing.Color.Black;
+            this.label95.Location = new System.Drawing.Point(143, 12);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(312, 31);
+            this.label95.TabIndex = 41;
+            this.label95.Text = "- To be completed by the";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.ForeColor = System.Drawing.Color.Black;
+            this.label96.Location = new System.Drawing.Point(10, 12);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(142, 31);
+            this.label96.TabIndex = 40;
+            this.label96.Text = "Step Four";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label65.Location = new System.Drawing.Point(18, 315);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(1077, 25);
+            this.label65.TabIndex = 31;
+            this.label65.Text = "5. Save this form to your computer and forward it and any email attachments, to t" +
+    "he Dean within seven (7) days.";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label92.Location = new System.Drawing.Point(18, 247);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(1193, 25);
+            this.label92.TabIndex = 29;
+            this.label92.Text = "4. Sign the printed form or enter your digital signature by clicking the appropri" +
+    "ate signature box and follow the instructions in";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label93.Location = new System.Drawing.Point(19, 213);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(392, 25);
+            this.label93.TabIndex = 28;
+            this.label93.Text = "3. Ensure that the evidence is attached.";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label82.Location = new System.Drawing.Point(45, 279);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(1091, 25);
+            this.label82.TabIndex = 26;
+            this.label82.Text = "Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the " +
+    "document after you sign it.";
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.65829F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.34171F));
+            this.tableLayoutPanel9.Controls.Add(this.panel23, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.panel24, 0, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(16, 430);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1393, 111);
+            this.tableLayoutPanel9.TabIndex = 51;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.White;
+            this.panel23.Controls.Add(this.chair_check_no_input);
+            this.panel23.Controls.Add(this.label98);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel23.Location = new System.Drawing.Point(443, 3);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(947, 105);
+            this.panel23.TabIndex = 49;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.label99);
+            this.panel24.Controls.Add(this.label100);
+            this.panel24.Controls.Add(this.chair_no_btn);
+            this.panel24.Controls.Add(this.chair_yes_btn);
+            this.panel24.Controls.Add(this.label101);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel24.Location = new System.Drawing.Point(3, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel24.Size = new System.Drawing.Size(434, 105);
+            this.panel24.TabIndex = 48;
+            // 
+            // label99
+            // 
+            this.label99.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label99.Location = new System.Drawing.Point(313, 61);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(39, 25);
+            this.label99.TabIndex = 49;
+            this.label99.Text = "No";
+            // 
+            // label100
+            // 
+            this.label100.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label100.Location = new System.Drawing.Point(302, 20);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(50, 25);
+            this.label100.TabIndex = 48;
+            this.label100.Text = "Yes";
+            // 
+            // chair_no_btn
+            // 
+            this.chair_no_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.chair_no_btn.Location = new System.Drawing.Point(358, 55);
+            this.chair_no_btn.Name = "chair_no_btn";
+            this.chair_no_btn.Size = new System.Drawing.Size(40, 40);
+            this.chair_no_btn.TabIndex = 46;
+            this.chair_no_btn.UseVisualStyleBackColor = false;
+            // 
+            // chair_yes_btn
+            // 
+            this.chair_yes_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.chair_yes_btn.Location = new System.Drawing.Point(358, 9);
+            this.chair_yes_btn.Name = "chair_yes_btn";
+            this.chair_yes_btn.Size = new System.Drawing.Size(40, 40);
+            this.chair_yes_btn.TabIndex = 47;
+            this.chair_yes_btn.UseVisualStyleBackColor = false;
+            // 
+            // label101
+            // 
+            this.label101.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label101.Location = new System.Drawing.Point(13, 15);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(270, 75);
+            this.label101.TabIndex = 42;
+            this.label101.Text = "I agree with the particulars \r\nof the case described in \r\nthis document:";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label98.Location = new System.Drawing.Point(9, 7);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(405, 25);
+            this.label98.TabIndex = 48;
+            this.label98.Text = "If you have checked “no,” please explain.";
+            // 
+            // chair_check_no_input
+            // 
+            this.chair_check_no_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.chair_check_no_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chair_check_no_input.Location = new System.Drawing.Point(11, 35);
+            this.chair_check_no_input.Name = "chair_check_no_input";
+            this.chair_check_no_input.Size = new System.Drawing.Size(927, 63);
+            this.chair_check_no_input.TabIndex = 49;
+            this.chair_check_no_input.Text = "";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.chair_comment_input);
+            this.groupBox6.Controls.Add(this.label88);
+            this.groupBox6.Location = new System.Drawing.Point(16, 536);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(1393, 171);
+            this.groupBox6.TabIndex = 54;
+            this.groupBox6.TabStop = false;
+            // 
+            // label88
+            // 
+            this.label88.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label88.Location = new System.Drawing.Point(16, 16);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(114, 25);
+            this.label88.TabIndex = 43;
+            this.label88.Text = "Comments";
+            // 
+            // chair_comment_input
+            // 
+            this.chair_comment_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.chair_comment_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chair_comment_input.Location = new System.Drawing.Point(21, 44);
+            this.chair_comment_input.Name = "chair_comment_input";
+            this.chair_comment_input.Size = new System.Drawing.Size(1360, 108);
+            this.chair_comment_input.TabIndex = 50;
+            this.chair_comment_input.Text = "";
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 3;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 340F));
+            this.tableLayoutPanel7.Controls.Add(this.panel19, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel20, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel21, 1, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(16, 735);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.89796F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1382, 90);
+            this.tableLayoutPanel7.TabIndex = 62;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.date_chair_input);
+            this.panel19.Controls.Add(this.date_depart_input);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(1044, 3);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(335, 84);
+            this.panel19.TabIndex = 63;
+            // 
+            // date_chair_input
+            // 
+            this.date_chair_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.date_chair_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_chair_input.Location = new System.Drawing.Point(8, 41);
+            this.date_chair_input.Name = "date_chair_input";
+            this.date_chair_input.Size = new System.Drawing.Size(318, 31);
+            this.date_chair_input.TabIndex = 45;
+            // 
+            // date_depart_input
+            // 
+            this.date_depart_input.AutoSize = true;
+            this.date_depart_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_depart_input.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.date_depart_input.Location = new System.Drawing.Point(5, 5);
+            this.date_depart_input.Margin = new System.Windows.Forms.Padding(5);
+            this.date_depart_input.Name = "date_depart_input";
+            this.date_depart_input.Size = new System.Drawing.Size(193, 25);
+            this.date_depart_input.TabIndex = 28;
+            this.date_depart_input.Text = "Date (yyyy-mm-dd)";
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.sign_chair_input);
+            this.panel20.Controls.Add(this.label81);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(3, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(513, 84);
+            this.panel20.TabIndex = 62;
+            // 
+            // sign_chair_input
+            // 
+            this.sign_chair_input.BackColor = System.Drawing.Color.White;
+            this.sign_chair_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sign_chair_input.Location = new System.Drawing.Point(10, 41);
+            this.sign_chair_input.Name = "sign_chair_input";
+            this.sign_chair_input.Size = new System.Drawing.Size(485, 31);
+            this.sign_chair_input.TabIndex = 44;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label81.Location = new System.Drawing.Point(5, 5);
+            this.label81.Margin = new System.Windows.Forms.Padding(5);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(302, 25);
+            this.label81.TabIndex = 26;
+            this.label81.Text = "Signature of Department Chair";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.name_chair_input);
+            this.panel21.Controls.Add(this.label97);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(522, 3);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(516, 84);
+            this.panel21.TabIndex = 63;
+            // 
+            // name_chair_input
+            // 
+            this.name_chair_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.name_chair_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_chair_input.Location = new System.Drawing.Point(10, 41);
+            this.name_chair_input.Name = "name_chair_input";
+            this.name_chair_input.Size = new System.Drawing.Size(490, 31);
+            this.name_chair_input.TabIndex = 45;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label97.Location = new System.Drawing.Point(5, 5);
+            this.label97.Margin = new System.Windows.Forms.Padding(5);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(266, 25);
+            this.label97.TabIndex = 27;
+            this.label97.Text = "Name of Department Chair";
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 340F));
+            this.tableLayoutPanel8.Controls.Add(this.panel22, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.panel25, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.panel26, 1, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(16, 1752);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.89796F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1382, 90);
+            this.tableLayoutPanel8.TabIndex = 69;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.date_dean_input);
+            this.panel22.Controls.Add(this.label80);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(1044, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(335, 84);
+            this.panel22.TabIndex = 63;
+            // 
+            // date_dean_input
+            // 
+            this.date_dean_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.date_dean_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_dean_input.Location = new System.Drawing.Point(8, 41);
+            this.date_dean_input.Name = "date_dean_input";
+            this.date_dean_input.Size = new System.Drawing.Size(318, 31);
+            this.date_dean_input.TabIndex = 45;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label80.Location = new System.Drawing.Point(5, 5);
+            this.label80.Margin = new System.Windows.Forms.Padding(5);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(193, 25);
+            this.label80.TabIndex = 28;
+            this.label80.Text = "Date (yyyy-mm-dd)";
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.sign_dean_input);
+            this.panel25.Controls.Add(this.label102);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(3, 3);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(513, 84);
+            this.panel25.TabIndex = 62;
+            // 
+            // sign_dean_input
+            // 
+            this.sign_dean_input.BackColor = System.Drawing.Color.White;
+            this.sign_dean_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sign_dean_input.Location = new System.Drawing.Point(10, 41);
+            this.sign_dean_input.Name = "sign_dean_input";
+            this.sign_dean_input.Size = new System.Drawing.Size(485, 31);
+            this.sign_dean_input.TabIndex = 44;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label102.Location = new System.Drawing.Point(5, 5);
+            this.label102.Margin = new System.Windows.Forms.Padding(5);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(302, 25);
+            this.label102.TabIndex = 26;
+            this.label102.Text = "Signature of Department Chair";
+            // 
+            // panel26
+            // 
+            this.panel26.Controls.Add(this.name_dean_input);
+            this.panel26.Controls.Add(this.label103);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel26.Location = new System.Drawing.Point(522, 3);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(516, 84);
+            this.panel26.TabIndex = 63;
+            // 
+            // name_dean_input
+            // 
+            this.name_dean_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.name_dean_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_dean_input.Location = new System.Drawing.Point(10, 41);
+            this.name_dean_input.Name = "name_dean_input";
+            this.name_dean_input.Size = new System.Drawing.Size(490, 31);
+            this.name_dean_input.TabIndex = 45;
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label103.Location = new System.Drawing.Point(5, 5);
+            this.label103.Margin = new System.Windows.Forms.Padding(5);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(266, 25);
+            this.label103.TabIndex = 27;
+            this.label103.Text = "Name of Department Chair";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.dean_comment_input);
+            this.groupBox7.Controls.Add(this.label104);
+            this.groupBox7.Location = new System.Drawing.Point(16, 1553);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1393, 171);
+            this.groupBox7.TabIndex = 68;
+            this.groupBox7.TabStop = false;
+            // 
+            // dean_comment_input
+            // 
+            this.dean_comment_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dean_comment_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dean_comment_input.Location = new System.Drawing.Point(21, 44);
+            this.dean_comment_input.Name = "dean_comment_input";
+            this.dean_comment_input.Size = new System.Drawing.Size(1360, 108);
+            this.dean_comment_input.TabIndex = 50;
+            this.dean_comment_input.Text = "";
+            // 
+            // label104
+            // 
+            this.label104.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label104.Location = new System.Drawing.Point(16, 16);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(114, 25);
+            this.label104.TabIndex = 43;
+            this.label104.Text = "Comments";
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.65829F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.34171F));
+            this.tableLayoutPanel10.Controls.Add(this.panel27, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.panel28, 0, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(16, 1447);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1393, 111);
+            this.tableLayoutPanel10.TabIndex = 67;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.White;
+            this.panel27.Controls.Add(this.dean_check_no_input);
+            this.panel27.Controls.Add(this.label105);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(443, 3);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(947, 105);
+            this.panel27.TabIndex = 49;
+            // 
+            // dean_check_no_input
+            // 
+            this.dean_check_no_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dean_check_no_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dean_check_no_input.Location = new System.Drawing.Point(11, 35);
+            this.dean_check_no_input.Name = "dean_check_no_input";
+            this.dean_check_no_input.Size = new System.Drawing.Size(927, 63);
+            this.dean_check_no_input.TabIndex = 49;
+            this.dean_check_no_input.Text = "";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label105.Location = new System.Drawing.Point(9, 7);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(405, 25);
+            this.label105.TabIndex = 48;
+            this.label105.Text = "If you have checked “no,” please explain.";
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.label106);
+            this.panel28.Controls.Add(this.label107);
+            this.panel28.Controls.Add(this.dean_no_input);
+            this.panel28.Controls.Add(this.dean_yes_input);
+            this.panel28.Controls.Add(this.label108);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel28.Location = new System.Drawing.Point(3, 3);
+            this.panel28.Name = "panel28";
+            this.panel28.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel28.Size = new System.Drawing.Size(434, 105);
+            this.panel28.TabIndex = 48;
+            // 
+            // label106
+            // 
+            this.label106.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label106.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label106.Location = new System.Drawing.Point(313, 61);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(39, 25);
+            this.label106.TabIndex = 49;
+            this.label106.Text = "No";
+            // 
+            // label107
+            // 
+            this.label107.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label107.Location = new System.Drawing.Point(302, 20);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(50, 25);
+            this.label107.TabIndex = 48;
+            this.label107.Text = "Yes";
+            // 
+            // dean_no_input
+            // 
+            this.dean_no_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dean_no_input.Location = new System.Drawing.Point(358, 55);
+            this.dean_no_input.Name = "dean_no_input";
+            this.dean_no_input.Size = new System.Drawing.Size(40, 40);
+            this.dean_no_input.TabIndex = 46;
+            this.dean_no_input.UseVisualStyleBackColor = false;
+            // 
+            // dean_yes_input
+            // 
+            this.dean_yes_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dean_yes_input.Location = new System.Drawing.Point(358, 9);
+            this.dean_yes_input.Name = "dean_yes_input";
+            this.dean_yes_input.Size = new System.Drawing.Size(40, 40);
+            this.dean_yes_input.TabIndex = 47;
+            this.dean_yes_input.UseVisualStyleBackColor = false;
+            // 
+            // label108
+            // 
+            this.label108.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label108.Location = new System.Drawing.Point(13, 15);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(270, 75);
+            this.label108.TabIndex = 42;
+            this.label108.Text = "I agree with the particulars \r\nof the case described in \r\nthis document:";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox8.Controls.Add(this.label126);
+            this.groupBox8.Controls.Add(this.label127);
+            this.groupBox8.Controls.Add(this.label125);
+            this.groupBox8.Controls.Add(this.label124);
+            this.groupBox8.Controls.Add(this.label123);
+            this.groupBox8.Controls.Add(this.label109);
+            this.groupBox8.Controls.Add(this.label110);
+            this.groupBox8.Controls.Add(this.label111);
+            this.groupBox8.Controls.Add(this.label112);
+            this.groupBox8.Controls.Add(this.label113);
+            this.groupBox8.Controls.Add(this.label114);
+            this.groupBox8.Controls.Add(this.label115);
+            this.groupBox8.Controls.Add(this.label116);
+            this.groupBox8.Controls.Add(this.label117);
+            this.groupBox8.Controls.Add(this.label118);
+            this.groupBox8.Controls.Add(this.label119);
+            this.groupBox8.Location = new System.Drawing.Point(16, 893);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.groupBox8.Size = new System.Drawing.Size(1396, 532);
+            this.groupBox8.TabIndex = 66;
+            this.groupBox8.TabStop = false;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label109.Location = new System.Drawing.Point(19, 414);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(340, 25);
+            this.label109.TabIndex = 31;
+            this.label109.Text = "5. Save this form to your computer";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label110.Location = new System.Drawing.Point(19, 349);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(1170, 25);
+            this.label110.TabIndex = 29;
+            this.label110.Text = "4. Sign the printed form or enter your digital signature by clicking the appropri" +
+    "ate signature box and follow the instructions";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label111.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label111.Location = new System.Drawing.Point(18, 317);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(611, 25);
+            this.label111.TabIndex = 28;
+            this.label111.Text = "3. Ensure that the supporting evidence of the case is attached.";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label112.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label112.Location = new System.Drawing.Point(46, 381);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(1091, 25);
+            this.label112.TabIndex = 26;
+            this.label112.Text = "Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the " +
+    "document after you sign it.";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label113.Location = new System.Drawing.Point(45, 388);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(0, 25);
+            this.label113.TabIndex = 25;
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label114.Location = new System.Drawing.Point(18, 283);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(299, 25);
+            this.label114.TabIndex = 24;
+            this.label114.Text = "2. Answer the question below.";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label115.Location = new System.Drawing.Point(45, 312);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(0, 25);
+            this.label115.TabIndex = 23;
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label116.Location = new System.Drawing.Point(19, 219);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(1147, 25);
+            this.label116.TabIndex = 22;
+            this.label116.Text = "1. Check to ensure that the student, Faculty Member and Chair have entered their " +
+    "digital signatures or signed a printed";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label117.Location = new System.Drawing.Point(19, 92);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(256, 25);
+            this.label117.TabIndex = 19;
+            this.label117.Text = "from the Faculty Member.";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label118.Location = new System.Drawing.Point(18, 57);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(1159, 25);
+            this.label118.TabIndex = 16;
+            this.label118.Text = "cases that reach the Academic Integrity Committee must have been forwarded from t" +
+    "he Dean (or designate), rather than ";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label119.Location = new System.Drawing.Point(19, 23);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(1127, 25);
+            this.label119.TabIndex = 13;
+            this.label119.Text = "All cases in which the Academic Integrity Policy is alleged to have been breached" +
+    " shall be reviewed by the Dean. All ";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.ForeColor = System.Drawing.Color.Black;
+            this.label120.Location = new System.Drawing.Point(451, 854);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(83, 31);
+            this.label120.TabIndex = 65;
+            this.label120.Text = "Dean";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label121.ForeColor = System.Drawing.Color.Black;
+            this.label121.Location = new System.Drawing.Point(143, 854);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(312, 31);
+            this.label121.TabIndex = 64;
+            this.label121.Text = "- To be completed by the";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label122.ForeColor = System.Drawing.Color.Black;
+            this.label122.Location = new System.Drawing.Point(10, 854);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(138, 31);
+            this.label122.TabIndex = 63;
+            this.label122.Text = "Step Five";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label123.Location = new System.Drawing.Point(19, 147);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(228, 25);
+            this.label123.TabIndex = 32;
+            this.label123.Text = "Dean (or designate):";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label124.Location = new System.Drawing.Point(19, 183);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(762, 25);
+            this.label124.TabIndex = 33;
+            this.label124.Text = "When you receive this form from the Department Chair, complete the following:";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label125.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label125.Location = new System.Drawing.Point(45, 251);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(172, 25);
+            this.label125.TabIndex = 34;
+            this.label125.Text = "copy of the form.";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label126.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label126.Location = new System.Drawing.Point(19, 448);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(1203, 25);
+            this.label126.TabIndex = 36;
+            this.label126.Text = "6. Submit the case package within (7) days by emailing the case in one PDF file t" +
+    "o aic@tru.ca, or sending the original printed";
+            this.label126.Click += new System.EventHandler(this.label126_Click);
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label127.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label127.Location = new System.Drawing.Point(46, 480);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(568, 25);
+            this.label127.TabIndex = 35;
+            this.label127.Text = "copy of the file to the Office of Student Affairs in OM 1631.";
+            // 
             // Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2217,6 +3260,38 @@
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2387,5 +3462,86 @@
         private System.Windows.Forms.TextBox student_email_input;
         private System.Windows.Forms.TextBox student_number_input;
         private System.Windows.Forms.TextBox student_name_input;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.TextBox date_dean_input;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.TextBox sign_dean_input;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.TextBox name_dean_input;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RichTextBox dean_comment_input;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.RichTextBox dean_check_no_input;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Button dean_no_input;
+        private System.Windows.Forms.Button dean_yes_input;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label116;
+        private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.TextBox date_chair_input;
+        private System.Windows.Forms.Label date_depart_input;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.TextBox sign_chair_input;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.TextBox name_chair_input;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RichTextBox chair_comment_input;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.RichTextBox chair_check_no_input;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Button chair_no_btn;
+        private System.Windows.Forms.Button chair_yes_btn;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label96;
     }
 }

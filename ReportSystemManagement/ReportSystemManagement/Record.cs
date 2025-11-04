@@ -101,5 +101,10 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void label126_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
