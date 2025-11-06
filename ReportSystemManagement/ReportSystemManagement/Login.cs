@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace ReportSystemManagement
@@ -17,15 +18,36 @@ namespace ReportSystemManagement
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Form mainForm = new Main_Page();
-            mainForm.Show();
+            var start = new ProcessStartInfo();
+            start.FileName = @"C:\Program Files\Python310\python.exe";
+            start.Arguments = $"login.py {username_input_box.Text} {password_input_box.Text}";
+
+            start.UseShellExecute = false;
+            start.CreateNoWindow = true;
+            start.RedirectStandardOutput = true;
+            start.RedirectStandardError = true;
+
+            using (Process process = Process.Start(start))
+            {
+                String output = process.StandardOutput.ReadToEnd();
+                String error = process.StandardError.ReadToEnd();
+
+                if (!string.IsNullOrEmpty(error))
+                {
+                    MessageBox.Show(output, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (output.Equals("Logged In"))
+                    {
+                        Form mainForm = new Main_Page();
+                        mainForm.Show();
+                    }
+                } else
+                {
+                    MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
     }
 }
