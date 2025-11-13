@@ -61,5 +61,69 @@ namespace ReportSystemManagement
         {
 
         }
+
+        private void written_statement_checkbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sanction_label_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label56_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label60_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label59_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void department_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label126_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chair_check_no_input_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void chair_check_no_input_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (richTextBox1.Focused)
+            {
+                if (e.Delta > 0)
+                {
+                    this.AutoScrollPosition = new Point(0, this.AutoScrollPosition.Y - 20);
+                }
+                else
+                {
+                    this.AutoScrollPosition = new Point(0, this.AutoScrollPosition.Y + 20);
+                }
+            }
+        }
     }
 }
