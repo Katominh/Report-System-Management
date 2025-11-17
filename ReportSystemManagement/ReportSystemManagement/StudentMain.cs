@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace ReportSystemManagement
 {
-    public partial class Admin_Main_Page : Form
+    public partial class Student_Main_Page : Form
     {
         private String user, passwd;
         private String file;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
 
-        public Admin_Main_Page(String username, String password)
+        public Student_Main_Page(String username, String password)
         {
             InitializeComponent();
             user = username;
@@ -27,47 +27,14 @@ namespace ReportSystemManagement
             loadRecordTable();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void StudentMain_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void create_btn_Click(object sender, EventArgs e)
-        {
-            Form newRecord = new Record();
-            newRecord.Show();
-        }
-
-        private void edit_btn_Click(object sender, EventArgs e)
-        {
-            Button btnClicked = sender as Button;
-
-            if (btnClicked != null)
-            {
-                string recordId = btnClicked.Tag.ToString();
-                String[] target = findStudent(recordId);
-                if (target.Length !=0)
-                {
-                    Form recordForm = new Record(user, passwd, target);
-                    recordForm.Show();
-                    this.Hide();
-                }
-            }
         }
 
         private void delete_btn_Click(object sender, EventArgs e)
         {
-            Button btnClicked = sender as Button;
 
-            if (btnClicked != null)
-            {
-                string recordId = btnClicked.Tag.ToString();
-                String[] target = findStudent(recordId);
-                if (target.Length != 0)
-                {
-                    MessageBox.Show($"Deleting record: {recordId}");
-                }
-            }
         }
 
         private void loadRecordTable()
@@ -140,28 +107,16 @@ namespace ReportSystemManagement
                     buttonPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                     buttonPanel.Anchor = AnchorStyles.Top;
 
-                    Button editBtn = new Button(), delBtn = new Button();
-                    editBtn.Text = "Edit record";
-                    editBtn.Tag = fields[0].Trim(); // Associate by ID
-                    editBtn.Click += edit_btn_Click;
+                    Button delBtn = new Button();
+                   
 
                     delBtn.Text = "Delete record";
                     delBtn.Tag = fields[0].Trim();
                     delBtn.Click += delete_btn_Click;
-
-                    buttonPanel.Controls.Add(editBtn);
-                    buttonPanel.Controls.Add(delBtn);
-                    records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
+                    records_table.Controls.Add(delBtn, colIndex, rowIndex);
                 }
                 rowIndex++;
             }
-        }
-
-        private void logout_btn_Click(object sender, EventArgs e)
-        {
-            Form login = new Login_Page();
-            login.Show();
-            this.Hide();
         }
 
         private String[] findStudent(String id)
@@ -177,7 +132,7 @@ namespace ReportSystemManagement
                 }
             }
 
-            return new String[]{ };
+            return new String[] { };
         }
     }
 }

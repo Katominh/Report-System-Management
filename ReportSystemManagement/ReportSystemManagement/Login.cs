@@ -47,7 +47,7 @@ namespace ReportSystemManagement
                     else if (String.Equals(output, "Student"))
                     {
                         MessageBox.Show("You are logged in as STUDENT", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form mainForm = new Admin_Main_Page(username_input_box.Text, password_input_box.Text);
+                        Form mainForm = new Student_Main_Page(username_input_box.Text, password_input_box.Text);
                         mainForm.Show();
                         this.Hide();
                     }
@@ -64,6 +64,5 @@ namespace ReportSystemManagement
                 }
             }
         }
-
     }
 }
