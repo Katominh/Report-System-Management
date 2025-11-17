@@ -15,6 +15,8 @@ namespace ReportSystemManagement
     {
         private String user, passwd;
         private String file;
+        private String[] allRecords;
+        private String[] delimiter = { "|||" };
 
         public Main_Page(String username, String password)
         {
@@ -26,16 +28,6 @@ namespace ReportSystemManagement
         }
 
         private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
 
         }
@@ -53,7 +45,13 @@ namespace ReportSystemManagement
             if (btnClicked != null)
             {
                 string recordId = btnClicked.Tag.ToString();
-                MessageBox.Show($"Editing record: {recordId}");
+                String[] target = findStudent(recordId);
+                if (target.Length !=0)
+                {
+                    Form recordForm = new Record(target);
+                    recordForm.Show();
+                    this.Hide();
+                }
             }
         }
 
@@ -64,7 +62,11 @@ namespace ReportSystemManagement
             if (btnClicked != null)
             {
                 string recordId = btnClicked.Tag.ToString();
-                MessageBox.Show($"Editing record: {recordId}");
+                String[] target = findStudent(recordId);
+                if (target.Length != 0)
+                {
+                    MessageBox.Show($"Deleting record: {recordId}");
+                }
             }
         }
 
@@ -81,8 +83,7 @@ namespace ReportSystemManagement
 
             // Read all records
             String[] all = File.ReadAllLines(filePath);
-            String[] allRecords = all.Skip(1).ToArray(); // Minus header
-            String[] delimiter = { "|||" };
+            allRecords = all.Skip(1).ToArray(); // Minus header
 
             // Redraw table layout
             records_table.Controls.Clear();
@@ -154,6 +155,22 @@ namespace ReportSystemManagement
                 }
                 rowIndex++;
             }
+        }
+
+        private String[] findStudent(String id)
+        {
+            // Linear search
+            foreach (String record in allRecords)
+            {
+                // Compare ids
+                String[] current = record.Split(delimiter, StringSplitOptions.None);
+                if (String.Equals(id, current[0]))
+                {
+                    return current;
+                }
+            }
+
+            return new String[]{ };
         }
     }
 }

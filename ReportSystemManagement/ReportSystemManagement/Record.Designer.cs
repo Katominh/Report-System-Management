@@ -35,15 +35,15 @@
             this.logout_btn = new System.Windows.Forms.Button();
             this.tab_control_record = new System.Windows.Forms.TabControl();
             this.page1_record = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.advice_btn = new System.Windows.Forms.Button();
             this.written_statement_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.sign_fac_date_input = new System.Windows.Forms.TextBox();
+            this.sign_fac_name_input = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.sign_fac_mem_input = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.sanction_label = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -117,7 +117,7 @@
             this.page2_record = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.date_fac_input_page2 = new System.Windows.Forms.TextBox();
             this.date_fac_input = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.sign_fac_input = new System.Windows.Forms.TextBox();
@@ -276,7 +276,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.page4_record = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.fac_comment_page5_input = new System.Windows.Forms.RichTextBox();
+            this.fac_comment_page4_input = new System.Windows.Forms.RichTextBox();
             this.label128 = new System.Windows.Forms.Label();
             this.page5_record = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -407,7 +407,7 @@
             // 
             this.page1_record.AutoScroll = true;
             this.page1_record.BackColor = System.Drawing.Color.White;
-            this.page1_record.Controls.Add(this.button1);
+            this.page1_record.Controls.Add(this.advice_btn);
             this.page1_record.Controls.Add(this.written_statement_btn);
             this.page1_record.Controls.Add(this.tableLayoutPanel2);
             this.page1_record.Controls.Add(this.label5);
@@ -437,16 +437,15 @@
             this.page1_record.Size = new System.Drawing.Size(1440, 735);
             this.page1_record.TabIndex = 0;
             this.page1_record.Text = "Page 1";
-            this.page1_record.Click += new System.EventHandler(this.page1_record_Click);
             // 
-            // button1
+            // advice_btn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.Location = new System.Drawing.Point(1168, 1826);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 45;
-            this.button1.UseVisualStyleBackColor = false;
+            this.advice_btn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.advice_btn.Location = new System.Drawing.Point(1168, 1826);
+            this.advice_btn.Name = "advice_btn";
+            this.advice_btn.Size = new System.Drawing.Size(50, 50);
+            this.advice_btn.TabIndex = 45;
+            this.advice_btn.UseVisualStyleBackColor = false;
             // 
             // written_statement_btn
             // 
@@ -463,13 +462,13 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 477F));
-            this.tableLayoutPanel2.Controls.Add(this.textBox14, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox15, 1, 1);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 481F));
+            this.tableLayoutPanel2.Controls.Add(this.sign_fac_date_input, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.sign_fac_name_input, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label9, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label12, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label23, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox16, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.sign_fac_mem_input, 0, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(15, 1897);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -479,31 +478,31 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1382, 81);
             this.tableLayoutPanel2.TabIndex = 43;
             // 
-            // textBox14
+            // sign_fac_date_input
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(906, 40);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(472, 31);
-            this.textBox14.TabIndex = 37;
+            this.sign_fac_date_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.sign_fac_date_input.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sign_fac_date_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sign_fac_date_input.Location = new System.Drawing.Point(902, 40);
+            this.sign_fac_date_input.Name = "sign_fac_date_input";
+            this.sign_fac_date_input.Size = new System.Drawing.Size(476, 31);
+            this.sign_fac_date_input.TabIndex = 37;
             // 
-            // textBox15
+            // sign_fac_name_input
             // 
-            this.textBox15.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(455, 40);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(444, 31);
-            this.textBox15.TabIndex = 36;
+            this.sign_fac_name_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.sign_fac_name_input.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sign_fac_name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sign_fac_name_input.Location = new System.Drawing.Point(453, 40);
+            this.sign_fac_name_input.Name = "sign_fac_name_input";
+            this.sign_fac_name_input.Size = new System.Drawing.Size(442, 31);
+            this.sign_fac_name_input.TabIndex = 36;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(908, 6);
+            this.label9.Location = new System.Drawing.Point(904, 6);
             this.label9.Margin = new System.Windows.Forms.Padding(5);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(193, 25);
@@ -514,7 +513,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(457, 6);
+            this.label12.Location = new System.Drawing.Point(455, 6);
             this.label12.Margin = new System.Windows.Forms.Padding(5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(252, 25);
@@ -532,15 +531,15 @@
             this.label23.TabIndex = 26;
             this.label23.Text = "Signature of Faculty Member";
             // 
-            // textBox16
+            // sign_fac_mem_input
             // 
-            this.textBox16.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(4, 40);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(444, 31);
-            this.textBox16.TabIndex = 35;
+            this.sign_fac_mem_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.sign_fac_mem_input.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sign_fac_mem_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sign_fac_mem_input.Location = new System.Drawing.Point(4, 40);
+            this.sign_fac_mem_input.Name = "sign_fac_mem_input";
+            this.sign_fac_mem_input.Size = new System.Drawing.Size(442, 31);
+            this.sign_fac_mem_input.TabIndex = 35;
             // 
             // label5
             // 
@@ -566,7 +565,6 @@
             this.sanction_label.Size = new System.Drawing.Size(1360, 301);
             this.sanction_label.TabIndex = 40;
             this.sanction_label.Text = resources.GetString("sanction_label.Text");
-            this.sanction_label.TextChanged += new System.EventHandler(this.sanction_label_TextChanged);
             // 
             // label3
             // 
@@ -648,7 +646,6 @@
             this.label22.TabIndex = 13;
             this.label22.Text = "Description of Violation of Academic Integrity Policy ED 5-0 with respect to a pa" +
     "rticular assignment or exam ";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -656,7 +653,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.76223F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.23777F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 343F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 347F));
             this.tableLayoutPanel1.Controls.Add(this.panel10, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel16, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel17, 0, 0);
@@ -673,9 +670,9 @@
             this.panel10.Controls.Add(this.term_sem_input);
             this.panel10.Controls.Add(this.term_label);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(1040, 4);
+            this.panel10.Location = new System.Drawing.Point(1036, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(338, 72);
+            this.panel10.Size = new System.Drawing.Size(342, 72);
             this.panel10.TabIndex = 46;
             // 
             // term_sem_input
@@ -703,9 +700,9 @@
             this.panel16.Controls.Add(this.department_input);
             this.panel16.Controls.Add(this.department_label);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(375, 4);
+            this.panel16.Location = new System.Drawing.Point(373, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(658, 72);
+            this.panel16.Size = new System.Drawing.Size(656, 72);
             this.panel16.TabIndex = 47;
             // 
             // department_input
@@ -727,7 +724,6 @@
             this.department_label.Size = new System.Drawing.Size(123, 25);
             this.department_label.TabIndex = 27;
             this.department_label.Text = "Department";
-            this.department_label.Click += new System.EventHandler(this.department_label_Click);
             // 
             // panel17
             // 
@@ -736,7 +732,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(4, 4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(364, 72);
+            this.panel17.Size = new System.Drawing.Size(362, 72);
             this.panel17.TabIndex = 47;
             // 
             // ass_exam_input
@@ -765,7 +761,7 @@
             this.table1_page1.ColumnCount = 3;
             this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 477F));
+            this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 481F));
             this.table1_page1.Controls.Add(this.panel18, 0, 1);
             this.table1_page1.Controls.Add(this.panel11, 1, 1);
             this.table1_page1.Controls.Add(this.panel12, 2, 1);
@@ -781,7 +777,6 @@
             this.table1_page1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.table1_page1.Size = new System.Drawing.Size(1382, 157);
             this.table1_page1.TabIndex = 34;
-            this.table1_page1.Paint += new System.Windows.Forms.PaintEventHandler(this.table1_Paint);
             // 
             // panel18
             // 
@@ -790,7 +785,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(4, 79);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(444, 74);
+            this.panel18.Size = new System.Drawing.Size(442, 74);
             this.panel18.TabIndex = 47;
             // 
             // fac_name_input
@@ -818,9 +813,9 @@
             this.panel11.Controls.Add(this.date_input);
             this.panel11.Controls.Add(this.student_date_label);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(455, 79);
+            this.panel11.Location = new System.Drawing.Point(453, 79);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(444, 74);
+            this.panel11.Size = new System.Drawing.Size(442, 74);
             this.panel11.TabIndex = 47;
             // 
             // date_input
@@ -848,9 +843,9 @@
             this.panel12.Controls.Add(this.course_input);
             this.panel12.Controls.Add(this.student_course_label);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(906, 79);
+            this.panel12.Location = new System.Drawing.Point(902, 79);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(472, 74);
+            this.panel12.Size = new System.Drawing.Size(476, 74);
             this.panel12.TabIndex = 47;
             // 
             // course_input
@@ -878,9 +873,9 @@
             this.panel13.Controls.Add(this.student_email_input);
             this.panel13.Controls.Add(this.student_email_label);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(906, 4);
+            this.panel13.Location = new System.Drawing.Point(902, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(472, 68);
+            this.panel13.Size = new System.Drawing.Size(476, 68);
             this.panel13.TabIndex = 47;
             // 
             // student_email_input
@@ -908,9 +903,9 @@
             this.panel14.Controls.Add(this.student_number_input);
             this.panel14.Controls.Add(this.student_num_label);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(455, 4);
+            this.panel14.Location = new System.Drawing.Point(453, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(444, 68);
+            this.panel14.Size = new System.Drawing.Size(442, 68);
             this.panel14.TabIndex = 47;
             // 
             // student_number_input
@@ -940,7 +935,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(444, 68);
+            this.panel15.Size = new System.Drawing.Size(442, 68);
             this.panel15.TabIndex = 47;
             // 
             // student_name_input
@@ -984,7 +979,6 @@
             this.groupBox5.Size = new System.Drawing.Size(1383, 371);
             this.groupBox5.TabIndex = 33;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // label31
             // 
@@ -1230,7 +1224,6 @@
             this.label18.Size = new System.Drawing.Size(209, 24);
             this.label18.TabIndex = 27;
             this.label18.Text = "Kamloops, BC, Canada ";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -1241,7 +1234,6 @@
             this.label19.Size = new System.Drawing.Size(84, 24);
             this.label19.TabIndex = 26;
             this.label19.Text = "V2C 0C8";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -1252,7 +1244,6 @@
             this.label20.Size = new System.Drawing.Size(85, 24);
             this.label20.TabIndex = 25;
             this.label20.Text = "tru.ca/aic";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
@@ -1263,7 +1254,6 @@
             this.label21.Size = new System.Drawing.Size(125, 24);
             this.label21.TabIndex = 24;
             this.label21.Text = "805 TRU Way";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // tru_image_page1
             // 
@@ -1370,7 +1360,7 @@
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 344F));
             this.tableLayoutPanel6.Controls.Add(this.panel8, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel9, 1, 0);
@@ -1383,22 +1373,22 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox18);
+            this.panel8.Controls.Add(this.date_fac_input_page2);
             this.panel8.Controls.Add(this.date_fac_input);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(1042, 3);
+            this.panel8.Location = new System.Drawing.Point(1040, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(337, 84);
+            this.panel8.Size = new System.Drawing.Size(339, 84);
             this.panel8.TabIndex = 63;
             // 
-            // textBox18
+            // date_fac_input_page2
             // 
-            this.textBox18.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(8, 41);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(318, 31);
-            this.textBox18.TabIndex = 45;
+            this.date_fac_input_page2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.date_fac_input_page2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_fac_input_page2.Location = new System.Drawing.Point(8, 41);
+            this.date_fac_input_page2.Name = "date_fac_input_page2";
+            this.date_fac_input_page2.Size = new System.Drawing.Size(318, 31);
+            this.date_fac_input_page2.TabIndex = 45;
             // 
             // date_fac_input
             // 
@@ -1418,7 +1408,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(512, 84);
+            this.panel7.Size = new System.Drawing.Size(511, 84);
             this.panel7.TabIndex = 62;
             // 
             // sign_fac_input
@@ -1446,9 +1436,9 @@
             this.panel9.Controls.Add(this.name_fac_input);
             this.panel9.Controls.Add(this.label66);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(521, 3);
+            this.panel9.Location = new System.Drawing.Point(520, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(515, 84);
+            this.panel9.Size = new System.Drawing.Size(514, 84);
             this.panel9.TabIndex = 63;
             // 
             // name_fac_input
@@ -1714,7 +1704,6 @@
             this.label59.Size = new System.Drawing.Size(193, 25);
             this.label59.TabIndex = 44;
             this.label59.Text = "Date (yyyy-mm-dd)";
-            this.label59.Click += new System.EventHandler(this.label59_Click);
             // 
             // panel6
             // 
@@ -1851,7 +1840,6 @@
             this.label60.Size = new System.Drawing.Size(685, 50);
             this.label60.TabIndex = 42;
             this.label60.Text = "Further comments may be added on Page 5 of this document to \r\nexplain your case";
-            this.label60.Click += new System.EventHandler(this.label60_Click);
             // 
             // panel1
             // 
@@ -1890,7 +1878,6 @@
             this.label56.Size = new System.Drawing.Size(50, 25);
             this.label56.TabIndex = 48;
             this.label56.Text = "Yes";
-            this.label56.Click += new System.EventHandler(this.label56_Click);
             // 
             // no_btn_page2
             // 
@@ -2145,7 +2132,6 @@
             this.label45.Size = new System.Drawing.Size(708, 25);
             this.label45.TabIndex = 16;
             this.label45.Text = "2. Please answer the following question by checking either “Yes” or “No.”";
-            this.label45.Click += new System.EventHandler(this.label45_Click);
             // 
             // label48
             // 
@@ -2248,14 +2234,13 @@
             this.page3_record.Size = new System.Drawing.Size(1440, 735);
             this.page3_record.TabIndex = 2;
             this.page3_record.Text = "Page 3";
-            this.page3_record.Click += new System.EventHandler(this.page3_record_Click);
             // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 344F));
             this.tableLayoutPanel8.Controls.Add(this.panel22, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel25, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel26, 1, 0);
@@ -2271,9 +2256,9 @@
             this.panel22.Controls.Add(this.date_dean_input);
             this.panel22.Controls.Add(this.label80);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(1042, 3);
+            this.panel22.Location = new System.Drawing.Point(1040, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(337, 84);
+            this.panel22.Size = new System.Drawing.Size(339, 84);
             this.panel22.TabIndex = 63;
             // 
             // date_dean_input
@@ -2304,7 +2289,7 @@
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel25.Location = new System.Drawing.Point(3, 3);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(512, 84);
+            this.panel25.Size = new System.Drawing.Size(511, 84);
             this.panel25.TabIndex = 62;
             // 
             // sign_dean_input
@@ -2333,9 +2318,9 @@
             this.panel26.Controls.Add(this.name_dean_input);
             this.panel26.Controls.Add(this.label103);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(521, 3);
+            this.panel26.Location = new System.Drawing.Point(520, 3);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(515, 84);
+            this.panel26.Size = new System.Drawing.Size(514, 84);
             this.panel26.TabIndex = 63;
             // 
             // name_dean_input
@@ -2545,7 +2530,6 @@
             this.label126.TabIndex = 36;
             this.label126.Text = "6. Submit the case package within (7) days by emailing the case in one PDF file t" +
     "o aic@tru.ca, or sending the original printed";
-            this.label126.Click += new System.EventHandler(this.label126_Click);
             // 
             // label127
             // 
@@ -2753,7 +2737,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 342F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 344F));
             this.tableLayoutPanel7.Controls.Add(this.panel19, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel20, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel21, 1, 0);
@@ -2769,9 +2753,9 @@
             this.panel19.Controls.Add(this.date_chair_input);
             this.panel19.Controls.Add(this.date_depart_input);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(1042, 3);
+            this.panel19.Location = new System.Drawing.Point(1040, 3);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(337, 84);
+            this.panel19.Size = new System.Drawing.Size(339, 84);
             this.panel19.TabIndex = 63;
             // 
             // date_chair_input
@@ -2802,7 +2786,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(3, 3);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(512, 84);
+            this.panel20.Size = new System.Drawing.Size(511, 84);
             this.panel20.TabIndex = 62;
             // 
             // sign_chair_input
@@ -2831,9 +2815,9 @@
             this.panel21.Controls.Add(this.name_chair_input);
             this.panel21.Controls.Add(this.label97);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(521, 3);
+            this.panel21.Location = new System.Drawing.Point(520, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(515, 84);
+            this.panel21.Size = new System.Drawing.Size(514, 84);
             this.panel21.TabIndex = 63;
             // 
             // name_chair_input
@@ -2926,7 +2910,6 @@
             this.chair_check_no_input.Size = new System.Drawing.Size(927, 63);
             this.chair_check_no_input.TabIndex = 49;
             this.chair_check_no_input.Text = "";
-            this.chair_check_no_input.TextChanged += new System.EventHandler(this.chair_check_no_input_TextChanged);
             this.chair_check_no_input.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.chair_check_no_input_MouseWheel);
             // 
             // label98
@@ -3220,7 +3203,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.fac_comment_page5_input);
+            this.groupBox9.Controls.Add(this.fac_comment_page4_input);
             this.groupBox9.Controls.Add(this.label128);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox9.Location = new System.Drawing.Point(3, 3);
@@ -3229,15 +3212,15 @@
             this.groupBox9.TabIndex = 57;
             this.groupBox9.TabStop = false;
             // 
-            // fac_comment_page5_input
+            // fac_comment_page4_input
             // 
-            this.fac_comment_page5_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.fac_comment_page5_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fac_comment_page5_input.Location = new System.Drawing.Point(12, 50);
-            this.fac_comment_page5_input.Name = "fac_comment_page5_input";
-            this.fac_comment_page5_input.Size = new System.Drawing.Size(1408, 661);
-            this.fac_comment_page5_input.TabIndex = 50;
-            this.fac_comment_page5_input.Text = "";
+            this.fac_comment_page4_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.fac_comment_page4_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fac_comment_page4_input.Location = new System.Drawing.Point(12, 50);
+            this.fac_comment_page4_input.Name = "fac_comment_page4_input";
+            this.fac_comment_page4_input.Size = new System.Drawing.Size(1408, 661);
+            this.fac_comment_page4_input.TabIndex = 50;
+            this.fac_comment_page4_input.Text = "";
             // 
             // label128
             // 
@@ -3479,12 +3462,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox sign_fac_date_input;
+        private System.Windows.Forms.TextBox sign_fac_name_input;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox sign_fac_mem_input;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBox1;
@@ -3510,7 +3493,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button advice_btn;
         private System.Windows.Forms.Button written_statement_btn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel1;
@@ -3534,7 +3517,7 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox date_fac_input_page2;
         private System.Windows.Forms.Label date_fac_input;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox sign_fac_input;
@@ -3667,7 +3650,7 @@
         private System.Windows.Forms.RichTextBox student_comment_page5_input;
         private System.Windows.Forms.Label label129;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox fac_comment_page5_input;
+        private System.Windows.Forms.RichTextBox fac_comment_page4_input;
         private System.Windows.Forms.Label label128;
     }
 }
