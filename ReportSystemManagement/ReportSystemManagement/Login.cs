@@ -36,13 +36,27 @@ namespace ReportSystemManagement
 
                 if (!string.IsNullOrEmpty(error))
                 {
-                    MessageBox.Show(output, "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (output.Equals("Logged In"))
+                    if (String.Equals(output, "Admin"))
                     {
                         Form mainForm = new Main_Page();
                         mainForm.Show();
                     }
-                } else
+
+                    else if (String.Equals(output, "Student"))
+                    {
+                        MessageBox.Show("You are logged in as STUDENT", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Form mainForm = new Main_Page();
+                        mainForm.Show();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Incorrect username and/or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(output);
+                        MessageBox.Show(error);
+                    }
+                }
+                else
                 {
                     MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
