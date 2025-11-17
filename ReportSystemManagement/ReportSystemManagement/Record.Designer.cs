@@ -282,6 +282,7 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.student_comment_page5_input = new System.Windows.Forms.RichTextBox();
             this.label129 = new System.Windows.Forms.Label();
+            this.back_btn = new System.Windows.Forms.Button();
             this.side_bar_record.SuspendLayout();
             this.flow_bar_record.SuspendLayout();
             this.tab_control_record.SuspendLayout();
@@ -359,11 +360,12 @@
             // flow_bar_record
             // 
             this.flow_bar_record.Controls.Add(this.save_btn);
+            this.flow_bar_record.Controls.Add(this.back_btn);
             this.flow_bar_record.Controls.Add(this.logout_btn);
             this.flow_bar_record.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flow_bar_record.Location = new System.Drawing.Point(3, 16);
             this.flow_bar_record.Name = "flow_bar_record";
-            this.flow_bar_record.Padding = new System.Windows.Forms.Padding(0, 275, 0, 0);
+            this.flow_bar_record.Padding = new System.Windows.Forms.Padding(0, 250, 0, 0);
             this.flow_bar_record.Size = new System.Drawing.Size(143, 742);
             this.flow_bar_record.TabIndex = 2;
             // 
@@ -371,7 +373,7 @@
             // 
             this.save_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.save_btn.Location = new System.Drawing.Point(3, 278);
+            this.save_btn.Location = new System.Drawing.Point(3, 253);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(137, 85);
             this.save_btn.TabIndex = 1;
@@ -382,12 +384,13 @@
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 369);
+            this.logout_btn.Location = new System.Drawing.Point(3, 435);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 85);
             this.logout_btn.TabIndex = 0;
             this.logout_btn.Text = "Log Out";
             this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // tab_control_record
             // 
@@ -3278,6 +3281,18 @@
             this.label129.TabIndex = 43;
             this.label129.Text = "Student Comments";
             // 
+            // back_btn
+            // 
+            this.back_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.back_btn.Location = new System.Drawing.Point(3, 344);
+            this.back_btn.Name = "back_btn";
+            this.back_btn.Size = new System.Drawing.Size(137, 85);
+            this.back_btn.TabIndex = 2;
+            this.back_btn.Text = "Go Back";
+            this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            // 
             // Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3652,5 +3667,6 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.RichTextBox fac_comment_page4_input;
         private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Button back_btn;
     }
 }

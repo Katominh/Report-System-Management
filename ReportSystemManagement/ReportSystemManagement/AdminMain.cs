@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace ReportSystemManagement
 {
-    public partial class Main_Page : Form
+    public partial class Admin_Main_Page : Form
     {
         private String user, passwd;
         private String file;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
 
-        public Main_Page(String username, String password)
+        public Admin_Main_Page(String username, String password)
         {
             InitializeComponent();
             user = username;
@@ -48,7 +48,7 @@ namespace ReportSystemManagement
                 String[] target = findStudent(recordId);
                 if (target.Length !=0)
                 {
-                    Form recordForm = new Record(target);
+                    Form recordForm = new Record(user, passwd, target);
                     recordForm.Show();
                     this.Hide();
                 }
@@ -155,6 +155,13 @@ namespace ReportSystemManagement
                 }
                 rowIndex++;
             }
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Form login = new Login_Page();
+            login.Show();
+            this.Hide();
         }
 
         private String[] findStudent(String id)

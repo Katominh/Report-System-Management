@@ -12,15 +12,19 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
+
+        private String username, password;
         private String[] data;
         public Record()
         {
             InitializeComponent();
         }
 
-        public Record(String[] data)
+        public Record(String usr, String passwd, String[] data)
         {
             InitializeComponent();
+            username = usr;
+            password = passwd;
             this.data = data;
             loadText();
         }
@@ -83,6 +87,20 @@ namespace ReportSystemManagement
             date_dean_input.Text = data[35];
             fac_comment_page4_input.Text = data[36];
             student_comment_page5_input.Text = data[37];
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Form login = new Login_Page();
+            login.Show();
+            this.Hide();
+        }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            Form aMain = new Admin_Main_Page(username, password);
+            aMain.Show();
+            this.Hide();
         }
     }
 }

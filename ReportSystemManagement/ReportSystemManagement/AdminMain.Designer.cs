@@ -1,6 +1,6 @@
 ﻿namespace ReportSystemManagement
 {
-    partial class Main_Page
+    partial class Admin_Main_Page
     {
         /// <summary>
         /// Required designer variable.
@@ -40,9 +40,9 @@
             this.student_num = new System.Windows.Forms.Label();
             this.student_name = new System.Windows.Forms.Label();
             this.student_id = new System.Windows.Forms.Label();
-            this.delete_btn = new System.Windows.Forms.Button();
-            this.edit_btn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.edit_btn = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.side_bar_main.SuspendLayout();
             this.flow_bar_main.SuspendLayout();
             this.records_table.SuspendLayout();
@@ -102,6 +102,7 @@
             this.logout_btn.TabIndex = 0;
             this.logout_btn.Text = "Log Out";
             this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // records_table
             // 
@@ -129,15 +130,15 @@
             this.records_table.Location = new System.Drawing.Point(155, 12);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.records_table.Size = new System.Drawing.Size(630, 22);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.records_table.Size = new System.Drawing.Size(624, 23);
             this.records_table.TabIndex = 4;
             // 
             // student_time
             // 
             this.student_time.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_time.AutoSize = true;
-            this.student_time.Location = new System.Drawing.Point(457, 4);
+            this.student_time.Location = new System.Drawing.Point(456, 5);
             this.student_time.Name = "student_time";
             this.student_time.Size = new System.Drawing.Size(65, 13);
             this.student_time.TabIndex = 5;
@@ -147,7 +148,7 @@
             // 
             this.fac_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fac_name.AutoSize = true;
-            this.fac_name.Location = new System.Drawing.Point(382, 4);
+            this.fac_name.Location = new System.Drawing.Point(381, 5);
             this.fac_name.Name = "fac_name";
             this.fac_name.Size = new System.Drawing.Size(38, 13);
             this.fac_name.TabIndex = 4;
@@ -157,9 +158,9 @@
             // 
             this.student_email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_email.AutoSize = true;
-            this.student_email.Location = new System.Drawing.Point(271, 1);
+            this.student_email.Location = new System.Drawing.Point(270, 1);
             this.student_email.Name = "student_email";
-            this.student_email.Size = new System.Drawing.Size(82, 20);
+            this.student_email.Size = new System.Drawing.Size(82, 21);
             this.student_email.TabIndex = 3;
             this.student_email.Text = "example@mytru.ca";
             // 
@@ -167,7 +168,7 @@
             // 
             this.student_num.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_num.AutoSize = true;
-            this.student_num.Location = new System.Drawing.Point(201, 4);
+            this.student_num.Location = new System.Drawing.Point(200, 5);
             this.student_num.Name = "student_num";
             this.student_num.Size = new System.Drawing.Size(44, 13);
             this.student_num.TabIndex = 2;
@@ -177,7 +178,7 @@
             // 
             this.student_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_name.AutoSize = true;
-            this.student_name.Location = new System.Drawing.Point(116, 4);
+            this.student_name.Location = new System.Drawing.Point(115, 5);
             this.student_name.Name = "student_name";
             this.student_name.Size = new System.Drawing.Size(35, 13);
             this.student_name.TabIndex = 1;
@@ -187,22 +188,23 @@
             // 
             this.student_id.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_id.AutoSize = true;
-            this.student_id.Location = new System.Drawing.Point(26, 4);
+            this.student_id.Location = new System.Drawing.Point(26, 5);
             this.student_id.Name = "student_id";
             this.student_id.Size = new System.Drawing.Size(37, 13);
             this.student_id.TabIndex = 0;
             this.student_id.Text = "12345";
             // 
-            // delete_btn
+            // flowLayoutPanel1
             // 
-            this.delete_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.delete_btn.Location = new System.Drawing.Point(3, 32);
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(75, 23);
-            this.delete_btn.TabIndex = 7;
-            this.delete_btn.Text = "Delete record";
-            this.delete_btn.UseVisualStyleBackColor = true;
-            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanel1.Controls.Add(this.edit_btn);
+            this.flowLayoutPanel1.Controls.Add(this.delete_btn);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(538, 4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 15);
+            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // edit_btn
             // 
@@ -215,26 +217,25 @@
             this.edit_btn.UseVisualStyleBackColor = true;
             this.edit_btn.Click += new System.EventHandler(this.edit_btn_Click);
             // 
-            // flowLayoutPanel1
+            // delete_btn
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.edit_btn);
-            this.flowLayoutPanel1.Controls.Add(this.delete_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(541, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 14);
-            this.flowLayoutPanel1.TabIndex = 6;
+            this.delete_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.delete_btn.Location = new System.Drawing.Point(3, 32);
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.Size = new System.Drawing.Size(75, 23);
+            this.delete_btn.TabIndex = 7;
+            this.delete_btn.Text = "Delete record";
+            this.delete_btn.UseVisualStyleBackColor = true;
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
-            // Main_Page
+            // Admin_Main_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.records_table);
             this.Controls.Add(this.side_bar_main);
-            this.Name = "Main_Page";
+            this.Name = "Admin_Main_Page";
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Login_Load);
             this.side_bar_main.ResumeLayout(false);
