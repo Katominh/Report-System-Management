@@ -31,7 +31,6 @@
             this.side_bar_main = new System.Windows.Forms.GroupBox();
             this.flow_bar_main = new System.Windows.Forms.FlowLayoutPanel();
             this.hi_username = new System.Windows.Forms.Label();
-            this.create_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
             this.records_table = new System.Windows.Forms.TableLayoutPanel();
             this.student_time = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             this.flow_bar_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flow_bar_main.Controls.Add(this.hi_username);
-            this.flow_bar_main.Controls.Add(this.create_btn);
             this.flow_bar_main.Controls.Add(this.logout_btn);
             this.flow_bar_main.Location = new System.Drawing.Point(3, 16);
             this.flow_bar_main.Name = "flow_bar_main";
@@ -81,23 +79,11 @@
             this.hi_username.TabIndex = 2;
             this.hi_username.Text = "Hi ____!";
             // 
-            // create_btn
-            // 
-            this.create_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.create_btn.Location = new System.Drawing.Point(3, 29);
-            this.create_btn.Name = "create_btn";
-            this.create_btn.Size = new System.Drawing.Size(137, 23);
-            this.create_btn.TabIndex = 1;
-            this.create_btn.Text = "Create new record";
-            this.create_btn.UseVisualStyleBackColor = true;
-            this.create_btn.Click += new System.EventHandler(this.create_btn_Click);
-            // 
             // logout_btn
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 58);
+            this.logout_btn.Location = new System.Drawing.Point(3, 29);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 23);
             this.logout_btn.TabIndex = 0;
@@ -131,15 +117,15 @@
             this.records_table.Location = new System.Drawing.Point(155, 12);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.records_table.Size = new System.Drawing.Size(631, 24);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.records_table.Size = new System.Drawing.Size(631, 25);
             this.records_table.TabIndex = 4;
             // 
             // student_time
             // 
             this.student_time.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_time.AutoSize = true;
-            this.student_time.Location = new System.Drawing.Point(462, 5);
+            this.student_time.Location = new System.Drawing.Point(462, 6);
             this.student_time.Name = "student_time";
             this.student_time.Size = new System.Drawing.Size(65, 13);
             this.student_time.TabIndex = 5;
@@ -149,7 +135,7 @@
             // 
             this.fac_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fac_name.AutoSize = true;
-            this.fac_name.Location = new System.Drawing.Point(385, 5);
+            this.fac_name.Location = new System.Drawing.Point(385, 6);
             this.fac_name.Name = "fac_name";
             this.fac_name.Size = new System.Drawing.Size(38, 13);
             this.fac_name.TabIndex = 4;
@@ -161,7 +147,7 @@
             this.student_email.AutoSize = true;
             this.student_email.Location = new System.Drawing.Point(273, 1);
             this.student_email.Name = "student_email";
-            this.student_email.Size = new System.Drawing.Size(82, 22);
+            this.student_email.Size = new System.Drawing.Size(82, 23);
             this.student_email.TabIndex = 3;
             this.student_email.Text = "example@mytru.ca";
             // 
@@ -169,7 +155,7 @@
             // 
             this.student_num.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_num.AutoSize = true;
-            this.student_num.Location = new System.Drawing.Point(202, 5);
+            this.student_num.Location = new System.Drawing.Point(202, 6);
             this.student_num.Name = "student_num";
             this.student_num.Size = new System.Drawing.Size(44, 13);
             this.student_num.TabIndex = 2;
@@ -179,7 +165,7 @@
             // 
             this.student_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_name.AutoSize = true;
-            this.student_name.Location = new System.Drawing.Point(117, 5);
+            this.student_name.Location = new System.Drawing.Point(117, 6);
             this.student_name.Name = "student_name";
             this.student_name.Size = new System.Drawing.Size(35, 13);
             this.student_name.TabIndex = 1;
@@ -189,7 +175,7 @@
             // 
             this.student_id.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_id.AutoSize = true;
-            this.student_id.Location = new System.Drawing.Point(26, 5);
+            this.student_id.Location = new System.Drawing.Point(26, 6);
             this.student_id.Name = "student_id";
             this.student_id.Size = new System.Drawing.Size(37, 13);
             this.student_id.TabIndex = 0;
@@ -204,7 +190,7 @@
             this.flowLayoutPanel1.Controls.Add(this.delete_btn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(544, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 16);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 17);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // edit_btn
@@ -254,7 +240,6 @@
 
         private System.Windows.Forms.GroupBox side_bar_main;
         private System.Windows.Forms.FlowLayoutPanel flow_bar_main;
-        private System.Windows.Forms.Button create_btn;
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Label hi_username;
         private System.Windows.Forms.TableLayoutPanel records_table;

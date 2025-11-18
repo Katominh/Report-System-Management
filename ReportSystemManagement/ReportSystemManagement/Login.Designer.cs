@@ -35,6 +35,7 @@
             this.login_btn = new System.Windows.Forms.Button();
             this.password_input_box = new System.Windows.Forms.TextBox();
             this.username_input_box = new System.Windows.Forms.TextBox();
+            this.test_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TRU_Title)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             this.login_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_btn.Location = new System.Drawing.Point(220, 373);
+            this.login_btn.Location = new System.Drawing.Point(144, 372);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(394, 30);
             this.login_btn.TabIndex = 8;
@@ -103,6 +104,20 @@
             this.username_input_box.Size = new System.Drawing.Size(348, 20);
             this.username_input_box.TabIndex = 6;
             // 
+            // test_btn
+            // 
+            this.test_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.test_btn.BackColor = System.Drawing.SystemColors.Info;
+            this.test_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.test_btn.Location = new System.Drawing.Point(562, 361);
+            this.test_btn.Name = "test_btn";
+            this.test_btn.Size = new System.Drawing.Size(108, 53);
+            this.test_btn.TabIndex = 12;
+            this.test_btn.Text = "Get Test Account";
+            this.test_btn.UseVisualStyleBackColor = false;
+            this.test_btn.Click += new System.EventHandler(this.test_btn_Click);
+            // 
             // Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +127,7 @@
             this.AutoScrollMinSize = new System.Drawing.Size(10, 10);
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.test_btn);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.username_label);
             this.Controls.Add(this.TRU_Title);
@@ -134,6 +150,7 @@
         private System.Windows.Forms.Button login_btn;
         private System.Windows.Forms.TextBox password_input_box;
         private System.Windows.Forms.TextBox username_input_box;
+        private System.Windows.Forms.Button test_btn;
     }
 }
 

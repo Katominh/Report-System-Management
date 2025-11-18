@@ -13,17 +13,18 @@ namespace ReportSystemManagement
 {
     public partial class Admin_Main_Page : Form
     {
-        private String user, passwd;
+        private String user, passwd, name;
         private String file;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
 
-        public Admin_Main_Page(String username, String password)
+        public Admin_Main_Page(String username, String password, String name)
         {
             InitializeComponent();
             user = username;
             passwd = password;
-            hi_username.Text = "Hi " + user + "!";
+            this.name = name;
+            hi_username.Text = "Hi " + name + "!";
             loadRecordTable();
         }
 
@@ -32,11 +33,6 @@ namespace ReportSystemManagement
 
         }
 
-        private void create_btn_Click(object sender, EventArgs e)
-        {
-            Form newRecord = new Record();
-            newRecord.Show();
-        }
 
         private void edit_btn_Click(object sender, EventArgs e)
         {
@@ -48,7 +44,7 @@ namespace ReportSystemManagement
                 String[] target = findStudent(recordId);
                 if (target.Length !=0)
                 {
-                    Form recordForm = new Record(user, passwd, target);
+                    Form recordForm = new Record(user, passwd, name, target);
                     recordForm.Show();
                     this.Hide();
                 }
@@ -155,6 +151,11 @@ namespace ReportSystemManagement
                 }
                 rowIndex++;
             }
+        }
+
+        private void create_btn_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void logout_btn_Click(object sender, EventArgs e)

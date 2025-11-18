@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -13,17 +14,19 @@ namespace ReportSystemManagement
 {
     public partial class Student_Main_Page : Form
     {
-        private String user, passwd;
+        private String user, passwd, name;
         private String file;
-        private String[] allRecords;
+        private String[] yourRecords;
         private String[] delimiter = { "|||" };
+        private ProcessStartInfo start = new ProcessStartInfo();
 
-        public Student_Main_Page(String username, String password)
+        public Student_Main_Page(String username, String password, String name)
         {
             InitializeComponent();
             user = username;
             passwd = password;
-            hi_username.Text = "Hi " + user + "!";
+            this.name = name;
+            hi_username.Text = "Hi " + name + "!";
             loadRecordTable();
         }
 
@@ -48,20 +51,19 @@ namespace ReportSystemManagement
             }
             file = filePath;
 
-            // Read all records
-            String[] all = File.ReadAllLines(filePath);
-            allRecords = all.Skip(1).ToArray(); // Minus header
+            // Read the student's record(s)
+            yourRecords = fetchStudentByName();
 
             // Redraw table layout
             records_table.Controls.Clear();
             records_table.RowStyles.Clear();
-            records_table.RowCount = allRecords.Length;
+            records_table.RowCount = yourRecords.Length;
 
             // Set new row
-            records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F)); // 50px for header
-            for (int i = 1; i < allRecords.Length; i++)
+            records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F)); // 40px for header
+            for (int i = 0; i < yourRecords.Length; i++)
             {
-                records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F)); // 65px for record
+                records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F)); // 30px for height
             }
 
             // Fill header row
@@ -82,10 +84,10 @@ namespace ReportSystemManagement
             // Fill each record
             int rowIndex = 1;
             int[] displayVals = { 0, 1, 2, 3, 4, 9 };
-            foreach (String record in allRecords)
+            foreach (String record in yourRecords)
             {
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
-                if (fields.Length == 38)
+                if (String.Equals(fields[1], name))
                 {
                     colIndex = 0;
 
@@ -108,10 +110,11 @@ namespace ReportSystemManagement
                     buttonPanel.Anchor = AnchorStyles.Top;
 
                     Button delBtn = new Button();
-                   
+
 
                     delBtn.Text = "Delete record";
                     delBtn.Tag = fields[0].Trim();
+                    delBtn.Anchor = AnchorStyles.None;
                     delBtn.Click += delete_btn_Click;
                     records_table.Controls.Add(delBtn, colIndex, rowIndex);
                 }
@@ -119,20 +122,62 @@ namespace ReportSystemManagement
             }
         }
 
-        private String[] findStudent(String id)
+        private void records_table_Paint(object sender, PaintEventArgs e)
         {
-            // Linear search
-            foreach (String record in allRecords)
+
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Form login = new Login_Page();
+            login.Show();
+            this.Hide();
+        }
+
+        private void create_btn_Click(object sender, EventArgs e)
+        {
+            Button btnClicked = sender as Button;
+
+            if (btnClicked != null)
             {
-                // Compare ids
-                String[] current = record.Split(delimiter, StringSplitOptions.None);
-                if (String.Equals(id, current[0]))
+                Form recordForm = new Record(user, passwd, name, getId());
+                recordForm.Show();
+                this.Hide();
+            }
+        }
+
+        // This is where I'll get the id from Python
+        private String getId()
+        {
+            start = new ProcessStartInfo();
+            start.FileName = @"C:\Program Files\Python310\python.exe";
+            start.Arguments = $"..\\..\\main.py {0}"; // Option 0 = get the generated ID
+
+            start.UseShellExecute = false;
+            start.CreateNoWindow = true;
+            start.RedirectStandardOutput = true;
+            start.RedirectStandardError = true;
+            using (Process process = Process.Start(start))
+            {
+                String output = process.StandardOutput.ReadToEnd(); // Use print() in Python so I can recieve the output
+                String error = process.StandardError.ReadToEnd();
+
+                if (String.IsNullOrEmpty(error))
                 {
-                    return current;
+                    return "12356";
+                    //return output;
+                }
+                else
+                {
+                    MessageBox.Show(error);
+                    return "";
                 }
             }
+        }
 
-            return new String[] { };
+        private String[] fetchStudentByName()
+        {
+            return new string[] { };
         }
     }
 }

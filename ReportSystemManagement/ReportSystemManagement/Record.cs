@@ -13,19 +13,26 @@ namespace ReportSystemManagement
     public partial class Record : Form
     {
 
-        private String username, password;
+        private String username, password, name, id;
         private String[] data;
-        public Record()
-        {
-            InitializeComponent();
-        }
-
-        public Record(String usr, String passwd, String[] data)
+        public Record(String usr, String passwd, String name, String id)
         {
             InitializeComponent();
             username = usr;
             password = passwd;
+            this.name = name;
+            this.id = id;
+            loadName();
+        }
+
+        public Record(String usr, String passwd, String name, String[] data)
+        {
+            InitializeComponent();
+            username = usr;
+            password = passwd;
+            this.name = name;
             this.data = data;
+            loadName();
             loadText();
         }
 
@@ -98,9 +105,17 @@ namespace ReportSystemManagement
 
         private void back_btn_Click(object sender, EventArgs e)
         {
-            Form aMain = new Admin_Main_Page(username, password);
+            Form aMain = new Admin_Main_Page(username, password, name);
             aMain.Show();
             this.Hide();
+        }
+
+        private void loadName()
+        {
+            declare_input.Text = name;
+            student_name_input.Text = name;
+            declare_input.ReadOnly = true;
+            student_name_input.ReadOnly = true;
         }
     }
 }

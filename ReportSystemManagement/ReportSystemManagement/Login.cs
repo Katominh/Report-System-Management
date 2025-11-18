@@ -36,18 +36,18 @@ namespace ReportSystemManagement
 
                 if (String.IsNullOrEmpty(error))
                 {
-                    if (String.Equals(output, "Admin"))
+                    if (String.Equals(output.Substring(0, 5), "Admin"))
                     {
                         MessageBox.Show("You are logged in as ADMIN", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form mainForm = new Admin_Main_Page(username_input_box.Text, password_input_box.Text);
+                        Form mainForm = new Admin_Main_Page(username_input_box.Text, password_input_box.Text, output.Substring(5));
                         mainForm.Show();
                         this.Hide();
                     }
 
-                    else if (String.Equals(output, "Student"))
+                    else if (String.Equals(output.Substring(0, 7), "Student"))
                     {
                         MessageBox.Show("You are logged in as STUDENT", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form mainForm = new Student_Main_Page(username_input_box.Text, password_input_box.Text);
+                        Form mainForm = new Student_Main_Page(username_input_box.Text, password_input_box.Text, output.Substring(7));
                         mainForm.Show();
                         this.Hide();
                     }
@@ -63,6 +63,11 @@ namespace ReportSystemManagement
                     MessageBox.Show(error);
                 }
             }
+        }
+
+        private void test_btn_Click(object sender, EventArgs e)
+        {
+            new TestAccount().Show();
         }
     }
 }
