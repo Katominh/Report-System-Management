@@ -12,7 +12,7 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
-
+        private static String NOTHING = "X", PYTHON_EXE_FILE = @"C:\Program Files\Python310\python.exe", MAIN_FILE = $"..\\..\\main.py";
         private String username, password, name, id;
         private String[] data;
         public Record(String usr, String passwd, String name, String id)

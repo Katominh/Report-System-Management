@@ -14,8 +14,9 @@ namespace ReportSystemManagement
 {
     public partial class Student_Main_Page : Form
     {
+        private static String NOTHING = "X", PYTHON_EXE_FILE = @"C:\Program Files\Python310\python.exe";
         private String user, passwd, name;
-        private String file;
+        private String textFile, mainFile; // These will get instantiated
         private String[] yourRecords;
         private String[] delimiter = { "|||" };
         private ProcessStartInfo start = new ProcessStartInfo();
@@ -43,13 +44,19 @@ namespace ReportSystemManagement
         private void loadRecordTable()
         {
             // Check if file exist
-            String filePath = "..\\..\\report_records.txt";
-            if (!File.Exists(filePath))
+            String textFilePath = "..\\..\\report_records.txt", mainFilePath = $"..\\..\\main.py";
+            if (!File.Exists(textFilePath))
             {
                 MessageBox.Show("Student data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            file = filePath;
+            if (!File.Exists(mainFilePath))
+            {
+                MessageBox.Show("Main Python file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            textFile = textFilePath;
+            mainFile = mainFilePath;
 
             // Read the student's record(s)
             yourRecords = fetchStudentByName();
@@ -149,9 +156,7 @@ namespace ReportSystemManagement
         // This is where I'll get the id from Python
         private String getId()
         {
-            start = new ProcessStartInfo();
-            start.FileName = @"C:\Program Files\Python310\python.exe";
-            start.Arguments = $"..\\..\\main.py {0}"; // Option 0 = get the generated ID
+            start = new ProcessStartInfo(PYTHON_EXE_FILE, $"{mainFile} {0} {NOTHING} {NOTHING}"); // Option 0 = get the generated ID
 
             start.UseShellExecute = false;
             start.CreateNoWindow = true;
@@ -164,8 +169,7 @@ namespace ReportSystemManagement
 
                 if (String.IsNullOrEmpty(error))
                 {
-                    return "12356";
-                    //return output;
+                    return output;
                 }
                 else
                 {
