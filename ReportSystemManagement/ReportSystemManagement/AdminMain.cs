@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace ReportSystemManagement
         private String file;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
+        private static String NOTHING = "X";
 
         public Admin_Main_Page(String username, String password, String name)
         {
@@ -59,11 +61,28 @@ namespace ReportSystemManagement
             {
                 string recordId = btnClicked.Tag.ToString();
                 String[] target = findStudent(recordId);
+                String result = String.Join("|||", target);
+                var start = new ProcessStartInfo();
                 if (target.Length != 0)
                 {
-                    MessageBox.Show($"Deleting record: {recordId}");
+
+                    MessageBox.Show($"Deleting record: {result}");
+                    start.FileName = "py";
+                    start.Arguments = $"..\\..\\main.py {3} \"{result}\" {NOTHING}";
+                    start.UseShellExecute = false;
+                    start.CreateNoWindow = true;
+                    start.RedirectStandardOutput = true;
+                    start.RedirectStandardError = true;
+                    using (Process process = Process.Start(start))
+                    {
+                        String output = process.StandardOutput.ReadToEnd();
+                        String error = process.StandardError.ReadToEnd();
+                        MessageBox.Show(output);
+                    }
                 }
             }
+
+            loadRecordTable();
         }
 
         private void loadRecordTable()
