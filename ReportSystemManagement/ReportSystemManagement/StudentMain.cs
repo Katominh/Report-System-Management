@@ -36,11 +36,6 @@ namespace ReportSystemManagement
 
         }
 
-        private void delete_btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void loadRecordTable()
         {
             // Check if file exist
@@ -70,7 +65,7 @@ namespace ReportSystemManagement
             records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F)); // 40px for header
             for (int i = 0; i < yourRecords.Length; i++)
             {
-                records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F)); // 30px for height
+                records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F)); // 65px for height
             }
 
             // Fill header row
@@ -116,22 +111,36 @@ namespace ReportSystemManagement
                     buttonPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                     buttonPanel.Anchor = AnchorStyles.Top;
 
-                    Button delBtn = new Button();
+                    Button editBtn = new Button(), delBtn = new Button();
 
+                    editBtn.Text = "Edit record";
+                    editBtn.Tag = fields[0].Trim(); // Associate by ID
+                    editBtn.Click += edit_btn_Click;
 
                     delBtn.Text = "Delete record";
                     delBtn.Tag = fields[0].Trim();
-                    delBtn.Anchor = AnchorStyles.None;
                     delBtn.Click += delete_btn_Click;
-                    records_table.Controls.Add(delBtn, colIndex, rowIndex);
+
+                    buttonPanel.Controls.Add(editBtn);
+                    buttonPanel.Controls.Add(delBtn);
+                    records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
                 }
                 rowIndex++;
             }
         }
 
-        private void records_table_Paint(object sender, PaintEventArgs e)
+        private void edit_btn_Click(object sender, EventArgs e)
         {
+            Button btnClicked = sender as Button;
 
+            
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            Button btnClicked = sender as Button;
+
+            
         }
 
         private void logout_btn_Click(object sender, EventArgs e)
@@ -181,7 +190,10 @@ namespace ReportSystemManagement
 
         private String[] fetchStudentByName()
         {
-            return new string[] { };
+            
+
+            return new String[] { };
         }
+  
     }
 }

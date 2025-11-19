@@ -46,15 +46,9 @@ namespace ReportSystemManagement
             loadText();
         }
 
+        // Save button listener
         private void save_btn_Click(object sender, EventArgs e)
         {
-            // If incomplete form
-            if (newData.Length != 38)
-            {
-                MessageBox.Show("The form is NOT completed. Please fill out everything before saving,", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             // If changes -> Update
             String changedIndices = GetChangedIndices();
             if (String.IsNullOrEmpty(changedIndices))
@@ -62,15 +56,15 @@ namespace ReportSystemManagement
                 newData = getInputs();
             }
 
-            String result = String.Join(delimiter, newData);
+            String result = "Test|||result";// String.Join(delimiter, newData);
             var start = new ProcessStartInfo();
             start.FileName = @"C:\Program Files\Python310\python.exe";
-            if (data.Length == 0)
+            if (data.Length == 0) // If no previous data, it's a new record
             {
-                start.Arguments = $"{MAIN_FILE} {1} {result} {NOTHING}"; // Choice mode 1 -> addRecord
+                start.Arguments = $"..\\..\\main.py {1} {result} {NOTHING}"; // Choice mode 1 -> addRecord
             } else
             {
-                start.Arguments = $"{MAIN_FILE} {4} {result} {changedIndices}"; // Choice mode 4 -> saveRecord
+                start.Arguments = $"..\\..\\main.py {4} {result} {changedIndices}"; // Choice mode 4 -> saveRecord
             }
 
             start.UseShellExecute = false;
@@ -85,6 +79,7 @@ namespace ReportSystemManagement
 
                 if (!String.IsNullOrEmpty(error))
                 {
+                    MessageBox.Show(output);
                     MessageBox.Show(error);
                 }
             }
@@ -107,7 +102,7 @@ namespace ReportSystemManagement
 
         
 
-        // For all the checking buttons
+        // For all the checking buttons in the records
         private void written_statement_btn_Click(object sender, EventArgs e)
         {
             // Toggle button state
@@ -149,6 +144,7 @@ namespace ReportSystemManagement
             no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
             yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
         }
+
         private void chair_yes_btn_Click(object sender, EventArgs e)
         {
             isChairChecked = true;
@@ -177,6 +173,7 @@ namespace ReportSystemManagement
             dean_yes_input.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
+        // Pre-filling text inputs
         private void loadText()
         {
             // The commented out lines are for check boxes (need to be implemented)
@@ -218,14 +215,26 @@ namespace ReportSystemManagement
             fac_comment_page4_input.Text = data[36];
             student_comment_page5_input.Text = data[37];
         }
-
+        
+        // Log out button
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            Form login = new Login_Page();
-            login.Show();
-            Close();
+            DialogResult result = MessageBox.Show(
+                "Do you want to log out? You may lose your unsaved changes.",
+                "Log Out Confirmation",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.OK)
+            {
+                Form login = new Login_Page();
+                login.Show();
+                Close();
+            }
         }
 
+        // Go back to Main button
         private void back_btn_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(

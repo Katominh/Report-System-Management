@@ -59,7 +59,7 @@ def getId():
 
 def addCaseReport():
     userInputs = MAIN_DATA
-    with open(FILENAME, "w", encoding="utf-8") as f:
+    with open(FILENAME, "a", encoding="utf-8") as f:
         f.write(userInputs + "\n")
     print("Add Done", end="")
 
