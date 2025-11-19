@@ -59,11 +59,15 @@ def main():
 # Generate a unique ID based on current time
 def getId():
     CURRENT_RECORD_ID = str(int(time.time()))
-    return CURRENT_RECORD_ID
+    print(CURRENT_RECORD_ID)
 
 # Add a new case report to the file
 def addCaseReport():
     userInputs = MAIN_DATA
+    id = MAIN_DATA.split(DELIMITER)[0]  
+    if searchRecord(id) != -1:
+        saveRecord()
+        return
     with open(FILENAME, "a", encoding="utf-8") as f:
         f.write(userInputs + "\n")
     print("Add Done.", end="")
@@ -102,6 +106,7 @@ def deleteRecord():
 
 def saveRecord():
     id = MAIN_DATA.split(DELIMITER)[0]
+
     indexLocation = searchRecord(id)
     # We'll then overwrite the old record with the new record data from MAIN_INPUT
     if indexLocation == -1:
