@@ -138,7 +138,7 @@ namespace ReportSystemManagement
         {
             Form login = new Login_Page();
             login.Show();
-            this.Hide();
+            Close();
         }
 
         private void create_btn_Click(object sender, EventArgs e)

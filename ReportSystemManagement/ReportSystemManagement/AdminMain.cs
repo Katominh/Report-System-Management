@@ -162,7 +162,7 @@ namespace ReportSystemManagement
         {
             Form login = new Login_Page();
             login.Show();
-            this.Hide();
+            Close();
         }
 
         private String[] findStudent(String id)

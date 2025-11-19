@@ -5,9 +5,9 @@ import os
 FILENAME = "..\\..\\report_records.txt"
 DELIMITER = "|||"
 CHOICE_MODE = int(sys.argv[1])
-MAIN_DATA = sys.argv[2].split(DELIMITER) # Often is the entire line of student's input
-EXTRA_DATA = sys.argv[3].split(DELIMITER)
-CURRENT_ID = "0"
+MAIN_DATA = sys.argv[2] # Often is the entire line of student's input
+EXTRA_DATA = sys.argv[3]
+CURRENT_RECORD_ID = "0"
 RECORDS = []
 SHORT_KEYS = [ # for dictionary keys
     "StudentName", "StudentNumber", "StudentEmail", "FacultyName", "ReportDate",
@@ -54,23 +54,37 @@ def main():
 # ===============================
 
 def getId():
-    CURRENT_ID = str(int(time.time()))
-    print(CURRENT_ID, end="")
+    CURRENT_RECORD_ID = str(int(time.time()))
+    print(CURRENT_RECORD_ID, end="")
 
 def addCaseReport():
-    userInputs = CURRENT_ID + (DELIMITER * 37) # Blank inputs for now
+    userInputs = MAIN_DATA
     with open(FILENAME, "w", encoding="utf-8") as f:
         f.write(userInputs + "\n")
     print("Add Done", end="")
 
-def searchRecord(records):
-    print("Search Done", end="")
+# Return index of the record found in RECORDS list
+def searchRecord(targetID):
+    for eachRecord in RECORDS:
+        if targetID == eachRecord[0]:
+            print(DELIMITER.join(eachRecord), end="")
+            return RECORDS.index(eachRecord)
+    print("Target record", targetID, "not found.", end="")
+    return -1
 
 
 def deleteRecord():
+    id = MAIN_DATA.split(DELIMITER)[0]
+    indexLocation = searchRecord(id)
+    # We'll delete this record in RECORDS
+    # Then overwrite the text file with the new RECORDS (Because there's no way to shift lines of text up or dowb=n)
     print("Delete Done", end="")
 
 def saveRecord():
+    id = MAIN_DATA.split(DELIMITER)[0]
+    indexLocation = searchRecord(id)
+
+    # We'll then overwrite the old record with the new record data from MAIN_INPUT
     print("Save Done", end="")
 
 
