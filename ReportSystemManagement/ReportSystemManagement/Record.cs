@@ -56,16 +56,16 @@ namespace ReportSystemManagement
                 newData = getInputs();
             }
 
-            String result = "Test|||result";// String.Join(delimiter, newData);
-            MessageBox.Show(String.Join(delimiter, newData));
+            String result = String.Join(delimiter, newData) + "a";
+            MessageBox.Show(result);
             var start = new ProcessStartInfo();
             start.FileName = "py";
             if (data.Length == 0) // If no previous data, it's a new record
             {
-                start.Arguments = $"..\\..\\main.py {1} {result} {NOTHING}"; // Choice mode 1 -> addRecord
+                start.Arguments = $"..\\..\\main.py {1} \"{result}\" {NOTHING}"; // Choice mode 1 -> addRecord
             } else
             {
-                start.Arguments = $"..\\..\\main.py {4} {result} {changedIndices}"; // Choice mode 4 -> saveRecord
+                start.Arguments = $"..\\..\\main.py {4} \"{result}\" {changedIndices}"; // Choice mode 4 -> saveRecord
             }
 
             start.UseShellExecute = false;
@@ -77,6 +77,7 @@ namespace ReportSystemManagement
             {
                 String output = process.StandardOutput.ReadToEnd();
                 String error = process.StandardError.ReadToEnd();
+                MessageBox.Show(output);
 
                 if (!String.IsNullOrEmpty(error))
                 {
@@ -356,61 +357,65 @@ namespace ReportSystemManagement
 
         private String GetChangedIndices()
         {
-            List<int> changedIndices = new List<int>();
-            Dictionary<int, String> inputMap = new Dictionary<int, String>();
-
-            // Populate dict
-            inputMap.Add(1, student_name_input.Text);
-            inputMap.Add(2, student_number_input.Text);
-            inputMap.Add(3, student_email_input.Text);
-            inputMap.Add(4, fac_name_input.Text);
-            inputMap.Add(5, date_input.Text);
-            inputMap.Add(6, course_input.Text);
-            inputMap.Add(7, ass_exam_input.Text);
-            inputMap.Add(8, department_input.Text);
-            inputMap.Add(9, term_sem_input.Text);
-            inputMap.Add(10, desc_violation_input.Text);
-            inputMap.Add(11, updateCheckState("get", 11));
-            inputMap.Add(12, updateCheckState("get", 12));
-            inputMap.Add(13, sign_fac_mem_input.Text);
-            inputMap.Add(14, sign_fac_name_input.Text);
-            inputMap.Add(15, sign_fac_date_input.Text);
-            inputMap.Add(16, declare_input.Text);
-            inputMap.Add(17, updateCheckState("get", 17));
-            inputMap.Add(18, tru_input_page2.Text);
-            inputMap.Add(19, sign_student_input.Text);
-            inputMap.Add(20, date_student_input.Text);
-            inputMap.Add(21, sign_fac_input.Text);
-            inputMap.Add(22, name_fac_input.Text);
-            inputMap.Add(23, date_fac_input_page2.Text);
-            inputMap.Add(24, updateCheckState("get", 24));
-            inputMap.Add(25, chair_check_no_input.Text);
-            inputMap.Add(26, chair_comment_input.Text);
-            inputMap.Add(27, sign_chair_input.Text);
-            inputMap.Add(28, name_chair_input.Text);
-            inputMap.Add(29, date_chair_input.Text);
-            inputMap.Add(30, updateCheckState("get", 30));
-            inputMap.Add(31, dean_check_no_input.Text);
-            inputMap.Add(32, dean_comment_input.Text);
-            inputMap.Add(33, sign_dean_input.Text);
-            inputMap.Add(34, name_dean_input.Text);
-            inputMap.Add(35, date_dean_input.Text);
-            inputMap.Add(36, fac_comment_page4_input.Text);
-            inputMap.Add(37, student_comment_page5_input.Text);
-
-            // Actual comparing difference
-            int index;
-            String originValue;
-            foreach (var pair in inputMap)
+            if (data.Length == 38)
             {
-                index = pair.Key;
-                originValue = (index < data.Length) ? data[index] : "";
-                if (!String.Equals(pair.Value, originValue))
+                List<int> changedIndices = new List<int>();
+                Dictionary<int, String> inputMap = new Dictionary<int, String>();
+
+                // Populate dict
+                inputMap.Add(1, student_name_input.Text); //
+                inputMap.Add(2, student_number_input.Text);
+                inputMap.Add(3, student_email_input.Text);
+                inputMap.Add(4, fac_name_input.Text);
+                inputMap.Add(5, date_input.Text);
+                inputMap.Add(6, course_input.Text);
+                inputMap.Add(7, ass_exam_input.Text);
+                inputMap.Add(8, department_input.Text);
+                inputMap.Add(9, term_sem_input.Text);
+                inputMap.Add(10, desc_violation_input.Text);
+                inputMap.Add(11, updateCheckState("get", 11)); //
+                inputMap.Add(12, updateCheckState("get", 12)); //
+                inputMap.Add(13, sign_fac_mem_input.Text);
+                inputMap.Add(14, sign_fac_name_input.Text);
+                inputMap.Add(15, sign_fac_date_input.Text);
+                inputMap.Add(16, declare_input.Text);
+                inputMap.Add(17, updateCheckState("get", 17)); //
+                inputMap.Add(18, tru_input_page2.Text);
+                inputMap.Add(19, sign_student_input.Text);
+                inputMap.Add(20, date_student_input.Text);
+                inputMap.Add(21, sign_fac_input.Text);
+                inputMap.Add(22, name_fac_input.Text);
+                inputMap.Add(23, date_fac_input_page2.Text);
+                inputMap.Add(24, updateCheckState("get", 24)); //
+                inputMap.Add(25, chair_check_no_input.Text);
+                inputMap.Add(26, chair_comment_input.Text);
+                inputMap.Add(27, sign_chair_input.Text);
+                inputMap.Add(28, name_chair_input.Text);
+                inputMap.Add(29, date_chair_input.Text);
+                inputMap.Add(30, updateCheckState("get", 30)); //
+                inputMap.Add(31, dean_check_no_input.Text);
+                inputMap.Add(32, dean_comment_input.Text);
+                inputMap.Add(33, sign_dean_input.Text);
+                inputMap.Add(34, name_dean_input.Text);
+                inputMap.Add(35, date_dean_input.Text);
+                inputMap.Add(36, fac_comment_page4_input.Text);
+                inputMap.Add(37, student_comment_page5_input.Text);
+
+                // Actual comparing difference
+                int index;
+                foreach (var pair in inputMap)
                 {
-                    changedIndices.Add(index);
+                    index = pair.Key;
+                    if (!String.Equals(pair.Value, data[index]))
+                    {
+                        changedIndices.Add(index);
+                    }
                 }
+                return String.Join(delimiter, changedIndices);
+            } else
+            {
+                return "";
             }
-            return String.Join(delimiter, changedIndices);
         }
 
         private String updateCheckState(String input, int questionIndex)
