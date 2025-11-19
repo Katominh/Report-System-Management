@@ -13,7 +13,7 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
-        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing = false;
+        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing = true;
         private static String NOTHING = "X", PYTHON_EXE_FILE = "py", MAIN_FILE = $"..\\..\\main.py";
         private static String delimiter = "|||";
         private String username, password, name, id;
@@ -30,6 +30,8 @@ namespace ReportSystemManagement
             newData = new String[] { };
             this.id = id;
             loadName();
+            isEditing = false;
+            setAllReadOnly(isEditing);
         }
 
         // For editing records
@@ -44,29 +46,22 @@ namespace ReportSystemManagement
             id = data[0];
             loadName();
             loadText();
+            setAllReadOnly(isEditing);
         }
 
         // Save button listener
         private void save_btn_Click(object sender, EventArgs e)
         {
-            // If changes -> Update
+            // Get changes
             String changedIndices = GetChangedIndices();
-            if (String.IsNullOrEmpty(changedIndices))
-            {
-                newData = getInputs();
-            }
+            newData = getInputs();
 
-            String result = String.Join(delimiter, newData) + "a";
-            MessageBox.Show(result);
+            String result = String.Join(delimiter, newData);
             var start = new ProcessStartInfo();
             start.FileName = "py";
-            if (data.Length == 0) // If no previous data, it's a new record
-            {
-                start.Arguments = $"..\\..\\main.py {1} \"{result}\" {NOTHING}"; // Choice mode 1 -> addRecord (Or saveRecord)
-            } else
-            {
-                start.Arguments = $"..\\..\\main.py {4} \"{result}\" {changedIndices}"; // Choice mode 4 -> saveRecord
-            }
+            
+            start.Arguments = $"..\\..\\main.py {1} \"{result}\" {NOTHING}"; // Choice mode 1 -> addRecord (Or else saveRecord)
+            
 
             start.UseShellExecute = false;
             start.CreateNoWindow = true;
@@ -77,11 +72,9 @@ namespace ReportSystemManagement
             {
                 String output = process.StandardOutput.ReadToEnd();
                 String error = process.StandardError.ReadToEnd();
-                MessageBox.Show(output);
 
                 if (!String.IsNullOrEmpty(error))
                 {
-                    MessageBox.Show(output);
                     MessageBox.Show(error);
                 }
             }
@@ -247,13 +240,13 @@ namespace ReportSystemManagement
             isEditing = !isEditing;
             if (isEditing)
             {
-                edit_mode_btn.Text = "Turn Off Editing Mode";
-                edit_mode_text.Text = "Edit Mode ON";
+                edit_mode_btn.Text = "Turn On Editing Mode";
+                edit_mode_text.Text = "Edit Mode OFF";
                 setAllReadOnly(true);
             } else
             {
-                edit_mode_btn.Text = "Turn On Editing Mode";
-                edit_mode_text.Text = "Edit Mode OFF";
+                edit_mode_btn.Text = "Turn Off Editing Mode";
+                edit_mode_text.Text = "Edit Mode ON";
                 setAllReadOnly(false);
             }
         }

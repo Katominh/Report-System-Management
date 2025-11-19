@@ -119,13 +119,13 @@ namespace ReportSystemManagement
             Button btnClicked = sender as Button;
             if (btnClicked != null)
             {
-                string recordId = btnClicked.Tag.ToString();
+                String recordId = btnClicked.Tag.ToString();
                 String[] target = findRecordById(recordId);
                 if (target.Length != 0)
                 {
                     Form recordForm = new Record(user, passwd, name, target);
                     recordForm.Show();
-                    this.Hide();
+                    Close();
                 }
             }
 
@@ -178,7 +178,7 @@ namespace ReportSystemManagement
             {
                 Form recordForm = new Record(user, passwd, name, getId());
                 recordForm.Show();
-                this.Hide();
+                Close();
             }
         }
 
@@ -225,9 +225,26 @@ namespace ReportSystemManagement
 
             // Read all records
             String[] all = File.ReadAllLines("..\\..\\report_records.txt").Skip(1).ToArray();
-            String[] ownerOf = new string[] { };
-            
-            return ownerOf;
+            List<string> ownerList = new List<string>();
+
+            foreach (String record in all)
+            {
+                // Filter out student's record
+                String[] fields = record.Split(delimiter, StringSplitOptions.None);
+
+                if (fields.Length >= 2)
+                {
+                    if (String.Equals(name, fields[1])) 
+                    {
+                        ownerList.Add(record);
+                    }
+                }
+                else if (!string.IsNullOrWhiteSpace(record))
+                {
+                    MessageBox.Show($"Skipped malformed record: {record}", "Fetch Name Error");
+                }
+            }
+            return ownerList.ToArray();
         }
   
         // Return a record based on record id
