@@ -232,7 +232,7 @@ namespace ReportSystemManagement
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
                 if (String.Equals(name, fields[1]))
                 {
-                    ownerOf.Append(record);
+                    //ownerOf.Append(record);
                 }
             }
             return ownerOf;

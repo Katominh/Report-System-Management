@@ -2,7 +2,7 @@ import time
 import sys 
 import os
 
-FILENAME = "Report-System-Management/ReportSystemManagement/ReportSystemManagement/report_records.txt"
+FILENAME = "..\\..\\report_records.txt"
 DELIMITER = "|||"
 CHOICE_MODE = int(sys.argv[1])
 MAIN_DATA = sys.argv[2] # Often is the entire line of student's input
@@ -138,7 +138,4 @@ def loadRecords(): # Return everything from file
    
     
 main()
-#addCaseReport()
-deleteRecord("1763586019") 
-#searchRecord(1763586013)
 
