@@ -33,15 +33,15 @@
             this.create_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
             this.records_table = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.edit_btn = new System.Windows.Forms.Button();
+            this.delete_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.edit_btn = new System.Windows.Forms.Button();
-            this.delete_btn = new System.Windows.Forms.Button();
             this.flow_bar_main.SuspendLayout();
             this.records_table.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -120,69 +120,9 @@
             this.records_table.Location = new System.Drawing.Point(152, 16);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.records_table.Size = new System.Drawing.Size(610, 34);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.records_table.Size = new System.Drawing.Size(631, 35);
             this.records_table.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(445, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Winter 2025";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(372, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "fName";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 26);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "example@mytru.ca";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(179, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "T00125 sadasdasdasd";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(112, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Name";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "12345";
             // 
             // flowLayoutPanel1
             // 
@@ -191,9 +131,9 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.edit_btn);
             this.flowLayoutPanel1.Controls.Add(this.delete_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(525, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(544, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 26);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 27);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // edit_btn
@@ -217,6 +157,66 @@
             this.delete_btn.Text = "Delete record";
             this.delete_btn.UseVisualStyleBackColor = true;
             this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(462, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Winter 2025";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(385, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "fName";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(273, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 26);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "example@mytru.ca";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(187, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 26);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "T00125 sadasdasdasd";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(117, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Name";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "12345";
             // 
             // Student_Main_Page
             // 

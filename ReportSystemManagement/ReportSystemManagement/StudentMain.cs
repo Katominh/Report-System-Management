@@ -14,9 +14,8 @@ namespace ReportSystemManagement
 {
     public partial class Student_Main_Page : Form
     {
-        private static String NOTHING = "X", PYTHON_EXE_FILE = @"C:\Program Files\Python310\python.exe";
+        private static String NOTHING = "X", PYTHON_EXE_FILE = "py";
         private String user, passwd, name;
-        private String textFile, mainFile; // These will get instantiated
         private String[] yourRecords;
         private String[] delimiter = { "|||" };
         private ProcessStartInfo start = new ProcessStartInfo();
@@ -38,21 +37,6 @@ namespace ReportSystemManagement
 
         private void loadRecordTable()
         {
-            // Check if file exist
-            String textFilePath = "..\\..\\report_records.txt", mainFilePath = $"..\\..\\main.py";
-            if (!File.Exists(textFilePath))
-            {
-                MessageBox.Show("Student data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!File.Exists(mainFilePath))
-            {
-                MessageBox.Show("Main Python file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            textFile = textFilePath;
-            mainFile = mainFilePath;
-
             // Read the student's record(s)
             yourRecords = fetchStudentByName();
 
@@ -129,20 +113,55 @@ namespace ReportSystemManagement
             }
         }
 
+        // Editing a record
         private void edit_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
+            if (btnClicked != null)
+            {
+                string recordId = btnClicked.Tag.ToString();
+                String[] target = findRecordById(recordId);
+                if (target.Length != 0)
+                {
+                    Form recordForm = new Record(user, passwd, name, target);
+                    recordForm.Show();
+                    this.Hide();
+                }
+            }
 
-            
+
         }
 
+        // Deleting a record
         private void delete_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
+            if (btnClicked != null)
+            {
+                string recordId = btnClicked.Tag.ToString();
+                if (findRecordById(recordId).Length != 0)
+                {
+                    start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {3} {recordId} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
 
-            
+                    start.UseShellExecute = false;
+                    start.CreateNoWindow = true;
+                    start.RedirectStandardOutput = true;
+                    start.RedirectStandardError = true;
+                    using (Process process = Process.Start(start))
+                    {
+                        String output = process.StandardOutput.ReadToEnd();
+                        String error = process.StandardError.ReadToEnd();
+
+                        if (!String.IsNullOrEmpty(error))
+                        {
+                            MessageBox.Show(error);
+                        }
+                    }
+                }
+            }
         }
 
+        // Log out button
         private void logout_btn_Click(object sender, EventArgs e)
         {
             Form login = new Login_Page();
@@ -150,6 +169,7 @@ namespace ReportSystemManagement
             Close();
         }
 
+        // Creating a record
         private void create_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
@@ -165,7 +185,7 @@ namespace ReportSystemManagement
         // This is where I'll get the id from Python
         private String getId()
         {
-            start = new ProcessStartInfo(PYTHON_EXE_FILE, $"{mainFile} {0} {NOTHING} {NOTHING}"); // Option 0 = get the generated ID
+            start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {0} {NOTHING} {NOTHING}"); // Option 0 = get the generated ID
 
             start.UseShellExecute = false;
             start.CreateNoWindow = true;
@@ -188,12 +208,51 @@ namespace ReportSystemManagement
             }
         }
 
+        // Get only the student's records
         private String[] fetchStudentByName()
         {
-            
+            // Check if file exist
+            if (!File.Exists("..\\..\\report_records.txt"))
+            {
+                MessageBox.Show("Student data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new string[] { };
+            }
+            if (!File.Exists($"..\\..\\main.py"))
+            {
+                MessageBox.Show("Main Python file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new string[] { };
+            }
+
+            // Read all records
+            String[] all = File.ReadAllLines("..\\..\\report_records.txt").Skip(1).ToArray();
+            String[] ownerOf = new string[] { };
+            foreach (String record in all)
+            {
+                // Filter out student's record
+                String[] fields = record.Split(delimiter, StringSplitOptions.None);
+                if (String.Equals(name, fields[1]))
+                {
+                    ownerOf.Append(record);
+                }
+            }
+            return ownerOf;
+        }
+  
+        // Return a record based on record id
+        private String[] findRecordById(String id)
+        {
+            // Linear search
+            foreach (String record in yourRecords)
+            {
+                // Compare ids
+                String[] current = record.Split(delimiter, StringSplitOptions.None);
+                if (String.Equals(id, current[0]))
+                {
+                    return current;
+                }
+            }
 
             return new String[] { };
         }
-  
     }
 }

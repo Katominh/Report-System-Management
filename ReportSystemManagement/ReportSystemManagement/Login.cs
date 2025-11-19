@@ -21,7 +21,7 @@ namespace ReportSystemManagement
         private void button1_Click(object sender, EventArgs e)
         {
             var start = new ProcessStartInfo();
-            start.FileName = @"C:\Program Files\Python310\python.exe";
+            start.FileName = "py";
             start.Arguments = $"..\\..\\login.py {username_input_box.Text} {password_input_box.Text}";
 
             start.UseShellExecute = false;

@@ -121,7 +121,7 @@
   <data name="advice_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -746,7 +746,7 @@
   <data name="written_statement_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -1386,7 +1386,7 @@ to aic@tru.ca.
   <data name="warning_image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAM0AAADZCAYAAACD+7TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAH+ZJREFUeF7tnYm/TdX7x7//ya/vt1LmBqVoJLMiUgqhkrFrViHcEBkiGVLImKFQ
+        wAAADsABataJCQAAH+ZJREFUeF7tnYm/TdX7x7//ya/vt1LmBqVoJLMiUgqhkrFrViHcEBkiGVLImKFQ
         CalIxopEojJnqIhCJd9vw/69PtvrWXedZ9179l5773PuPns/z+v1fvXSs84+9+x9PmevvdYz/Ovy/7vM
         EQTBP//i/0MQhOyIaATBEhGNIFgiohEES0Q0gmCJiEYQLBHRCIIlIhpBsEREIwiWiGgEwRIRjSBYIqIR
         BEtENIJgiYimnKlydUWnzu13OK1b3e90bN/e6fTIo07Xzp2dJ7p1d3oVFTlF3Xs43Tp3cR5/9DHnkQ4d
@@ -1528,7 +1528,7 @@ to aic@tru.ca.
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA3IAAAAOCAYAAABq3y7GAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAJVJREFUeF7t2rEJgDAURVG3FNzXbBHJEEkdO0ErK/HBOXCbv8GDv0wAAACiLM8D
+        wAAADsABataJCQAAAJVJREFUeF7t2rEJgDAURVG3FNzXbBHJEEkdO0ErK/HBOXCbv8GDv0wAAACiLM8D
         AAAA/2bIAQAAhDHkAAAAwhhyAAAAYQw5AACAMIYcAABAGEMOAAAgzDXkxhiz7EWSJEmS9GG99/tKe+Ea
         cq21ua2rJEmSJOnDjlrvK+0Fr5UAAABhDDkAAIAwhhwAAEAYQw4AACDMCWMeVCfxUKSgAAAAAElFTkSu
         QmCC
@@ -1537,7 +1537,7 @@ to aic@tru.ca.
   <data name="tru_image_page1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAb0AAAClCAYAAADI3CMGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAOOZJREFUeF7tnYfXFEXat9//5HvfDe6uCQUxY8CMATGimBOYA2DAiGBERREDKAoq
+        wAAADsABataJCQAAOOZJREFUeF7tnYfXFEXat9//5HvfDe6uCQUxY8CMATGimBOYA2DAiGBERREDKAoq
         giLmBIpgwsSqgDmhICqKoq6rbuzvXL2n2HrurqoO0z0zPXNf5/yOu0xVz8wzM/3rrrrD/0SKoiiK0iX8
         j/wHRVEURelU1PQURVGUrkFNT1EUReka1PQURVGUrkFNT1EURekofvnll+jnn3+W/xyjpqcoiqJ0FNtu
         tXX0x9/9Xv5zjJqeoiiK0lF0pelxe/vdd99FKz//PProw4+ipUuWRK+8/HL0/HPPRQvmL4jmz3smmvf0
@@ -1786,7 +1786,7 @@ to aic@tru.ca.
   <data name="no_btn_page2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -2411,7 +2411,7 @@ to aic@tru.ca.
   <data name="yes_btn_page2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -3046,7 +3046,7 @@ the Chairperson of the Academic Integrity Committee and the Director of Student 
   <data name="dean_no_input.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -3671,7 +3671,7 @@ the Chairperson of the Academic Integrity Committee and the Director of Student 
   <data name="dean_yes_input.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -4296,7 +4296,7 @@ the Chairperson of the Academic Integrity Committee and the Director of Student 
   <data name="chair_no_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+
@@ -4921,7 +4921,7 @@ the Chairperson of the Academic Integrity Committee and the Director of Student 
   <data name="chair_yes_btn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
+        wwAADsMBx2+oZAAAkStJREFUeF7s/QWcJOd97/vrf++5h+Gec3Ju4CQnjE5iO07iGGLHjh07sWOQQQZZ
         bMsgi5mZLGZmZmZpUYsz013NzF3MTL3zf/3aVZPe3tldaeOV2uPvvF5vjyztTvf0VNdnnqeqntpnH3zg
         Ax/08f8ji4uLS84+++z/K/XII4/836nFxcX/e9WqVf8mNTc39/+QQqHwb0m9Xv93q1at+vcbNmz4D2Ru
         bu4/siz7HxmG+U+FQuE/r1+//r9UKpX/Uq/X/+vc3Nx/y2Qy/y/J5XL/vVgs/o/Nmzf/z3K5/D8XFhb+

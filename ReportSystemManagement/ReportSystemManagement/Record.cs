@@ -13,8 +13,8 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
-        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false;
-        private static String NOTHING = "X", PYTHON_EXE_FILE = @"C:\Program Files\Python310\python.exe", MAIN_FILE = $"..\\..\\main.py";
+        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing = false;
+        private static String NOTHING = "X", PYTHON_EXE_FILE = "py", MAIN_FILE = $"..\\..\\main.py";
         private static String delimiter = "|||";
         private String username, password, name, id;
         private String[] data, newData;
@@ -57,8 +57,9 @@ namespace ReportSystemManagement
             }
 
             String result = "Test|||result";// String.Join(delimiter, newData);
+            MessageBox.Show(String.Join(delimiter, newData));
             var start = new ProcessStartInfo();
-            start.FileName = @"C:\Program Files\Python310\python.exe";
+            start.FileName = "py";
             if (data.Length == 0) // If no previous data, it's a new record
             {
                 start.Arguments = $"..\\..\\main.py {1} {result} {NOTHING}"; // Choice mode 1 -> addRecord
@@ -106,77 +107,100 @@ namespace ReportSystemManagement
         private void written_statement_btn_Click(object sender, EventArgs e)
         {
             // Toggle button state
-            isWrittentStatementChecked = !isWrittentStatementChecked;
-            if (isWrittentStatementChecked)
+            if (isEditing)
             {
-                written_statement_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
-            }
-            else
-            {
-                written_statement_btn.BackgroundImage = Properties.Resources.unchecked_image;
+                isWrittentStatementChecked = !isWrittentStatementChecked;
+                if (isWrittentStatementChecked)
+                {
+                    written_statement_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
+                }
+                else
+                {
+                    written_statement_btn.BackgroundImage = Properties.Resources.unchecked_image;
+                }
             }
         }
 
         private void advice_btn_Click(object sender, EventArgs e)
         {
             // Toggle button state
-            isAdvicedChecked = !isAdvicedChecked;
-            if (isAdvicedChecked)
+            if (isEditing)
             {
-                advice_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
-            }
-            else
-            {
-                advice_btn.BackgroundImage = Properties.Resources.unchecked_image;
+                isAdvicedChecked = !isAdvicedChecked;
+                if (isAdvicedChecked)
+                {
+                    advice_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
+                }
+                else
+                {
+                    advice_btn.BackgroundImage = Properties.Resources.unchecked_image;
+                }
             }
         }
 
         private void yes_btn_page2_Click(object sender, EventArgs e)
         {
-            isYesNoPage2Checked = true;
-            yes_btn_page2.BackgroundImage = Properties.Resources.checked_image;
-            no_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
+            if (isEditing)
+            {
+                isYesNoPage2Checked = true;
+                yes_btn_page2.BackgroundImage = Properties.Resources.checked_image;
+                no_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
+            }
         }
 
         private void no_btn_page2_Click(object sender, EventArgs e)
         {
-            isYesNoPage2Checked = false;
-            no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
-            yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
+            if (isEditing)
+            {
+                isYesNoPage2Checked = false;
+                no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
+                yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
+            }
         }
 
         private void chair_yes_btn_Click(object sender, EventArgs e)
         {
-            isChairChecked = true;
-            chair_yes_btn.BackgroundImage = Properties.Resources.checked_image;
-            chair_no_btn.BackgroundImage = Properties.Resources.unchecked_image;
+            if (isEditing)
+            {
+                isChairChecked = true;
+                chair_yes_btn.BackgroundImage = Properties.Resources.checked_image;
+                chair_no_btn.BackgroundImage = Properties.Resources.unchecked_image;
+            }
         }
 
         private void chair_no_btn_Click(object sender, EventArgs e)
         {
-            isChairChecked = false;
-            chair_no_btn.BackgroundImage = Properties.Resources.checked_image;
-            chair_yes_btn.BackgroundImage = Properties.Resources.unchecked_image;
+            if (isEditing)
+            {
+                isChairChecked = false;
+                chair_no_btn.BackgroundImage = Properties.Resources.checked_image;
+                chair_yes_btn.BackgroundImage = Properties.Resources.unchecked_image;
+            }
         }
 
         private void dean_yes_input_Click(object sender, EventArgs e)
         {
-            isDeanChecked = true;
-            dean_yes_input.BackgroundImage = Properties.Resources.checked_image;
-            dean_no_input.BackgroundImage = Properties.Resources.unchecked_image;
+            if (isEditing)
+            {
+                isDeanChecked = true;
+                dean_yes_input.BackgroundImage = Properties.Resources.checked_image;
+                dean_no_input.BackgroundImage = Properties.Resources.unchecked_image;
+            }
         }
 
         private void dean_no_input_Click(object sender, EventArgs e)
         {
-            isDeanChecked = false;
-            dean_no_input.BackgroundImage = Properties.Resources.checked_image;
-            dean_yes_input.BackgroundImage = Properties.Resources.unchecked_image;
+            if (isEditing)
+            {
+                isDeanChecked = false;
+                dean_no_input.BackgroundImage = Properties.Resources.checked_image;
+                dean_yes_input.BackgroundImage = Properties.Resources.unchecked_image;
+            }
         }
 
         // Pre-filling text inputs
         private void loadText()
         {
-            // The commented out lines are for check boxes (need to be implemented)
             student_name_input.Text = data[1];
             student_number_input.Text = data[2];
             student_email_input.Text = data[3];
@@ -215,7 +239,24 @@ namespace ReportSystemManagement
             fac_comment_page4_input.Text = data[36];
             student_comment_page5_input.Text = data[37];
         }
-        
+
+        // Toggle edit Mode Button
+        private void edit_mode_btn_Click(object sender, EventArgs e)
+        {
+            isEditing = !isEditing;
+            if (isEditing)
+            {
+                edit_mode_btn.Text = "Turn Off Editing Mode";
+                edit_mode_text.Text = "Edit Mode ON";
+                setAllReadOnly(true);
+            } else
+            {
+                edit_mode_btn.Text = "Turn On Editing Mode";
+                edit_mode_text.Text = "Edit Mode OFF";
+                setAllReadOnly(false);
+            }
+        }
+
         // Log out button
         private void logout_btn_Click(object sender, EventArgs e)
         {
@@ -458,6 +499,42 @@ namespace ReportSystemManagement
                 }
             }
             return "";
+        }
+
+        private void setAllReadOnly(bool state)
+        {
+            student_name_input.ReadOnly = state;
+            student_number_input.ReadOnly = state;
+            student_email_input.ReadOnly = state;
+            fac_name_input.ReadOnly = state;
+            date_input.ReadOnly = state;
+            course_input.ReadOnly = state;
+            ass_exam_input.ReadOnly = state;
+            department_input.ReadOnly = state;
+            term_sem_input.ReadOnly = state;
+            desc_violation_input.ReadOnly = state;
+            sign_fac_mem_input.ReadOnly = state;
+            sign_fac_name_input.ReadOnly = state;
+            sign_fac_date_input.ReadOnly = state;
+            declare_input.ReadOnly = state;
+            tru_input_page2.ReadOnly = state;
+            sign_student_input.ReadOnly = state;
+            date_student_input.ReadOnly = state;
+            sign_fac_input.ReadOnly = state;
+            name_fac_input.ReadOnly = state;
+            date_fac_input_page2.ReadOnly = state;
+            chair_check_no_input.ReadOnly = state;
+            chair_comment_input.ReadOnly = state;
+            sign_chair_input.ReadOnly = state;
+            name_chair_input.ReadOnly = state;
+            date_chair_input.ReadOnly = state;
+            dean_check_no_input.ReadOnly = state;
+            dean_comment_input.ReadOnly = state;
+            sign_dean_input.ReadOnly = state;
+            name_dean_input.ReadOnly = state;
+            date_dean_input.ReadOnly = state;
+            fac_comment_page4_input.ReadOnly = state;
+            student_comment_page5_input.ReadOnly = state;
         }
     }
 }
