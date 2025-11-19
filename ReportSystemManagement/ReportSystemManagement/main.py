@@ -59,7 +59,7 @@ def main():
 # Generate a unique ID based on current time
 def getId():
     CURRENT_RECORD_ID = str(int(time.time()))
-    print(CURRENT_RECORD_ID)
+    print(CURRENT_RECORD_ID, end="")
 
 # Add a new case report to the file
 def addCaseReport():

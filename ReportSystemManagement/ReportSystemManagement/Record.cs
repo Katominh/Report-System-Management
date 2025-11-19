@@ -62,7 +62,7 @@ namespace ReportSystemManagement
             start.FileName = "py";
             if (data.Length == 0) // If no previous data, it's a new record
             {
-                start.Arguments = $"..\\..\\main.py {1} \"{result}\" {NOTHING}"; // Choice mode 1 -> addRecord
+                start.Arguments = $"..\\..\\main.py {1} \"{result}\" {NOTHING}"; // Choice mode 1 -> addRecord (Or saveRecord)
             } else
             {
                 start.Arguments = $"..\\..\\main.py {4} \"{result}\" {changedIndices}"; // Choice mode 4 -> saveRecord
