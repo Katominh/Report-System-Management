@@ -16,8 +16,8 @@ namespace ReportSystemManagement
         public Loading(String username, String password, String name)
         {
             InitializeComponent();
-            user = username;
-            passwd = password;
+            this.user = username;
+            this.passwd = password;
             this.name = name;
         }
 
@@ -26,16 +26,18 @@ namespace ReportSystemManagement
 
             progressBar1.Value = 0;
 
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 100; i+=3)
             {
                 progressBar1.Value = i;
-                await Task.Delay(20);
+                await Task.Delay(1);
             }
 
             // Move progress to 100%
             progressBar1.Value = 100;
 
-            if (String.Equals(user, "Admin"))
+            MessageBox.Show(user);
+
+            if (String.Equals(user.Substring(0,5), "admin"))
             {
                 //MessageBox.Show("You are logged in as ADMIN", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form mainForm = new Admin_Main_Page(user, passwd, name);
@@ -43,15 +45,14 @@ namespace ReportSystemManagement
                 this.Hide();
             }
 
-            else if (String.Equals(user, "Student"))
+            else if (String.Equals(user.Substring(0, 7), "student"))
             {
                 //MessageBox.Show("You are logged in as STUDENT", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form mainForm = new Student_Main_Page(user, passwd, name);
                 mainForm.Show();
                 this.Hide();
             }
-
-            this.Hide();
+            
             
         }
     }
