@@ -14,7 +14,7 @@ namespace ReportSystemManagement
 {
     public partial class Admin_Main_Page : Form
     {
-        private String user, passwd, name;
+        private String user, passwd, userID;
         private String file;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
@@ -23,13 +23,13 @@ namespace ReportSystemManagement
         // ###################################################################################
         // Constructors
         // ###################################################################################
-        public Admin_Main_Page(String username, String password, String name)
+        public Admin_Main_Page(String username, String password, String userID)
         {
             InitializeComponent();
             user = username;
             passwd = password;
-            this.name = name;
-            hi_username.Text = "Hi " + name + "!";
+            this.userID = userID;
+            hi_username.Text = "Hi Faculty Member!";
             loadRecordTable();
         }
 
@@ -48,7 +48,7 @@ namespace ReportSystemManagement
                 String[] target = findStudent(recordId);
                 if (target.Length !=0)
                 {
-                    Form recordForm = new Record(user, passwd, name, target);
+                    Form recordForm = new Record(user, passwd, userID, target);
                     recordForm.Show();
                     Close();
                 }
@@ -84,7 +84,7 @@ namespace ReportSystemManagement
                             MessageBox.Show(error);
                         }
 
-                        Form mainForm = new Loading(user, passwd, name);
+                        Form mainForm = new Loading(user, passwd, userID);
                         mainForm.Show();
                         Close();
                     }
@@ -94,19 +94,6 @@ namespace ReportSystemManagement
             loadRecordTable();
         }
 
-        // Change name Button
-        private void chg_name_btn_Click(object sender, EventArgs e)
-        {
-            new ChangeYourName(this, name).ShowDialog();
-        }
-
-        // Go together with change name button | Updating name for admin
-        public void UpdateData(string newName)
-        {
-            Form loadForm = new Loading(user, passwd, newName);
-            loadForm.Show();
-            Close();
-        }
 
         // Logout Button
         private void logout_btn_Click(object sender, EventArgs e)
@@ -133,6 +120,7 @@ namespace ReportSystemManagement
             // Read all records
             String[] all = File.ReadAllLines(filePath);
             allRecords = all.Skip(1).ToArray(); // Minus header
+            
 
             // Redraw table layout
             records_table.Controls.Clear();
@@ -167,41 +155,38 @@ namespace ReportSystemManagement
             foreach (String record in allRecords)
             {
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
-                if (fields.Length == 38)
+                colIndex = 0;
+
+                // Fill each data in a record
+                foreach (int i in displayVals)
                 {
-                    colIndex = 0;
+                    Label label = new Label();
+                    label.Text = fields[i];
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.Dock = DockStyle.Fill;
 
-                    // Fill each data in a record
-                    foreach (int i in displayVals)
-                    {
-                        Label label = new Label();
-                        label.Text = fields[i];
-                        label.TextAlign = ContentAlignment.MiddleCenter;
-                        label.Dock = DockStyle.Fill;
-
-                        records_table.Controls.Add(label, colIndex, rowIndex);
-                        colIndex++;
-                    }
-
-                    // Delete + edit btn
-                    FlowLayoutPanel buttonPanel = new FlowLayoutPanel();
-                    buttonPanel.AutoSize = true;
-                    buttonPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                    buttonPanel.Anchor = AnchorStyles.Top;
-
-                    Button editBtn = new Button(), delBtn = new Button();
-                    editBtn.Text = "Edit record";
-                    editBtn.Tag = fields[0].Trim(); // Associate by ID
-                    editBtn.Click += edit_btn_Click;
-
-                    delBtn.Text = "Delete record";
-                    delBtn.Tag = fields[0].Trim();
-                    delBtn.Click += delete_btn_Click;
-
-                    buttonPanel.Controls.Add(editBtn);
-                    buttonPanel.Controls.Add(delBtn);
-                    records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
+                    records_table.Controls.Add(label, colIndex, rowIndex);
+                    colIndex++;
                 }
+
+                // Delete + edit btn
+                FlowLayoutPanel buttonPanel = new FlowLayoutPanel();
+                buttonPanel.AutoSize = true;
+                buttonPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                buttonPanel.Anchor = AnchorStyles.Top;
+
+                Button editBtn = new Button(), delBtn = new Button();
+                editBtn.Text = "Edit record";
+                editBtn.Tag = fields[0].Trim(); // Associate by ID
+                editBtn.Click += edit_btn_Click;
+
+                delBtn.Text = "Delete record";
+                delBtn.Tag = fields[0].Trim();
+                delBtn.Click += delete_btn_Click;
+
+                buttonPanel.Controls.Add(editBtn);
+                buttonPanel.Controls.Add(delBtn);
+                records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
                 rowIndex++;
             }
         }

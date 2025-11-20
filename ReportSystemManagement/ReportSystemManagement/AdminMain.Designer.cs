@@ -43,7 +43,6 @@
             this.edit_btn = new System.Windows.Forms.Button();
             this.delete_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chg_name_btn = new System.Windows.Forms.Button();
             this.side_bar_main.SuspendLayout();
             this.flow_bar_main.SuspendLayout();
             this.records_table.SuspendLayout();
@@ -66,7 +65,6 @@
             this.flow_bar_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flow_bar_main.Controls.Add(this.hi_username);
-            this.flow_bar_main.Controls.Add(this.chg_name_btn);
             this.flow_bar_main.Controls.Add(this.logout_btn);
             this.flow_bar_main.Location = new System.Drawing.Point(3, 16);
             this.flow_bar_main.Name = "flow_bar_main";
@@ -87,7 +85,7 @@
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 92);
+            this.logout_btn.Location = new System.Drawing.Point(3, 29);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 50);
             this.logout_btn.TabIndex = 0;
@@ -120,15 +118,15 @@
             this.records_table.Location = new System.Drawing.Point(3, 3);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.records_table.Size = new System.Drawing.Size(714, 27);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.records_table.Size = new System.Drawing.Size(707, 28);
             this.records_table.TabIndex = 4;
             // 
             // student_time
             // 
             this.student_time.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_time.AutoSize = true;
-            this.student_time.Location = new System.Drawing.Point(523, 7);
+            this.student_time.Location = new System.Drawing.Point(518, 7);
             this.student_time.Name = "student_time";
             this.student_time.Size = new System.Drawing.Size(65, 13);
             this.student_time.TabIndex = 5;
@@ -138,7 +136,7 @@
             // 
             this.fac_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fac_name.AutoSize = true;
-            this.fac_name.Location = new System.Drawing.Point(436, 7);
+            this.fac_name.Location = new System.Drawing.Point(431, 7);
             this.fac_name.Name = "fac_name";
             this.fac_name.Size = new System.Drawing.Size(38, 13);
             this.fac_name.TabIndex = 4;
@@ -148,9 +146,9 @@
             // 
             this.student_email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_email.AutoSize = true;
-            this.student_email.Location = new System.Drawing.Point(308, 1);
+            this.student_email.Location = new System.Drawing.Point(305, 1);
             this.student_email.Name = "student_email";
-            this.student_email.Size = new System.Drawing.Size(91, 25);
+            this.student_email.Size = new System.Drawing.Size(91, 26);
             this.student_email.TabIndex = 3;
             this.student_email.Text = "example@mytru.ca";
             // 
@@ -158,7 +156,7 @@
             // 
             this.student_num.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_num.AutoSize = true;
-            this.student_num.Location = new System.Drawing.Point(231, 7);
+            this.student_num.Location = new System.Drawing.Point(228, 7);
             this.student_num.Name = "student_num";
             this.student_num.Size = new System.Drawing.Size(44, 13);
             this.student_num.TabIndex = 2;
@@ -168,7 +166,7 @@
             // 
             this.student_name.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.student_name.AutoSize = true;
-            this.student_name.Location = new System.Drawing.Point(134, 7);
+            this.student_name.Location = new System.Drawing.Point(133, 7);
             this.student_name.Name = "student_name";
             this.student_name.Size = new System.Drawing.Size(35, 13);
             this.student_name.TabIndex = 1;
@@ -191,9 +189,9 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.edit_btn);
             this.flowLayoutPanel1.Controls.Add(this.delete_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(619, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(613, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 19);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 20);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // edit_btn
@@ -229,19 +227,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(728, 435);
             this.panel1.TabIndex = 5;
-            // 
-            // chg_name_btn
-            // 
-            this.chg_name_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chg_name_btn.Location = new System.Drawing.Point(3, 36);
-            this.chg_name_btn.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.chg_name_btn.Name = "chg_name_btn";
-            this.chg_name_btn.Size = new System.Drawing.Size(137, 50);
-            this.chg_name_btn.TabIndex = 3;
-            this.chg_name_btn.Text = "Change Your Name";
-            this.chg_name_btn.UseVisualStyleBackColor = true;
-            this.chg_name_btn.Click += new System.EventHandler(this.chg_name_btn_Click);
             // 
             // Admin_Main_Page
             // 
@@ -282,6 +267,5 @@
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button chg_name_btn;
     }
 }

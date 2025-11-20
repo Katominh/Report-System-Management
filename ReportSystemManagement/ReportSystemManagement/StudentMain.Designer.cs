@@ -31,7 +31,6 @@
             this.flow_bar_main = new System.Windows.Forms.FlowLayoutPanel();
             this.hi_username = new System.Windows.Forms.Label();
             this.create_btn = new System.Windows.Forms.Button();
-            this.chg_name_btn = new System.Windows.Forms.Button();
             this.logout_btn = new System.Windows.Forms.Button();
             this.records_table = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,7 +56,6 @@
             this.flow_bar_main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flow_bar_main.Controls.Add(this.hi_username);
             this.flow_bar_main.Controls.Add(this.create_btn);
-            this.flow_bar_main.Controls.Add(this.chg_name_btn);
             this.flow_bar_main.Controls.Add(this.logout_btn);
             this.flow_bar_main.Location = new System.Drawing.Point(3, 10);
             this.flow_bar_main.Name = "flow_bar_main";
@@ -87,23 +85,11 @@
             this.create_btn.UseVisualStyleBackColor = true;
             this.create_btn.Click += new System.EventHandler(this.create_btn_Click);
             // 
-            // chg_name_btn
-            // 
-            this.chg_name_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chg_name_btn.Location = new System.Drawing.Point(3, 92);
-            this.chg_name_btn.Name = "chg_name_btn";
-            this.chg_name_btn.Size = new System.Drawing.Size(137, 50);
-            this.chg_name_btn.TabIndex = 3;
-            this.chg_name_btn.Text = "Change Your Name";
-            this.chg_name_btn.UseVisualStyleBackColor = true;
-            this.chg_name_btn.Click += new System.EventHandler(this.chg_name_btn_Click);
-            // 
             // logout_btn
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 148);
+            this.logout_btn.Location = new System.Drawing.Point(3, 92);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 50);
             this.logout_btn.TabIndex = 0;
@@ -136,8 +122,8 @@
             this.records_table.Location = new System.Drawing.Point(3, 3);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.records_table.Size = new System.Drawing.Size(707, 37);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.records_table.Size = new System.Drawing.Size(700, 38);
             this.records_table.TabIndex = 8;
             // 
             // flowLayoutPanel1
@@ -147,9 +133,9 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.edit_btn);
             this.flowLayoutPanel1.Controls.Add(this.delete_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(613, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(606, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 29);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 30);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // edit_btn
@@ -178,7 +164,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(518, 12);
+            this.label1.Location = new System.Drawing.Point(512, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 5;
@@ -188,7 +174,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(431, 12);
+            this.label2.Location = new System.Drawing.Point(427, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -198,7 +184,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(305, 5);
+            this.label3.Location = new System.Drawing.Point(301, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 26);
             this.label3.TabIndex = 3;
@@ -208,7 +194,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(213, 5);
+            this.label4.Location = new System.Drawing.Point(210, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 26);
             this.label4.TabIndex = 2;
@@ -218,7 +204,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(133, 12);
+            this.label5.Location = new System.Drawing.Point(131, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 1;
@@ -228,7 +214,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 12);
+            this.label6.Location = new System.Drawing.Point(31, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 0;
@@ -283,6 +269,5 @@
         private System.Windows.Forms.Button edit_btn;
         private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button chg_name_btn;
     }
 }

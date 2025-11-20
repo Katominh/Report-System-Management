@@ -15,7 +15,7 @@ namespace ReportSystemManagement
     public partial class Student_Main_Page : Form
     {
         private static String NOTHING = "X", PYTHON_EXE_FILE = "py";
-        private String user, passwd, name;
+        private String user, passwd, userID;
         private String[] yourRecords;
         private String[] delimiter = { "|||" };
         private ProcessStartInfo start = new ProcessStartInfo();
@@ -23,13 +23,13 @@ namespace ReportSystemManagement
         // ###################################################################################
         // Constructor
         // ###################################################################################
-        public Student_Main_Page(String username, String password, String name)
+        public Student_Main_Page(String username, String password, String userID)
         {
             InitializeComponent();
             user = username;
             passwd = password;
-            this.name = name;
-            hi_username.Text = "Hi " + name + "!";
+            this.userID = userID;
+            hi_username.Text = "Hi TRU Student!";
             loadRecordTable();
         }
 
@@ -47,7 +47,7 @@ namespace ReportSystemManagement
                 String[] target = findRecordById(recordId);
                 if (target.Length != 0)
                 {
-                    Form recordForm = new Record(user, passwd, name, target);
+                    Form recordForm = new Record(user, passwd, userID, target);
                     recordForm.Show();
                     Close();
                 }
@@ -81,7 +81,7 @@ namespace ReportSystemManagement
                             MessageBox.Show(error);
                         }
 
-                        Form loadForm = new Loading(user, passwd, name);
+                        Form loadForm = new Loading(user, passwd, userID);
                         loadForm.Show();
                         Close();
                     }
@@ -100,24 +100,10 @@ namespace ReportSystemManagement
 
             if (btnClicked != null)
             {
-                Form recordForm = new Record(user, passwd, name, getId());
+                Form recordForm = new Record(user, passwd, userID, getId());
                 recordForm.Show();
                 Close();
             }
-        }
-
-        // Change name button
-        private void chg_name_btn_Click(object sender, EventArgs e)
-        {
-            new ChangeYourName(this, name).ShowDialog();
-        }
-
-        // Go together with change name button | Updating name for user
-        public void UpdateData(string newName)
-        {
-            Form loadForm = new Loading(user, passwd, newName);
-            loadForm.Show();
-            Close();
         }
 
         // Log out button
@@ -134,7 +120,7 @@ namespace ReportSystemManagement
         private void loadRecordTable()
         {
             // Read the student's record(s)
-            yourRecords = fetchStudentByName();
+            yourRecords = fetchStudentByID();
 
             // Redraw table layout
             records_table.Controls.Clear();
@@ -169,7 +155,8 @@ namespace ReportSystemManagement
             foreach (String record in yourRecords)
             {
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
-                if (String.Equals(fields[1], name))
+                int last = fields.Length - 1;
+                if (String.Equals(fields[last], userID))
                 {
                     colIndex = 0;
 
@@ -236,7 +223,7 @@ namespace ReportSystemManagement
         }
 
         // Get only the student's records
-        private String[] fetchStudentByName()
+        private String[] fetchStudentByID()
         {
             // Check if file exist
             if (!File.Exists("..\\..\\report_records.txt"))
@@ -258,10 +245,11 @@ namespace ReportSystemManagement
             {
                 // Filter out student's record
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
+                int last = fields.Length - 1;
 
                 if (fields.Length >= 2)
                 {
-                    if (String.Equals(name, fields[1])) 
+                    if (String.Equals(userID, fields[last])) 
                     {
                         ownerList.Add(record);
                     }

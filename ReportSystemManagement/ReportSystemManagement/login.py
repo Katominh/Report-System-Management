@@ -17,16 +17,16 @@ def readLoginAccount():
 
 def checkAdmin():
     global isValid
-    u, p, n = admin
+    u, p, id = admin
     if u == usr and p == passwd:
-        print("Admin" + n, end="")
+        print("Admin" + id, end="")
         isValid = True
 
 def checkStudent():
     global isValid
-    for u, p, n in students:
+    for u, p, id in students:
         if u == usr and p == passwd:
-            print("Student" + n, end="")
+            print("Student" + id, end="")
             isValid = True
 
 # Prevent crashing if input less than 5 letter long
