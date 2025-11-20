@@ -753,7 +753,7 @@
             this.panel16.Controls.Add(this.department_input);
             this.panel16.Controls.Add(this.department_label);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(362, 4);
+            this.panel16.Location = new System.Drawing.Point(361, 4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(635, 72);
             this.panel16.TabIndex = 47;
@@ -785,7 +785,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(4, 4);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(351, 72);
+            this.panel17.Size = new System.Drawing.Size(350, 72);
             this.panel17.TabIndex = 47;
             // 
             // ass_exam_input
@@ -1491,7 +1491,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(512, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(506, 84);
+            this.panel9.Size = new System.Drawing.Size(505, 84);
             this.panel9.TabIndex = 63;
             // 
             // name_fac_input
@@ -2379,7 +2379,7 @@
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel26.Location = new System.Drawing.Point(512, 3);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(506, 84);
+            this.panel26.Size = new System.Drawing.Size(505, 84);
             this.panel26.TabIndex = 63;
             // 
             // name_dean_input
@@ -2882,7 +2882,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel21.Location = new System.Drawing.Point(512, 3);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(506, 84);
+            this.panel21.Size = new System.Drawing.Size(505, 84);
             this.panel21.TabIndex = 63;
             // 
             // name_chair_input

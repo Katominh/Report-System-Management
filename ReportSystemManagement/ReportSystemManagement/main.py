@@ -10,7 +10,7 @@ EXTRA_DATA = sys.argv[3]
 CURRENT_RECORD_ID = "0"
 RECORDS = []
 SHORT_KEYS = [ # for dictionary keys
-    "StudentName", "StudentNumber", "StudentEmail", "FacultyName", "ReportDate",
+    "RecordId", "StudentName", "StudentNumber", "StudentEmail", "FacultyName", "ReportDate",
     "CourseInfo", "AssignmentInfo", "Department", "Term",
     "ViolationDesc",
     "StudentSupportNotice",
@@ -24,7 +24,7 @@ SHORT_KEYS = [ # for dictionary keys
     "ChairSignature", "ChairName", "ChairDate",
     "StudentAgreement2", "StudentDisagreeReason2", "StudentComments2",
     "DeanSignature", "DeanName", "DeanDate",
-    "FacComments", "StudentComments"
+    "FacComments", "StudentComments", "userId"
 ]
 
 # ===============================

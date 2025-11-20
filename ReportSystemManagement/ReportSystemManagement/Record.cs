@@ -16,7 +16,7 @@ namespace ReportSystemManagement
         private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing;
         private static String NOTHING = "X", PYTHON_EXE_FILE = "py", MAIN_FILE = $"..\\..\\main.py";
         private static String delimiter = "|||";
-        private String username, password, name, id;
+        private String username, password, userID, recordID;
         private String[] data, newData;
 
         // ###################################################################################
@@ -24,12 +24,12 @@ namespace ReportSystemManagement
         // ###################################################################################
 
         // For creating records
-        public Record(String usr, String passwd, String name, String id)
+        public Record(String usr, String passwd, String userID, String recordID)
         {
             InitializeComponent();
             username = usr;
             password = passwd;
-            this.name = name;
+            this.userID = userID;
             data = new String[] { };
             newData = new String[] { };
             this.id = id;
@@ -41,16 +41,15 @@ namespace ReportSystemManagement
         }
 
         // For editing records
-        public Record(String usr, String passwd, String name, String[] data)
+        public Record(String usr, String passwd, String userID, String[] data)
         {
             InitializeComponent();
             username = usr;
             password = passwd;
-            this.name = name;
+            this.userID = userID;
             this.data = data;
             newData = new String[] { };
-            id = data[0];
-            loadName();
+            recordID = data[0];
             loadText();
             isEditing = false;
             setAllReadOnly(true);
@@ -145,13 +144,13 @@ namespace ReportSystemManagement
             {
                 if (String.Equals(username, "admin"))
                 {
-                    Form aMain = new Admin_Main_Page(username, password, name);
+                    Form aMain = new Admin_Main_Page(username, password, userID);
                     aMain.Show();
                     Close();
                 }
                 else
                 {
-                    Form sMain = new Student_Main_Page(username, password, name);
+                    Form sMain = new Student_Main_Page(username, password, userID);
                     sMain.Show();
                     Close();
                 }
@@ -314,21 +313,12 @@ namespace ReportSystemManagement
             student_comment_page5_input.Text = data[37];
         }
 
-        
-
-        private void loadName()
-        {
-            declare_input.Text = name;
-            student_name_input.Text = name;
-            declare_input.ReadOnly = true;
-            student_name_input.ReadOnly = true;
-        }
-
+       
         private String[] getInputs()
         {
             String[] inputs = {
-                id,
-                name,
+                recordID,
+                student_name_input.Text,
                 student_number_input.Text,
                 student_email_input.Text,
                 fac_name_input.Text,
@@ -343,7 +333,7 @@ namespace ReportSystemManagement
                 sign_fac_mem_input.Text,
                 sign_fac_name_input.Text,
                 sign_fac_date_input.Text,
-                name,
+                declare_input.Text,
                 updateCheckState("get", 17),
                 tru_input_page2.Text,
                 sign_student_input.Text,
@@ -364,7 +354,8 @@ namespace ReportSystemManagement
                 name_dean_input.Text,
                 date_dean_input.Text,
                 fac_comment_page4_input.Text,
-                student_comment_page5_input.Text
+                student_comment_page5_input.Text,
+                userID
             };
             return inputs;
         }
