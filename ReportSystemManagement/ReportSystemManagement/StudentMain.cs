@@ -158,6 +158,10 @@ namespace ReportSystemManagement
                         {
                             MessageBox.Show(error);
                         }
+
+                        Form mainForm = new Loading(user, passwd, name);
+                        mainForm.Show();
+                        this.Hide();
                     }
                 }
             }
@@ -228,7 +232,15 @@ namespace ReportSystemManagement
             // Read all records
             String[] all = File.ReadAllLines("..\\..\\report_records.txt").Skip(1).ToArray();
             String[] ownerOf = new string[] { };
-            
+            foreach (String record in all)
+            {
+                // Filter out student's record
+                String[] fields = record.Split(delimiter, StringSplitOptions.None);
+                if (String.Equals(name, fields[1]))
+                {
+                    //ownerOf.Append(record);
+                }
+            }
             return ownerOf;
         }
   
