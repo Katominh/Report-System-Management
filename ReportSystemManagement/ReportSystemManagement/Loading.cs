@@ -20,8 +20,8 @@ namespace ReportSystemManagement
         public Loading(String username, String password, String name)
         {
             InitializeComponent();
-            this.user = username;
-            this.passwd = password;
+            user = username;
+            passwd = password;
             this.name = name;
         }
 

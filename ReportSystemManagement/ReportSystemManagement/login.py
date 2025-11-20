@@ -2,22 +2,45 @@ import sys
 
 usr = sys.argv[1]
 passwd = sys.argv[2]
-admin = {"adminKelvin Hart": "1234567890"}
-students = {
-    "student1John Ward": "1234567890",
-    "student2Nathan Gale": "1234567890",
-    "student3Garcia": "1234567890"
-}
+admin = []
+students = []
+isValid = False
+DELIMITER = "|||"
+
+def readLoginAccount():
+    global admin, students
+    with open("..\\..\\login_accounts.txt", "r") as f:
+        admin = f.readline().strip().split(DELIMITER)
+
+        for i in range(3):
+            students.append(f.readline().strip().split(DELIMITER))
 
 def checkAdmin():
-    for n, p in admin.items():
-        if n[:5] == usr and p == passwd:
-            print("Admin" + n[5:], end="")
+    global isValid
+    u, p, n = admin
+    if u == usr and p == passwd:
+        print("Admin" + n, end="")
+        isValid = True
 
 def checkStudent():
-    for n, p in students.items():
-        if n[:8] == usr and p == passwd:
-            print("Student" + n[8:], end="")
+    global isValid
+    for u, p, n in students:
+        if u == usr and p == passwd:
+            print("Student" + n, end="")
+            isValid = True
 
+# Prevent crashing if input less than 5 letter long
+def checkInputLength():
+    if len(usr) < 5:
+        validate()
+
+def validate():
+    if not isValid:
+        print("Invalid", end="")
+        return
+
+checkInputLength()
+readLoginAccount()
 checkAdmin()
 checkStudent()
+validate()

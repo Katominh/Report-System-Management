@@ -94,6 +94,20 @@ namespace ReportSystemManagement
             loadRecordTable();
         }
 
+        // Change name Button
+        private void chg_name_btn_Click(object sender, EventArgs e)
+        {
+            new ChangeYourName(this, name).ShowDialog();
+        }
+
+        // Go together with change name button | Updating name for admin
+        public void UpdateData(string newName)
+        {
+            Form loadForm = new Loading(user, passwd, newName);
+            loadForm.Show();
+            Close();
+        }
+
         // Logout Button
         private void logout_btn_Click(object sender, EventArgs e)
         {

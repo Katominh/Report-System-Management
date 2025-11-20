@@ -26,6 +26,15 @@ namespace ReportSystemManagement
         // ###################################################################################
         private void button1_Click(object sender, EventArgs e)
         {
+            // Check if inputs empty
+            String username = username_input_box.Text, password = password_input_box.Text;
+            if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please fill out all the fields.", "Incomplete Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            // Start Python
             var start = new ProcessStartInfo();
             start.FileName = "py";
             start.Arguments = $"..\\..\\login.py {username_input_box.Text} {password_input_box.Text}";

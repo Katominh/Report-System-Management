@@ -81,21 +81,17 @@ namespace ReportSystemManagement
                             MessageBox.Show(error);
                         }
 
-                        Form mainForm = new Loading(user, passwd, name);
-                        mainForm.Show();
+                        Form loadForm = new Loading(user, passwd, name);
+                        loadForm.Show();
                         Close();
                     }
                 }
             }
         }
 
-        // Log out button
-        private void logout_btn_Click(object sender, EventArgs e)
-        {
-            Form login = new Login_Page();
-            login.Show();
-            Close();
-        }
+        // ###################################################################################
+        // Side Bar Button Functions
+        // ###################################################################################
 
         // Create Button
         private void create_btn_Click(object sender, EventArgs e)
@@ -108,6 +104,28 @@ namespace ReportSystemManagement
                 recordForm.Show();
                 Close();
             }
+        }
+
+        // Change name button
+        private void chg_name_btn_Click(object sender, EventArgs e)
+        {
+            new ChangeYourName(this, name).ShowDialog();
+        }
+
+        // Go together with change name button | Updating name for user
+        public void UpdateData(string newName)
+        {
+            Form loadForm = new Loading(user, passwd, newName);
+            loadForm.Show();
+            Close();
+        }
+
+        // Log out button
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Form login = new Login_Page();
+            login.Show();
+            Close();
         }
 
         // ###################################################################################
@@ -272,6 +290,9 @@ namespace ReportSystemManagement
 
             return new String[] { };
         }
+
+        // Get new name data from "Change Your Name" Form
+        public string RecievedNewName { get; set; }
 
         // ###################################################################################
         // Window Closing Function

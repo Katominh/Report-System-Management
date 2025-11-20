@@ -12,11 +12,17 @@ namespace ReportSystemManagement
 {
     public partial class TestAccount : Form
     {
+        // ###################################################################################
+        // Constructor
+        // ###################################################################################
         public TestAccount()
         {
             InitializeComponent();
         }
 
+        // ###################################################################################
+        // Close Button Function
+        // ###################################################################################
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
