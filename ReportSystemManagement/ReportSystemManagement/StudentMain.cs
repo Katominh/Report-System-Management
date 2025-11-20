@@ -139,9 +139,11 @@ namespace ReportSystemManagement
             if (btnClicked != null)
             {
                 string recordId = btnClicked.Tag.ToString();
+                String[] target = findRecordById(recordId);
+                String result = String.Join("|||", target);
                 if (findRecordById(recordId).Length != 0)
                 {
-                    start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {3} {recordId} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
+                    start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
 
                     start.UseShellExecute = false;
                     start.CreateNoWindow = true;
