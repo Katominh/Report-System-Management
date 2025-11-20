@@ -93,5 +93,10 @@ namespace ReportSystemManagement
                 }
             }
         }
+
+        private String[] getNames()
+        {
+            return new string[] { };
+        }
     }
 }
