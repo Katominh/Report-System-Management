@@ -87,7 +87,7 @@
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 85);
+            this.logout_btn.Location = new System.Drawing.Point(3, 92);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 50);
             this.logout_btn.TabIndex = 0;
@@ -234,7 +234,8 @@
             // 
             this.chg_name_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chg_name_btn.Location = new System.Drawing.Point(3, 29);
+            this.chg_name_btn.Location = new System.Drawing.Point(3, 36);
+            this.chg_name_btn.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.chg_name_btn.Name = "chg_name_btn";
             this.chg_name_btn.Size = new System.Drawing.Size(137, 50);
             this.chg_name_btn.TabIndex = 3;

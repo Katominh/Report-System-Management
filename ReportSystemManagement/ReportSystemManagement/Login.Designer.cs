@@ -94,6 +94,7 @@
             this.password_input_box.Name = "password_input_box";
             this.password_input_box.Size = new System.Drawing.Size(348, 20);
             this.password_input_box.TabIndex = 7;
+            this.password_input_box.UseSystemPasswordChar = true;
             // 
             // username_input_box
             // 
