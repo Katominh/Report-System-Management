@@ -78,6 +78,10 @@ namespace ReportSystemManagement
                         String output = process.StandardOutput.ReadToEnd();
                         String error = process.StandardError.ReadToEnd();
                         MessageBox.Show(output);
+                        if (!String.IsNullOrEmpty(error))
+                        {
+                            MessageBox.Show(error);
+                        }
                     }
                 }
             }
