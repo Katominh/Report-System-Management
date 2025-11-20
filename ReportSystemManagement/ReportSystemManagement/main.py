@@ -24,7 +24,7 @@ SHORT_KEYS = [ # for dictionary keys
     "ChairSignature", "ChairName", "ChairDate",
     "StudentAgreement2", "StudentDisagreeReason2", "StudentComments2",
     "DeanSignature", "DeanName", "DeanDate",
-    "FacComments", "StudentComments"
+    "FacComments", "StudentComments", "userId"
 ]
 
 # ===============================
