@@ -498,6 +498,7 @@ namespace ReportSystemManagement
 
         private void setAllReadOnly(bool state)
         {
+            student_name_input.ReadOnly = state;
             student_number_input.ReadOnly = state;
             student_email_input.ReadOnly = state;
             fac_name_input.ReadOnly = state;
@@ -510,6 +511,7 @@ namespace ReportSystemManagement
             sign_fac_mem_input.ReadOnly = state;
             sign_fac_name_input.ReadOnly = state;
             sign_fac_date_input.ReadOnly = state;
+            declare_input.ReadOnly = state;
             tru_input_page2.ReadOnly = state;
             sign_student_input.ReadOnly = state;
             date_student_input.ReadOnly = state;
