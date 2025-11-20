@@ -13,11 +13,17 @@ namespace ReportSystemManagement
 {
     public partial class Login_Page : Form
     {
+        // ###################################################################################
+        // Constructor
+        // ###################################################################################
         public Login_Page()
         {
             InitializeComponent();
         }
 
+        // ###################################################################################
+        // Main Function
+        // ###################################################################################
         private void button1_Click(object sender, EventArgs e)
         {
             var start = new ProcessStartInfo();
@@ -38,18 +44,16 @@ namespace ReportSystemManagement
                 {
                     if (String.Equals(output.Substring(0, 5), "Admin"))
                     {
-                        //MessageBox.Show("You are logged in as ADMIN", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Form mainForm = new Admin_Main_Page(username_input_box.Text, password_input_box.Text, output.Substring(5));
                         mainForm.Show();
-                        this.Hide();
+                        Close();
                     }
 
                     else if (String.Equals(output.Substring(0, 7), "Student"))
                     {
-                        //MessageBox.Show("You are logged in as STUDENT", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Form mainForm = new Student_Main_Page(username_input_box.Text, password_input_box.Text, output.Substring(7));
                         mainForm.Show();
-                        this.Hide();
+                        Close();
                     }
 
                     else
@@ -65,9 +69,22 @@ namespace ReportSystemManagement
             }
         }
 
+        // For opening test account form
         private void test_btn_Click(object sender, EventArgs e)
         {
             new TestAccount().Show();
+        }
+
+        // ###################################################################################
+        // Window Closing Function
+        // ###################################################################################
+        private void Login_Page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Check if there are any other open forms left.
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
     }
 }

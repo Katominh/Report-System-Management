@@ -120,8 +120,8 @@
             this.records_table.Location = new System.Drawing.Point(152, 16);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.records_table.Size = new System.Drawing.Size(631, 35);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.records_table.Size = new System.Drawing.Size(630, 36);
             this.records_table.TabIndex = 8;
             // 
             // flowLayoutPanel1
@@ -131,9 +131,9 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.edit_btn);
             this.flowLayoutPanel1.Controls.Add(this.delete_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(544, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(541, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 27);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 28);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // edit_btn
@@ -162,7 +162,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(462, 11);
+            this.label1.Location = new System.Drawing.Point(457, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 5;
@@ -172,7 +172,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(385, 11);
+            this.label2.Location = new System.Drawing.Point(382, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -182,7 +182,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(273, 4);
+            this.label3.Location = new System.Drawing.Point(271, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 26);
             this.label3.TabIndex = 3;
@@ -192,7 +192,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 4);
+            this.label4.Location = new System.Drawing.Point(185, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 26);
             this.label4.TabIndex = 2;
@@ -202,7 +202,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 11);
+            this.label5.Location = new System.Drawing.Point(116, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 1;
@@ -227,7 +227,7 @@
             this.Controls.Add(this.flow_bar_main);
             this.Name = "Student_Main_Page";
             this.Text = "StudentMain";
-            this.Load += new System.EventHandler(this.StudentMain_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Student_Main_Page_FormClosed);
             this.flow_bar_main.ResumeLayout(false);
             this.flow_bar_main.PerformLayout();
             this.records_table.ResumeLayout(false);

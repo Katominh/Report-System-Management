@@ -136,6 +136,7 @@
             this.Controls.Add(this.username_input_box);
             this.Name = "Login_Page";
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_Page_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.TRU_Title)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

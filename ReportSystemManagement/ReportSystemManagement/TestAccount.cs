@@ -21,5 +21,17 @@ namespace ReportSystemManagement
         {
             Close();
         }
+
+        // ###################################################################################
+        // Window Closing Function
+        // ###################################################################################
+        private void TestAccount_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Check if there are any other open forms left.
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

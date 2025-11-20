@@ -13,6 +13,10 @@ namespace ReportSystemManagement
     public partial class Loading : Form
     {
         private String user, passwd, name;
+
+        // ###################################################################################
+        // Constructor
+        // ###################################################################################
         public Loading(String username, String password, String name)
         {
             InitializeComponent();
@@ -21,12 +25,14 @@ namespace ReportSystemManagement
             this.name = name;
         }
 
+        // ###################################################################################
+        // Async Loading Bar Function
+        // ###################################################################################
         private async void Loading_Load(object sender, EventArgs e)
         {
 
             progressBar1.Value = 0;
-
-            for (int i = 0; i <= 100; i+=3)
+            for (int i = 0; i <= 100; i+=5)
             {
                 progressBar1.Value = i;
                 await Task.Delay(1);
@@ -35,22 +41,19 @@ namespace ReportSystemManagement
             // Move progress to 100%
             progressBar1.Value = 100;
 
-            MessageBox.Show(user);
-
+            // Go back to Main Page
             if (String.Equals(user.Substring(0,5), "admin"))
             {
-                //MessageBox.Show("You are logged in as ADMIN", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form mainForm = new Admin_Main_Page(user, passwd, name);
                 mainForm.Show();
-                this.Hide();
+                Close();
             }
 
             else if (String.Equals(user.Substring(0, 7), "student"))
             {
-                //MessageBox.Show("You are logged in as STUDENT", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form mainForm = new Student_Main_Page(user, passwd, name);
                 mainForm.Show();
-                this.Hide();
+                Close();
             }
             
             

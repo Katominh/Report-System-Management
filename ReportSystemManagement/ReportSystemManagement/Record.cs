@@ -19,6 +19,10 @@ namespace ReportSystemManagement
         private String username, password, name, id;
         private String[] data, newData;
 
+        // ###################################################################################
+        // Constructors
+        // ###################################################################################
+
         // For creating records
         public Record(String usr, String passwd, String name, String id)
         {
@@ -48,6 +52,10 @@ namespace ReportSystemManagement
             loadText();
             setAllReadOnly(isEditing);
         }
+
+        // ###################################################################################
+        // Side Bar Button Function
+        // ###################################################################################
 
         // Save button listener
         private void save_btn_Click(object sender, EventArgs e)
@@ -80,22 +88,76 @@ namespace ReportSystemManagement
             }
         }
 
-        private void chair_check_no_input_MouseWheel(object sender, MouseEventArgs e)
+        // Toggle edit Mode Button
+        private void edit_mode_btn_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Focused)
+            isEditing = !isEditing;
+            if (isEditing)
             {
-                if (e.Delta > 0)
+                edit_mode_btn.Text = "Turn On Editing Mode";
+                edit_mode_btn.BackColor = Color.White;
+                edit_mode_text.Text = "Edit Mode OFF";
+                edit_mode_text.ForeColor = Color.Red;
+                setAllReadOnly(true);
+            }
+            else
+            {
+                edit_mode_btn.Text = "Turn Off Editing Mode";
+                edit_mode_btn.BackColor = Color.AliceBlue;
+                edit_mode_text.Text = "Edit Mode ON";
+                edit_mode_text.ForeColor = Color.Green;
+                setAllReadOnly(false);
+            }
+        }
+
+        // Log out button
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Do you want to log out? You may lose your unsaved changes if you have any.",
+                "Log Out Confirmation",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.OK)
+            {
+                Form login = new Login_Page();
+                login.Show();
+                Close();
+            }
+        }
+
+        // Go back to Main button
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Do you want to go back? You may lose your unsaved changes if you have any.",
+                "Go Back Confirmation",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.OK)
+            {
+                if (String.Equals(username, "admin"))
                 {
-                    this.AutoScrollPosition = new Point(0, this.AutoScrollPosition.Y - 20);
+                    Form aMain = new Admin_Main_Page(username, password, name);
+                    aMain.Show();
+                    Close();
                 }
                 else
                 {
-                    this.AutoScrollPosition = new Point(0, this.AutoScrollPosition.Y + 20);
+                    Form sMain = new Student_Main_Page(username, password, name);
+                    sMain.Show();
+                    Close();
                 }
             }
         }
 
-        
+        // ###################################################################################
+        // "Checkbox" Button Logic for the Record
+        // ###################################################################################
 
         // For all the checking buttons in the records
         private void written_statement_btn_Click(object sender, EventArgs e)
@@ -192,6 +254,11 @@ namespace ReportSystemManagement
             }
         }
 
+
+        // ###################################################################################
+        // Supporting Functions
+        // ###################################################################################
+
         // Pre-filling text inputs
         private void loadText()
         {
@@ -234,66 +301,7 @@ namespace ReportSystemManagement
             student_comment_page5_input.Text = data[37];
         }
 
-        // Toggle edit Mode Button
-        private void edit_mode_btn_Click(object sender, EventArgs e)
-        {
-            isEditing = !isEditing;
-            if (isEditing)
-            {
-                edit_mode_btn.Text = "Turn On Editing Mode";
-                edit_mode_text.Text = "Edit Mode OFF";
-                setAllReadOnly(true);
-            } else
-            {
-                edit_mode_btn.Text = "Turn Off Editing Mode";
-                edit_mode_text.Text = "Edit Mode ON";
-                setAllReadOnly(false);
-            }
-        }
-
-        // Log out button
-        private void logout_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-                "Do you want to log out? You may lose your unsaved changes.",
-                "Log Out Confirmation",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Warning
-            );
-
-            if (result == DialogResult.OK)
-            {
-                Form login = new Login_Page();
-                login.Show();
-                Close();
-            }
-        }
-
-        // Go back to Main button
-        private void back_btn_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show(
-                "Do you want to go back? You may lose your unsaved changes.",
-                "Go Back Confirmation",
-                MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Warning
-            );
-
-            if (result == DialogResult.OK)
-            {
-                if (String.Equals(username, "admin"))
-                {
-                    Form aMain = new Admin_Main_Page(username, password, name);
-                    aMain.Show();
-                    Close();
-                } else
-                {
-                    Form sMain = new Student_Main_Page(username, password, name);
-                    sMain.Show();
-                    Close();
-                }
-            }
-        }
+        
 
         private void loadName()
         {
@@ -355,8 +363,7 @@ namespace ReportSystemManagement
                 List<int> changedIndices = new List<int>();
                 Dictionary<int, String> inputMap = new Dictionary<int, String>();
 
-                // Populate dict
-                inputMap.Add(1, student_name_input.Text); //
+                inputMap.Add(1, student_name_input.Text); 
                 inputMap.Add(2, student_number_input.Text);
                 inputMap.Add(3, student_email_input.Text);
                 inputMap.Add(4, fac_name_input.Text);
@@ -366,26 +373,26 @@ namespace ReportSystemManagement
                 inputMap.Add(8, department_input.Text);
                 inputMap.Add(9, term_sem_input.Text);
                 inputMap.Add(10, desc_violation_input.Text);
-                inputMap.Add(11, updateCheckState("get", 11)); //
-                inputMap.Add(12, updateCheckState("get", 12)); //
+                inputMap.Add(11, updateCheckState("get", 11));
+                inputMap.Add(12, updateCheckState("get", 12));
                 inputMap.Add(13, sign_fac_mem_input.Text);
                 inputMap.Add(14, sign_fac_name_input.Text);
                 inputMap.Add(15, sign_fac_date_input.Text);
                 inputMap.Add(16, declare_input.Text);
-                inputMap.Add(17, updateCheckState("get", 17)); //
+                inputMap.Add(17, updateCheckState("get", 17)); 
                 inputMap.Add(18, tru_input_page2.Text);
                 inputMap.Add(19, sign_student_input.Text);
                 inputMap.Add(20, date_student_input.Text);
                 inputMap.Add(21, sign_fac_input.Text);
                 inputMap.Add(22, name_fac_input.Text);
                 inputMap.Add(23, date_fac_input_page2.Text);
-                inputMap.Add(24, updateCheckState("get", 24)); //
+                inputMap.Add(24, updateCheckState("get", 24)); 
                 inputMap.Add(25, chair_check_no_input.Text);
                 inputMap.Add(26, chair_comment_input.Text);
                 inputMap.Add(27, sign_chair_input.Text);
                 inputMap.Add(28, name_chair_input.Text);
                 inputMap.Add(29, date_chair_input.Text);
-                inputMap.Add(30, updateCheckState("get", 30)); //
+                inputMap.Add(30, updateCheckState("get", 30)); 
                 inputMap.Add(31, dean_check_no_input.Text);
                 inputMap.Add(32, dean_comment_input.Text);
                 inputMap.Add(33, sign_dean_input.Text);
@@ -533,6 +540,18 @@ namespace ReportSystemManagement
             date_dean_input.ReadOnly = state;
             fac_comment_page4_input.ReadOnly = state;
             student_comment_page5_input.ReadOnly = state;
+        }
+
+        // ###################################################################################
+        // Window Closing Function
+        // ###################################################################################
+        private void Record_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Check if there are any other open forms left.
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
     }
 }

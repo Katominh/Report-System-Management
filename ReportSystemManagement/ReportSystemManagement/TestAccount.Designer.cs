@@ -182,6 +182,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TestAccount";
             this.Text = "Sample Account";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TestAccount_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

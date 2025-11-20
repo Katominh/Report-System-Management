@@ -20,6 +20,9 @@ namespace ReportSystemManagement
         private String[] delimiter = { "|||" };
         private ProcessStartInfo start = new ProcessStartInfo();
 
+        // ###################################################################################
+        // Constructor
+        // ###################################################################################
         public Student_Main_Page(String username, String password, String name)
         {
             InitializeComponent();
@@ -30,11 +33,86 @@ namespace ReportSystemManagement
             loadRecordTable();
         }
 
-        private void StudentMain_Load(object sender, EventArgs e)
-        {
+        // ###################################################################################
+        // Key Button Functions
+        // ###################################################################################
 
+        // Edit Button
+        private void edit_btn_Click(object sender, EventArgs e)
+        {
+            Button btnClicked = sender as Button;
+            if (btnClicked != null)
+            {
+                String recordId = btnClicked.Tag.ToString();
+                String[] target = findRecordById(recordId);
+                if (target.Length != 0)
+                {
+                    Form recordForm = new Record(user, passwd, name, target);
+                    recordForm.Show();
+                    Close();
+                }
+            }
         }
 
+        // Delete Button
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            Button btnClicked = sender as Button;
+            if (btnClicked != null)
+            {
+                string recordId = btnClicked.Tag.ToString();
+                String[] target = findRecordById(recordId);
+                String result = String.Join("|||", target);
+                if (findRecordById(recordId).Length != 0)
+                {
+                    start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
+
+                    start.UseShellExecute = false;
+                    start.CreateNoWindow = true;
+                    start.RedirectStandardOutput = true;
+                    start.RedirectStandardError = true;
+                    using (Process process = Process.Start(start))
+                    {
+                        String output = process.StandardOutput.ReadToEnd();
+                        String error = process.StandardError.ReadToEnd();
+
+                        if (!String.IsNullOrEmpty(error))
+                        {
+                            MessageBox.Show(error);
+                        }
+
+                        Form mainForm = new Loading(user, passwd, name);
+                        mainForm.Show();
+                        Close();
+                    }
+                }
+            }
+        }
+
+        // Log out button
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Form login = new Login_Page();
+            login.Show();
+            Close();
+        }
+
+        // Create Button
+        private void create_btn_Click(object sender, EventArgs e)
+        {
+            Button btnClicked = sender as Button;
+
+            if (btnClicked != null)
+            {
+                Form recordForm = new Record(user, passwd, name, getId());
+                recordForm.Show();
+                Close();
+            }
+        }
+
+        // ###################################################################################
+        // Supporting Functions
+        // ###################################################################################
         private void loadRecordTable()
         {
             // Read the student's record(s)
@@ -110,81 +188,6 @@ namespace ReportSystemManagement
                     records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
                 }
                 rowIndex++;
-            }
-        }
-
-        // Editing a record
-        private void edit_btn_Click(object sender, EventArgs e)
-        {
-            Button btnClicked = sender as Button;
-            if (btnClicked != null)
-            {
-                String recordId = btnClicked.Tag.ToString();
-                String[] target = findRecordById(recordId);
-                if (target.Length != 0)
-                {
-                    Form recordForm = new Record(user, passwd, name, target);
-                    recordForm.Show();
-                    Close();
-                }
-            }
-
-
-        }
-
-        // Deleting a record
-        private void delete_btn_Click(object sender, EventArgs e)
-        {
-            Button btnClicked = sender as Button;
-            if (btnClicked != null)
-            {
-                string recordId = btnClicked.Tag.ToString();
-                String[] target = findRecordById(recordId);
-                String result = String.Join("|||", target);
-                if (findRecordById(recordId).Length != 0)
-                {
-                    start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
-
-                    start.UseShellExecute = false;
-                    start.CreateNoWindow = true;
-                    start.RedirectStandardOutput = true;
-                    start.RedirectStandardError = true;
-                    using (Process process = Process.Start(start))
-                    {
-                        String output = process.StandardOutput.ReadToEnd();
-                        String error = process.StandardError.ReadToEnd();
-
-                        if (!String.IsNullOrEmpty(error))
-                        {
-                            MessageBox.Show(error);
-                        }
-
-                        Form mainForm = new Loading(user, passwd, name);
-                        mainForm.Show();
-                        this.Hide();
-                    }
-                }
-            }
-        }
-
-        // Log out button
-        private void logout_btn_Click(object sender, EventArgs e)
-        {
-            Form login = new Login_Page();
-            login.Show();
-            Close();
-        }
-
-        // Creating a record
-        private void create_btn_Click(object sender, EventArgs e)
-        {
-            Button btnClicked = sender as Button;
-
-            if (btnClicked != null)
-            {
-                Form recordForm = new Record(user, passwd, name, getId());
-                recordForm.Show();
-                Close();
             }
         }
 
@@ -268,6 +271,18 @@ namespace ReportSystemManagement
             }
 
             return new String[] { };
+        }
+
+        // ###################################################################################
+        // Window Closing Function
+        // ###################################################################################
+        private void Student_Main_Page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Check if there are any other open forms left.
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -20,6 +20,9 @@ namespace ReportSystemManagement
         private String[] delimiter = { "|||" };
         private static String NOTHING = "X";
 
+        // ###################################################################################
+        // Constructors
+        // ###################################################################################
         public Admin_Main_Page(String username, String password, String name)
         {
             InitializeComponent();
@@ -30,12 +33,11 @@ namespace ReportSystemManagement
             loadRecordTable();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
+        // ###################################################################################
+        // Key Button Functions
+        // ###################################################################################
 
-        }
-
-
+        // Edit button
         private void edit_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
@@ -48,11 +50,12 @@ namespace ReportSystemManagement
                 {
                     Form recordForm = new Record(user, passwd, name, target);
                     recordForm.Show();
-                    this.Hide();
+                    Close();
                 }
             }
         }
 
+        // Delete button
         private void delete_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
@@ -66,7 +69,6 @@ namespace ReportSystemManagement
                 if (target.Length != 0)
                 {
 
-                    MessageBox.Show($"Deleting record: {result}");
                     start.FileName = "py";
                     start.Arguments = $"..\\..\\main.py {3} \"{result}\" {NOTHING}";
                     start.UseShellExecute = false;
@@ -77,7 +79,6 @@ namespace ReportSystemManagement
                     {
                         String output = process.StandardOutput.ReadToEnd();
                         String error = process.StandardError.ReadToEnd();
-                        MessageBox.Show(output);
                         if (!String.IsNullOrEmpty(error))
                         {
                             MessageBox.Show(error);
@@ -85,7 +86,7 @@ namespace ReportSystemManagement
 
                         Form mainForm = new Loading(user, passwd, name);
                         mainForm.Show();
-                        this.Hide();
+                        Close();
                     }
                 }
             }
@@ -93,6 +94,17 @@ namespace ReportSystemManagement
             loadRecordTable();
         }
 
+        // Logout Button
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            Form login = new Login_Page();
+            login.Show();
+            Close();
+        }
+
+        // ###################################################################################
+        // Supporting Functions
+        // ###################################################################################
         private void loadRecordTable()
         {
             // Check if file exist
@@ -180,14 +192,6 @@ namespace ReportSystemManagement
             }
         }
 
-
-        private void logout_btn_Click(object sender, EventArgs e)
-        {
-            Form login = new Login_Page();
-            login.Show();
-            Close();
-        }
-
         private String[] findStudent(String id)
         {
             // Linear search
@@ -202,6 +206,18 @@ namespace ReportSystemManagement
             }
 
             return new String[]{ };
+        }
+
+        // ###################################################################################
+        // Window Closing Function
+        // ###################################################################################
+        private void Admin_Main_Page_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Check if there are any other open forms left.
+            if (Application.OpenForms.Count == 0)
+            {
+                Application.Exit();
+            }
         }
     }
 }
