@@ -13,7 +13,7 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
-        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing = true;
+        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing;
         private static String NOTHING = "X", PYTHON_EXE_FILE = "py", MAIN_FILE = $"..\\..\\main.py";
         private static String delimiter = "|||";
         private String username, password, userID, recordID;
@@ -32,9 +32,12 @@ namespace ReportSystemManagement
             this.userID = userID;
             data = new String[] { };
             newData = new String[] { };
-            this.recordID = recordID;
-            isEditing = false;
-            setAllReadOnly(isEditing);
+            this.id = id;
+            loadName();
+            isEditing = true;
+            edit_mode_text.Text = "Edit Mode ON";
+            edit_mode_text.ForeColor = Color.Green;
+            setAllReadOnly(false);
         }
 
         // For editing records
@@ -48,7 +51,8 @@ namespace ReportSystemManagement
             newData = new String[] { };
             recordID = data[0];
             loadText();
-            setAllReadOnly(isEditing);
+            isEditing = false;
+            setAllReadOnly(true);
         }
 
         // ###################################################################################
@@ -92,19 +96,19 @@ namespace ReportSystemManagement
             isEditing = !isEditing;
             if (isEditing)
             {
-                edit_mode_btn.Text = "Turn On Editing Mode";
-                edit_mode_btn.BackColor = Color.White;
-                edit_mode_text.Text = "Edit Mode OFF";
-                edit_mode_text.ForeColor = Color.Red;
-                setAllReadOnly(true);
-            }
-            else
-            {
                 edit_mode_btn.Text = "Turn Off Editing Mode";
-                edit_mode_btn.BackColor = Color.AliceBlue;
+                edit_mode_btn.BackColor = Color.White;
                 edit_mode_text.Text = "Edit Mode ON";
                 edit_mode_text.ForeColor = Color.Green;
                 setAllReadOnly(false);
+            }
+            else
+            {
+                edit_mode_btn.Text = "Turn On Editing Mode";
+                edit_mode_btn.BackColor = Color.AliceBlue;
+                edit_mode_text.Text = "Edit Mode OFF";
+                edit_mode_text.ForeColor = Color.Red;
+                setAllReadOnly(true);
             }
         }
 
@@ -210,6 +214,16 @@ namespace ReportSystemManagement
                 no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
                 yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
             }
+        }
+
+        private void label100_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void edit_mode_text_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void chair_yes_btn_Click(object sender, EventArgs e)
@@ -530,6 +544,7 @@ namespace ReportSystemManagement
             date_dean_input.ReadOnly = state;
             fac_comment_page4_input.ReadOnly = state;
             student_comment_page5_input.ReadOnly = state;
+
         }
 
         // ###################################################################################
