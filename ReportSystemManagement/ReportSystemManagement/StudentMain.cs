@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -158,6 +158,10 @@ namespace ReportSystemManagement
                         {
                             MessageBox.Show(error);
                         }
+
+                        Form mainForm = new Loading(user, passwd, name);
+                        mainForm.Show();
+                        this.Hide();
                     }
                 }
             }

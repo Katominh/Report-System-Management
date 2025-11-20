@@ -100,8 +100,7 @@ def deleteRecord():
     with open(FILENAME, "w", encoding="utf-8") as f:
         f.write(DELIMITER.join(SHORT_KEYS) + "\n") # Write headers
         for i, record in enumerate(RECORDS):
-            if i != indexLocation:
-                f.write(DELIMITER.join(record) + "\n")
+            f.write(DELIMITER.join(record) + "\n")
     print("Delete Done", end="")
 
 def saveRecord():

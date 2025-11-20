@@ -82,6 +82,10 @@ namespace ReportSystemManagement
                         {
                             MessageBox.Show(error);
                         }
+
+                        Form mainForm = new Loading(user, passwd, name);
+                        mainForm.Show();
+                        this.Hide();
                     }
                 }
             }
