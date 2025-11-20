@@ -4,7 +4,6 @@ StudentName|||StudentNumber|||StudentEmail|||FacultyName|||ReportDate|||CourseIn
 1763586841|||Brian Wong|||100987654|||brian@gmail.com|||Prof. Linda Scott|||2025-10-08|||ECON 1210 - Principles of Microeconomics|||Midterm Exam|||Economics|||Fall 2025|||Used unauthorized notes during exam.|||n|||y|||Prof. Linda Scott|||Prof. Linda Scott|||2025-10-09|||Brian Wong|||y|||T00000002@mytru.ca|||Brian Wong|||2025-10-09|||Prof. Linda Scott|||Prof. Linda Scott|||2025-10-09|||y||||||I take full responsibility.|||Dr. Emily Ford|||Dr. Emily Ford|||2025-10-10|||y|||||||||Dean Alexandra Ruiz|||Alexandra Ruiz|||2025-10-11|||Incident reported promptly during the exam.|||I will not repeat this mistake.
 1763602263|||Nathan Gale||||||||||||||||||||||||||||||n|||n||||||||||||Nathan Gale|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
 1763604638|||John Wart|||asdasd|||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
-1763608199|||John Wart||||||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
-1763608203|||John Wart||||||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
-1763608208|||John Wart||||||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
-1763614845|||John Wart||||||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
+1763675002|||John Wart|||T00724044|||john@mytru.ca|||SK|||2025/11/17|||Comp 2210|||10|||Cs|||Fall|||Used Interner|||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
+1763678342|||John Wart||||||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n||||||||||||||||||n|||||||||||||||||||||
+1763679915|||John Wart||||||||||||||||||||||||||||||n|||n||||||||||||John Wart|||n|||||||||||||||||||||n|||adsdad|||||||||||||||n|||||||||||||||||||||

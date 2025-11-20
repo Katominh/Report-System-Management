@@ -385,6 +385,7 @@
             this.edit_mode_text.TabIndex = 15;
             this.edit_mode_text.Text = "Edit Mode OFF";
             this.edit_mode_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.edit_mode_text.Click += new System.EventHandler(this.edit_mode_text_Click);
             // 
             // edit_mode_btn
             // 
@@ -514,7 +515,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 511F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.tableLayoutPanel2.Controls.Add(this.sign_fac_date_input, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.sign_fac_name_input, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label9, 2, 0);
@@ -535,9 +536,9 @@
             this.sign_fac_date_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.sign_fac_date_input.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sign_fac_date_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sign_fac_date_input.Location = new System.Drawing.Point(872, 40);
+            this.sign_fac_date_input.Location = new System.Drawing.Point(870, 40);
             this.sign_fac_date_input.Name = "sign_fac_date_input";
-            this.sign_fac_date_input.Size = new System.Drawing.Size(506, 31);
+            this.sign_fac_date_input.Size = new System.Drawing.Size(508, 31);
             this.sign_fac_date_input.TabIndex = 37;
             // 
             // sign_fac_name_input
@@ -545,16 +546,16 @@
             this.sign_fac_name_input.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.sign_fac_name_input.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sign_fac_name_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sign_fac_name_input.Location = new System.Drawing.Point(438, 40);
+            this.sign_fac_name_input.Location = new System.Drawing.Point(437, 40);
             this.sign_fac_name_input.Name = "sign_fac_name_input";
-            this.sign_fac_name_input.Size = new System.Drawing.Size(427, 31);
+            this.sign_fac_name_input.Size = new System.Drawing.Size(426, 31);
             this.sign_fac_name_input.TabIndex = 36;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(874, 6);
+            this.label9.Location = new System.Drawing.Point(872, 6);
             this.label9.Margin = new System.Windows.Forms.Padding(5);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(193, 25);
@@ -565,7 +566,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(440, 6);
+            this.label12.Location = new System.Drawing.Point(439, 6);
             this.label12.Margin = new System.Windows.Forms.Padding(5);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(252, 25);
@@ -590,7 +591,7 @@
             this.sign_fac_mem_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sign_fac_mem_input.Location = new System.Drawing.Point(4, 40);
             this.sign_fac_mem_input.Name = "sign_fac_mem_input";
-            this.sign_fac_mem_input.Size = new System.Drawing.Size(427, 31);
+            this.sign_fac_mem_input.Size = new System.Drawing.Size(426, 31);
             this.sign_fac_mem_input.TabIndex = 35;
             // 
             // label5
@@ -705,7 +706,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.76223F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.23777F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 377F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 379F));
             this.tableLayoutPanel1.Controls.Add(this.panel10, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel16, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel17, 0, 0);
@@ -722,9 +723,9 @@
             this.panel10.Controls.Add(this.term_sem_input);
             this.panel10.Controls.Add(this.term_label);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(1006, 4);
+            this.panel10.Location = new System.Drawing.Point(1004, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(372, 72);
+            this.panel10.Size = new System.Drawing.Size(374, 72);
             this.panel10.TabIndex = 46;
             // 
             // term_sem_input
@@ -754,7 +755,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(362, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(637, 72);
+            this.panel16.Size = new System.Drawing.Size(635, 72);
             this.panel16.TabIndex = 47;
             // 
             // department_input
@@ -813,7 +814,7 @@
             this.table1_page1.ColumnCount = 3;
             this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 511F));
+            this.table1_page1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.table1_page1.Controls.Add(this.panel18, 0, 1);
             this.table1_page1.Controls.Add(this.panel11, 1, 1);
             this.table1_page1.Controls.Add(this.panel12, 2, 1);
@@ -837,7 +838,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel18.Location = new System.Drawing.Point(4, 79);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(427, 74);
+            this.panel18.Size = new System.Drawing.Size(426, 74);
             this.panel18.TabIndex = 47;
             // 
             // fac_name_input
@@ -865,9 +866,9 @@
             this.panel11.Controls.Add(this.date_input);
             this.panel11.Controls.Add(this.student_date_label);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(438, 79);
+            this.panel11.Location = new System.Drawing.Point(437, 79);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(427, 74);
+            this.panel11.Size = new System.Drawing.Size(426, 74);
             this.panel11.TabIndex = 47;
             // 
             // date_input
@@ -895,9 +896,9 @@
             this.panel12.Controls.Add(this.course_input);
             this.panel12.Controls.Add(this.student_course_label);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(872, 79);
+            this.panel12.Location = new System.Drawing.Point(870, 79);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(506, 74);
+            this.panel12.Size = new System.Drawing.Size(508, 74);
             this.panel12.TabIndex = 47;
             // 
             // course_input
@@ -925,9 +926,9 @@
             this.panel13.Controls.Add(this.student_email_input);
             this.panel13.Controls.Add(this.student_email_label);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(872, 4);
+            this.panel13.Location = new System.Drawing.Point(870, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(506, 68);
+            this.panel13.Size = new System.Drawing.Size(508, 68);
             this.panel13.TabIndex = 47;
             // 
             // student_email_input
@@ -955,9 +956,9 @@
             this.panel14.Controls.Add(this.student_number_input);
             this.panel14.Controls.Add(this.student_num_label);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(438, 4);
+            this.panel14.Location = new System.Drawing.Point(437, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(427, 68);
+            this.panel14.Size = new System.Drawing.Size(426, 68);
             this.panel14.TabIndex = 47;
             // 
             // student_number_input
@@ -987,7 +988,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(427, 68);
+            this.panel15.Size = new System.Drawing.Size(426, 68);
             this.panel15.TabIndex = 47;
             // 
             // student_name_input
@@ -1412,7 +1413,7 @@
             this.tableLayoutPanel6.ColumnCount = 3;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 359F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
             this.tableLayoutPanel6.Controls.Add(this.panel8, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel7, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.panel9, 1, 0);
@@ -1428,9 +1429,9 @@
             this.panel8.Controls.Add(this.date_fac_input_page2);
             this.panel8.Controls.Add(this.date_fac_input);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(1025, 3);
+            this.panel8.Location = new System.Drawing.Point(1024, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(354, 84);
+            this.panel8.Size = new System.Drawing.Size(355, 84);
             this.panel8.TabIndex = 63;
             // 
             // date_fac_input_page2
@@ -1460,7 +1461,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(504, 84);
+            this.panel7.Size = new System.Drawing.Size(503, 84);
             this.panel7.TabIndex = 62;
             // 
             // sign_fac_input
@@ -1488,7 +1489,7 @@
             this.panel9.Controls.Add(this.name_fac_input);
             this.panel9.Controls.Add(this.label66);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(513, 3);
+            this.panel9.Location = new System.Drawing.Point(512, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(506, 84);
             this.panel9.TabIndex = 63;
@@ -2298,7 +2299,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 359F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
             this.tableLayoutPanel8.Controls.Add(this.panel22, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel25, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.panel26, 1, 0);
@@ -2314,9 +2315,9 @@
             this.panel22.Controls.Add(this.date_dean_input);
             this.panel22.Controls.Add(this.label80);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(1025, 3);
+            this.panel22.Location = new System.Drawing.Point(1024, 3);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(354, 84);
+            this.panel22.Size = new System.Drawing.Size(355, 84);
             this.panel22.TabIndex = 63;
             // 
             // date_dean_input
@@ -2347,7 +2348,7 @@
             this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel25.Location = new System.Drawing.Point(3, 3);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(504, 84);
+            this.panel25.Size = new System.Drawing.Size(503, 84);
             this.panel25.TabIndex = 62;
             // 
             // sign_dean_input
@@ -2376,7 +2377,7 @@
             this.panel26.Controls.Add(this.name_dean_input);
             this.panel26.Controls.Add(this.label103);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(513, 3);
+            this.panel26.Location = new System.Drawing.Point(512, 3);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(506, 84);
             this.panel26.TabIndex = 63;
@@ -2801,7 +2802,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85591F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14409F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 359F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
             this.tableLayoutPanel7.Controls.Add(this.panel19, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel20, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.panel21, 1, 0);
@@ -2817,9 +2818,9 @@
             this.panel19.Controls.Add(this.date_chair_input);
             this.panel19.Controls.Add(this.date_depart_input);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(1025, 3);
+            this.panel19.Location = new System.Drawing.Point(1024, 3);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(354, 84);
+            this.panel19.Size = new System.Drawing.Size(355, 84);
             this.panel19.TabIndex = 63;
             // 
             // date_chair_input
@@ -2850,7 +2851,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(3, 3);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(504, 84);
+            this.panel20.Size = new System.Drawing.Size(503, 84);
             this.panel20.TabIndex = 62;
             // 
             // sign_chair_input
@@ -2879,7 +2880,7 @@
             this.panel21.Controls.Add(this.name_chair_input);
             this.panel21.Controls.Add(this.label97);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(513, 3);
+            this.panel21.Location = new System.Drawing.Point(512, 3);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(506, 84);
             this.panel21.TabIndex = 63;
@@ -3023,6 +3024,7 @@
             this.label100.Size = new System.Drawing.Size(50, 25);
             this.label100.TabIndex = 48;
             this.label100.Text = "Yes";
+            this.label100.Click += new System.EventHandler(this.label100_Click);
             // 
             // chair_no_btn
             // 
