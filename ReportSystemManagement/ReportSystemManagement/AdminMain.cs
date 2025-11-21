@@ -15,7 +15,6 @@ namespace ReportSystemManagement
     public partial class Admin_Main_Page : Form
     {
         private String user, passwd, userID;
-        private String file;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
         private static String NOTHING = "X";
@@ -41,11 +40,9 @@ namespace ReportSystemManagement
         private void edit_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
-
             if (btnClicked != null)
             {
-                string recordId = btnClicked.Tag.ToString();
-                String[] target = findStudent(recordId);
+                String[] target = findRecordById(btnClicked.Tag.ToString());
                 if (target.Length !=0)
                 {
                     Form recordForm = new Record(user, passwd, userID, target);
@@ -59,39 +56,29 @@ namespace ReportSystemManagement
         private void delete_btn_Click(object sender, EventArgs e)
         {
             Button btnClicked = sender as Button;
-
             if (btnClicked != null)
             {
-                string recordId = btnClicked.Tag.ToString();
-                String[] target = findStudent(recordId);
-                String result = String.Join("|||", target);
-                var start = new ProcessStartInfo();
-                if (target.Length != 0)
+                String result = String.Join("|||", findRecordById(btnClicked.Tag.ToString()));
+                if (result.Length != 0)
                 {
+                    var start = new ProcessStartInfo("py", $"..\\..\\main.py {3} \"{result}\" {NOTHING}");
+                    processConfig(start);
 
-                    start.FileName = "py";
-                    start.Arguments = $"..\\..\\main.py {3} \"{result}\" {NOTHING}";
-                    start.UseShellExecute = false;
-                    start.CreateNoWindow = true;
-                    start.RedirectStandardOutput = true;
-                    start.RedirectStandardError = true;
                     using (Process process = Process.Start(start))
                     {
                         String output = process.StandardOutput.ReadToEnd();
                         String error = process.StandardError.ReadToEnd();
                         if (!String.IsNullOrEmpty(error))
-                        {
                             MessageBox.Show(error);
+                        else
+                        {
+                            Form mainForm = new Loading(user, passwd, userID);
+                            mainForm.Show();
+                            Close();
                         }
-
-                        Form mainForm = new Loading(user, passwd, userID);
-                        mainForm.Show();
-                        Close();
                     }
                 }
             }
-
-            loadRecordTable();
         }
 
 
@@ -108,17 +95,8 @@ namespace ReportSystemManagement
         // ###################################################################################
         private void loadRecordTable()
         {
-            // Check if file exist
-            String filePath = "..\\..\\report_records.txt";
-            if (!File.Exists(filePath))
-            {
-                MessageBox.Show("Student data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            file = filePath;
-
             // Read all records
-            String[] all = File.ReadAllLines(filePath);
+            String[] all = File.ReadAllLines("..\\..\\report_records.txt");
             allRecords = all.Skip(1).ToArray(); // Minus header
             
 
@@ -130,9 +108,7 @@ namespace ReportSystemManagement
             // Set new row
             records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F)); // 50px for header
             for (int i = 1; i < allRecords.Length; i++)
-            {
                 records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F)); // 65px for record
-            }
 
             // Fill header row
             int colIndex = 0;
@@ -147,7 +123,6 @@ namespace ReportSystemManagement
                 records_table.Controls.Add(label, colIndex, 0);
                 colIndex++;
             }
-
 
             // Fill each record
             int rowIndex = 1;
@@ -191,7 +166,8 @@ namespace ReportSystemManagement
             }
         }
 
-        private String[] findStudent(String id)
+        // Return a record based on RECORD id
+        private String[] findRecordById(String id)
         {
             // Linear search
             foreach (String record in allRecords)
@@ -199,12 +175,18 @@ namespace ReportSystemManagement
                 // Compare ids
                 String[] current = record.Split(delimiter, StringSplitOptions.None);
                 if (String.Equals(id, current[0]))
-                {
                     return current;
-                }
             }
 
             return new String[]{ };
+        }
+
+        private void processConfig(ProcessStartInfo start)
+        {
+            start.UseShellExecute = false;
+            start.CreateNoWindow = true;
+            start.RedirectStandardOutput = true;
+            start.RedirectStandardError = true;
         }
 
         // ###################################################################################
@@ -214,9 +196,7 @@ namespace ReportSystemManagement
         {
             // Check if there are any other open forms left.
             if (Application.OpenForms.Count == 0)
-            {
                 Application.Exit();
-            }
         }
     }
 }

@@ -59,9 +59,8 @@ namespace ReportSystemManagement
             Button btnClicked = sender as Button;
             if (btnClicked != null)
             {
-                string recordId = btnClicked.Tag.ToString();
-                String[] target = findRecordById(btnClicked.Tag.ToString());
-                String result = String.Join("|||", target);
+                String recordId = btnClicked.Tag.ToString();
+                String result = String.Join("|||", findRecordById(recordId));
                 if (findRecordById(recordId).Length != 0)
                 {
                     start = new ProcessStartInfo("py", $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
@@ -212,7 +211,6 @@ namespace ReportSystemManagement
             {
                 // Filter out student's record
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
-
                 if (fields.Length >= 2)
                 {
                     if (String.Equals(userID, fields[fields.Length - 1])) 

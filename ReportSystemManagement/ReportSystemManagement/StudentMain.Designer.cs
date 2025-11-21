@@ -66,7 +66,8 @@
             // 
             this.hi_username.AutoSize = true;
             this.hi_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hi_username.Location = new System.Drawing.Point(3, 0);
+            this.hi_username.Location = new System.Drawing.Point(3, 10);
+            this.hi_username.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.hi_username.Name = "hi_username";
             this.hi_username.Size = new System.Drawing.Size(101, 26);
             this.hi_username.TabIndex = 2;
@@ -76,8 +77,8 @@
             // 
             this.create_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.create_btn.Location = new System.Drawing.Point(3, 36);
-            this.create_btn.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.create_btn.Location = new System.Drawing.Point(3, 56);
+            this.create_btn.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
             this.create_btn.Name = "create_btn";
             this.create_btn.Size = new System.Drawing.Size(137, 50);
             this.create_btn.TabIndex = 1;
@@ -89,7 +90,7 @@
             // 
             this.logout_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logout_btn.Location = new System.Drawing.Point(3, 92);
+            this.logout_btn.Location = new System.Drawing.Point(3, 112);
             this.logout_btn.Name = "logout_btn";
             this.logout_btn.Size = new System.Drawing.Size(137, 50);
             this.logout_btn.TabIndex = 0;
@@ -122,8 +123,8 @@
             this.records_table.Location = new System.Drawing.Point(3, 3);
             this.records_table.Name = "records_table";
             this.records_table.RowCount = 1;
-            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.records_table.Size = new System.Drawing.Size(700, 38);
+            this.records_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.records_table.Size = new System.Drawing.Size(693, 39);
             this.records_table.TabIndex = 8;
             // 
             // flowLayoutPanel1
@@ -133,9 +134,9 @@
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.edit_btn);
             this.flowLayoutPanel1.Controls.Add(this.delete_btn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(606, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(600, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 30);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(81, 31);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // edit_btn
@@ -164,7 +165,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(512, 12);
+            this.label1.Location = new System.Drawing.Point(507, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 5;
@@ -174,7 +175,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 12);
+            this.label2.Location = new System.Drawing.Point(422, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -184,7 +185,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 6);
+            this.label3.Location = new System.Drawing.Point(298, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 26);
             this.label3.TabIndex = 3;
@@ -194,7 +195,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(210, 6);
+            this.label4.Location = new System.Drawing.Point(208, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 26);
             this.label4.TabIndex = 2;
@@ -204,7 +205,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(131, 12);
+            this.label5.Location = new System.Drawing.Point(130, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 1;
@@ -214,7 +215,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 12);
+            this.label6.Location = new System.Drawing.Point(31, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 0;
