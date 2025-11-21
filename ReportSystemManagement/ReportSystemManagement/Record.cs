@@ -8,12 +8,11 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
-        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing;
         private static String NOTHING = "X";
-        private static String delimiter = "|||";
         private String username, password, userID, recordID;
         private String[] data, newData;
         private Dictionary<int, Control> inputMap = new Dictionary<int, Control>(); // For iteration over text inputs
+        private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing;
 
         // ###################################################################################
         // Constructors
@@ -23,10 +22,10 @@ namespace ReportSystemManagement
         public Record(String usr, String passwd, String userID, String recordID)
         {
             InitializeComponent();
+            fillAllInputReference();
             username = usr;
             password = passwd;
             this.userID = userID;
-            data = new String[] { };
             newData = new String[] { };
             this.recordID = recordID;
 
@@ -40,6 +39,7 @@ namespace ReportSystemManagement
         public Record(String usr, String passwd, String userID, String[] data)
         {
             InitializeComponent();
+            fillAllInputReference();
             username = usr;
             password = passwd;
             this.userID = userID;
@@ -61,7 +61,7 @@ namespace ReportSystemManagement
         {
             // Get new data
             newData = getInputs();
-            String result = String.Join(delimiter, newData);
+            String result = String.Join("|||", newData);
 
             var start = new ProcessStartInfo("py", $"..\\..\\main.py {1} \"{result}\" {NOTHING}"); // Choice mode 1 -> addRecord (Or else saveRecord)
             start.UseShellExecute = false;
@@ -79,7 +79,7 @@ namespace ReportSystemManagement
             }
         }
 
-        // Toggle edit Mode Button
+        // Toggle Edit Mode Button
         private void edit_mode_btn_Click(object sender, EventArgs e)
         {
             isEditing = !isEditing;
@@ -154,88 +154,70 @@ namespace ReportSystemManagement
         // For all the checking buttons in the records
         private void written_statement_btn_Click(object sender, EventArgs e)
         {
-            // Toggle button state
-            if (isEditing)
-            {
-                isWrittentStatementChecked = !isWrittentStatementChecked;
-                if (isWrittentStatementChecked)
-                    written_statement_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
-                else
-                    written_statement_btn.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // Toggle button state + images
+            isWrittentStatementChecked = !isWrittentStatementChecked;
+            if (isWrittentStatementChecked)
+                written_statement_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
+            else
+                written_statement_btn.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void advice_btn_Click(object sender, EventArgs e)
         {
-            // Toggle button state
-            if (isEditing)
-            {
-                isAdvicedChecked = !isAdvicedChecked;
-                if (isAdvicedChecked)
-                    advice_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
-                else
-                    advice_btn.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // Toggle button state + images
+            isAdvicedChecked = !isAdvicedChecked;
+            if (isAdvicedChecked)
+                advice_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
+            else
+                advice_btn.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void yes_btn_page2_Click(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                isYesNoPage2Checked = true;
-                yes_btn_page2.BackgroundImage = Properties.Resources.checked_image;
-                no_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // Yes button state + images
+            isYesNoPage2Checked = true;
+            yes_btn_page2.BackgroundImage = Properties.Resources.checked_image;
+            no_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void no_btn_page2_Click(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                isYesNoPage2Checked = false;
-                no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
-                yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // No button state + images
+            isYesNoPage2Checked = false;
+            no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
+            yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void chair_yes_btn_Click(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                isChairChecked = true;
-                chair_yes_btn.BackgroundImage = Properties.Resources.checked_image;
-                chair_no_btn.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // Yes button state + images
+            isChairChecked = true;
+            chair_yes_btn.BackgroundImage = Properties.Resources.checked_image;
+            chair_no_btn.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void chair_no_btn_Click(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                isChairChecked = false;
-                chair_no_btn.BackgroundImage = Properties.Resources.checked_image;
-                chair_yes_btn.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // No button state + images
+            isChairChecked = false;
+            chair_no_btn.BackgroundImage = Properties.Resources.checked_image;
+            chair_yes_btn.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void dean_yes_input_Click(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                isDeanChecked = true;
-                dean_yes_input.BackgroundImage = Properties.Resources.checked_image;
-                dean_no_input.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // Yes button state + images
+            isDeanChecked = true;
+            dean_yes_input.BackgroundImage = Properties.Resources.checked_image;
+            dean_no_input.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
         private void dean_no_input_Click(object sender, EventArgs e)
         {
-            if (isEditing)
-            {
-                isDeanChecked = false;
-                dean_no_input.BackgroundImage = Properties.Resources.checked_image;
-                dean_yes_input.BackgroundImage = Properties.Resources.unchecked_image;
-            }
+            // No button state + images
+            isDeanChecked = false;
+            dean_no_input.BackgroundImage = Properties.Resources.checked_image;
+            dean_yes_input.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
 
@@ -246,153 +228,49 @@ namespace ReportSystemManagement
         // Pre-filling text inputs
         private void loadText()
         {
-            student_name_input.Text = data[1];
-            student_number_input.Text = data[2];
-            student_email_input.Text = data[3];
-            fac_name_input.Text = data[4];
-            date_input.Text = data[5];
-            course_input.Text = data[6];
-            ass_exam_input.Text = data[7];
-            department_input.Text = data[8];
-            term_sem_input.Text = data[9];
-            desc_violation_input.Text = data[10];
-            updateCheckState(data[11], 11);
-            updateCheckState(data[12], 12);
-            sign_fac_mem_input.Text = data[13];
-            sign_fac_name_input.Text = data[14];
-            sign_fac_date_input.Text = data[15];
-            declare_input.Text = data[16];
-            updateCheckState(data[17], 17);
-            tru_input_page2.Text = data[18];
-            sign_student_input.Text = data[19];
-            date_student_input.Text = data[20];
-            sign_fac_input.Text = data[21];
-            name_fac_input.Text = data[22];
-            date_fac_input_page2.Text = data[23];
-            updateCheckState(data[24], 24);
-            chair_check_no_input.Text = data[25];
-            chair_comment_input.Text = data[26];
-            sign_chair_input.Text = data[27];
-            name_chair_input.Text = data[28];
-            date_chair_input.Text = data[29];
-            updateCheckState(data[30], 30);
-            dean_check_no_input.Text = data[31];
-            dean_comment_input.Text = data[32];
-            sign_dean_input.Text = data[33];
-            name_dean_input.Text = data[34];
-            date_dean_input.Text = data[35];
-            fac_comment_page4_input.Text = data[36];
-            student_comment_page5_input.Text = data[37];
+            foreach (var item in inputMap)
+            {
+                int index = item.Key;
+                Control obj = item.Value;
+
+                if (obj is TextBox textBox)
+                    textBox.Text = data[index];
+
+                else if (obj is RichTextBox richTextBox)
+                    richTextBox.Text = data[index];
+
+                else if (obj is Button button)
+                    updateCheckState(data[index], index);
+            }
         }
 
         // Get user input as list of Strings
         private String[] getInputs()
         {
-            String[] inputs = {
-                recordID,
-                student_name_input.Text,
-                student_number_input.Text,
-                student_email_input.Text,
-                fac_name_input.Text,
-                date_input.Text,
-                course_input.Text,
-                ass_exam_input.Text,
-                department_input.Text,
-                term_sem_input.Text,
-                desc_violation_input.Text,
-                updateCheckState("get", 11),
-                updateCheckState("get", 12),
-                sign_fac_mem_input.Text,
-                sign_fac_name_input.Text,
-                sign_fac_date_input.Text,
-                declare_input.Text,
-                updateCheckState("get", 17),
-                tru_input_page2.Text,
-                sign_student_input.Text,
-                date_student_input.Text,
-                sign_fac_input.Text,
-                name_fac_input.Text,
-                date_fac_input_page2.Text,
-                updateCheckState("get", 24),
-                chair_check_no_input.Text,
-                chair_comment_input.Text,
-                sign_chair_input.Text,
-                name_chair_input.Text,
-                date_chair_input.Text,
-                updateCheckState("get", 30),
-                dean_check_no_input.Text,
-                dean_comment_input.Text,
-                sign_dean_input.Text,
-                name_dean_input.Text,
-                date_dean_input.Text,
-                fac_comment_page4_input.Text,
-                student_comment_page5_input.Text,
-                userID
-            };
-            return inputs;
-        }
+            List<String> inputsList = new List<string>();
+            inputsList.Add(recordID);
 
-        private String GetChangedIndices()
-        {
-            if (data.Length == 38)
+            foreach (var item in inputMap)
             {
-                List<int> changedIndices = new List<int>();
-                Dictionary<int, String> inputMap = new Dictionary<int, String>();
+                int index = item.Key;
+                Control obj = item.Value;
 
-                inputMap.Add(1, student_name_input.Text); 
-                inputMap.Add(2, student_number_input.Text);
-                inputMap.Add(3, student_email_input.Text);
-                inputMap.Add(4, fac_name_input.Text);
-                inputMap.Add(5, date_input.Text);
-                inputMap.Add(6, course_input.Text);
-                inputMap.Add(7, ass_exam_input.Text);
-                inputMap.Add(8, department_input.Text);
-                inputMap.Add(9, term_sem_input.Text);
-                inputMap.Add(10, desc_violation_input.Text);
-                inputMap.Add(11, updateCheckState("get", 11));
-                inputMap.Add(12, updateCheckState("get", 12));
-                inputMap.Add(13, sign_fac_mem_input.Text);
-                inputMap.Add(14, sign_fac_name_input.Text);
-                inputMap.Add(15, sign_fac_date_input.Text);
-                inputMap.Add(16, declare_input.Text);
-                inputMap.Add(17, updateCheckState("get", 17)); 
-                inputMap.Add(18, tru_input_page2.Text);
-                inputMap.Add(19, sign_student_input.Text);
-                inputMap.Add(20, date_student_input.Text);
-                inputMap.Add(21, sign_fac_input.Text);
-                inputMap.Add(22, name_fac_input.Text);
-                inputMap.Add(23, date_fac_input_page2.Text);
-                inputMap.Add(24, updateCheckState("get", 24)); 
-                inputMap.Add(25, chair_check_no_input.Text);
-                inputMap.Add(26, chair_comment_input.Text);
-                inputMap.Add(27, sign_chair_input.Text);
-                inputMap.Add(28, name_chair_input.Text);
-                inputMap.Add(29, date_chair_input.Text);
-                inputMap.Add(30, updateCheckState("get", 30)); 
-                inputMap.Add(31, dean_check_no_input.Text);
-                inputMap.Add(32, dean_comment_input.Text);
-                inputMap.Add(33, sign_dean_input.Text);
-                inputMap.Add(34, name_dean_input.Text);
-                inputMap.Add(35, date_dean_input.Text);
-                inputMap.Add(36, fac_comment_page4_input.Text);
-                inputMap.Add(37, student_comment_page5_input.Text);
+                if (obj is TextBox textBox)
+                    inputsList.Add(textBox.Text);
 
-                // Actual comparing difference
-                int index;
-                foreach (var pair in inputMap)
-                {
-                    index = pair.Key;
-                    if (!String.Equals(pair.Value, data[index]))
-                        changedIndices.Add(index);
-                }
-                return String.Join(delimiter, changedIndices);
-            } else
-                return "";
+                else if (obj is RichTextBox richTextBox)
+                    inputsList.Add(richTextBox.Text);
+
+                else if (obj is Button button)
+                    inputsList.Add(updateCheckState("get", index));
+            }
+
+            inputsList.Add(userID);
+            return inputsList.ToArray();
         }
 
         private String updateCheckState(String input, int questionIndex)
         {
-
             if (String.Equals(input, "y"))
             {
                 switch (questionIndex)
@@ -421,32 +299,28 @@ namespace ReportSystemManagement
                         dean_no_input.BackgroundImage = Properties.Resources.unchecked_image;
                         break;
                 }
-            } else if (String.Equals(input, "get"))
+            }
+
+            else if (String.Equals(input, "get"))
             {
-                String value;
                 switch (questionIndex)
                 {
                     case 11:
-                        value = isWrittentStatementChecked ? "y" : "n";
-                        break;
+                        return isWrittentStatementChecked ? "y" : "n";
                     case 12:
-                        value = isAdvicedChecked ? "y" : "n";
-                        break;
+                        return isAdvicedChecked ? "y" : "n";
                     case 17:
-                        value = isYesNoPage2Checked ? "y" : "n";
-                        break;
+                        return isYesNoPage2Checked ? "y" : "n";
                     case 24:
-                        value = isChairChecked ? "y" : "n";
-                        break;
+                        return isChairChecked ? "y" : "n";
                     case 30:
-                        value = isDeanChecked ? "y" : "n";
-                        break;
+                        return isDeanChecked ? "y" : "n";
                     default:
-                        value = "n";
-                        break;
+                        return "n";
                 }
-                return value;
-            } else
+            }
+
+            else
             {
                 switch (questionIndex)
                 {
@@ -478,41 +352,63 @@ namespace ReportSystemManagement
             return "";
         }
 
+        // Set ReadOnly and Enable attributes
         private void setAllReadOnly(bool state)
         {
-            student_name_input.ReadOnly = state;
-            student_number_input.ReadOnly = state;
-            student_email_input.ReadOnly = state;
-            fac_name_input.ReadOnly = state;
-            date_input.ReadOnly = state;
-            course_input.ReadOnly = state;
-            ass_exam_input.ReadOnly = state;
-            department_input.ReadOnly = state;
-            term_sem_input.ReadOnly = state;
-            desc_violation_input.ReadOnly = state;
-            sign_fac_mem_input.ReadOnly = state;
-            sign_fac_name_input.ReadOnly = state;
-            sign_fac_date_input.ReadOnly = state;
-            declare_input.ReadOnly = state;
-            tru_input_page2.ReadOnly = state;
-            sign_student_input.ReadOnly = state;
-            date_student_input.ReadOnly = state;
-            sign_fac_input.ReadOnly = state;
-            name_fac_input.ReadOnly = state;
-            date_fac_input_page2.ReadOnly = state;
-            chair_check_no_input.ReadOnly = state;
-            chair_comment_input.ReadOnly = state;
-            sign_chair_input.ReadOnly = state;
-            name_chair_input.ReadOnly = state;
-            date_chair_input.ReadOnly = state;
-            dean_check_no_input.ReadOnly = state;
-            dean_comment_input.ReadOnly = state;
-            sign_dean_input.ReadOnly = state;
-            name_dean_input.ReadOnly = state;
-            date_dean_input.ReadOnly = state;
-            fac_comment_page4_input.ReadOnly = state;
-            student_comment_page5_input.ReadOnly = state;
+            foreach (var item in inputMap)
+            {
+                Control obj = item.Value;
+                if (obj is TextBox textBox)
+                    textBox.ReadOnly = state;
 
+                else if (obj is RichTextBox richTextBox)
+                    richTextBox.ReadOnly = state;
+
+                else if (obj is Button button)
+                    button.Enabled = !state;
+            }
+        }
+
+        // Load the dictionary with all INPUT references. TEXTBOXES + "CHECKBOXES" BUTTONS
+        private void fillAllInputReference()
+        {
+            inputMap.Add(1, student_name_input);
+            inputMap.Add(2, student_number_input);
+            inputMap.Add(3, student_email_input);
+            inputMap.Add(4, fac_name_input);
+            inputMap.Add(5, date_input);
+            inputMap.Add(6, course_input);
+            inputMap.Add(7, ass_exam_input);
+            inputMap.Add(8, department_input);
+            inputMap.Add(9, term_sem_input);
+            inputMap.Add(10, desc_violation_input);
+            inputMap.Add(11, written_statement_btn);
+            inputMap.Add(12, advice_btn);
+            inputMap.Add(13, sign_fac_mem_input);
+            inputMap.Add(14, sign_fac_name_input);
+            inputMap.Add(15, sign_fac_date_input);
+            inputMap.Add(16, declare_input);
+            inputMap.Add(17, yes_btn_page2);
+            inputMap.Add(18, tru_input_page2);
+            inputMap.Add(19, sign_student_input);
+            inputMap.Add(20, date_student_input);
+            inputMap.Add(21, sign_fac_input);
+            inputMap.Add(22, name_fac_input);
+            inputMap.Add(23, date_fac_input_page2);
+            inputMap.Add(24, chair_yes_btn);
+            inputMap.Add(25, chair_check_no_input);
+            inputMap.Add(26, chair_comment_input);
+            inputMap.Add(27, sign_chair_input);
+            inputMap.Add(28, name_chair_input);
+            inputMap.Add(29, date_chair_input);
+            inputMap.Add(30, dean_yes_input);
+            inputMap.Add(31, dean_check_no_input);
+            inputMap.Add(32, dean_comment_input);
+            inputMap.Add(33, sign_dean_input);
+            inputMap.Add(34, name_dean_input);
+            inputMap.Add(35, date_dean_input);
+            inputMap.Add(36, fac_comment_page4_input);
+            inputMap.Add(37, student_comment_page5_input);
         }
 
         // ###################################################################################
