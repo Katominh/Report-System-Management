@@ -32,7 +32,7 @@ namespace ReportSystemManagement
             this.userID = userID;
             data = new String[] { };
             newData = new String[] { };
-            this.userID = userID;
+            this.recordID = recordID;
             isEditing = true;
             edit_mode_text.Text = "Edit Mode ON";
             edit_mode_text.ForeColor = Color.Green;

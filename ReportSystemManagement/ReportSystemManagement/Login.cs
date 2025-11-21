@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -35,9 +28,7 @@ namespace ReportSystemManagement
             }
 
             // Start Python
-            var start = new ProcessStartInfo();
-            start.FileName = "py";
-            start.Arguments = $"..\\..\\login.py {username_input_box.Text} {password_input_box.Text}";
+            var start = new ProcessStartInfo("py", $"..\\..\\login.py {username_input_box.Text} {password_input_box.Text}");
 
             start.UseShellExecute = false;
             start.CreateNoWindow = true;
@@ -51,6 +42,7 @@ namespace ReportSystemManagement
 
                 if (String.IsNullOrEmpty(error))
                 {
+                    // Check admin / teacher
                     if (String.Equals(output.Substring(0, 5), "Admin"))
                     {
                         Form mainForm = new Admin_Main_Page(username_input_box.Text, password_input_box.Text, output.Substring(5));
@@ -58,6 +50,7 @@ namespace ReportSystemManagement
                         Close();
                     }
 
+                    // Check student
                     else if (String.Equals(output.Substring(0, 7), "Student"))
                     {
                         Form mainForm = new Student_Main_Page(username_input_box.Text, password_input_box.Text, output.Substring(7));
@@ -66,15 +59,10 @@ namespace ReportSystemManagement
                     }
 
                     else
-                    {
                         MessageBox.Show("Incorrect username and/or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
                 }
                 else
-                {
                     MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    MessageBox.Show(error);
-                }
             }
         }
 
@@ -91,9 +79,7 @@ namespace ReportSystemManagement
         {
             // Check if there are any other open forms left.
             if (Application.OpenForms.Count == 0)
-            {
                 Application.Exit();
-            }
         }
     }
 }

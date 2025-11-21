@@ -14,7 +14,7 @@ namespace ReportSystemManagement
 {
     public partial class Student_Main_Page : Form
     {
-        private static String NOTHING = "X", PYTHON_EXE_FILE = "py";
+        private static String NOTHING = "X";
         private String user, passwd, userID;
         private String[] yourRecords;
         private String[] delimiter = { "|||" };
@@ -40,11 +40,10 @@ namespace ReportSystemManagement
         // Edit Button
         private void edit_btn_Click(object sender, EventArgs e)
         {
-            Button btnClicked = sender as Button;
+            Button btnClicked = sender as Button; // Cast to get its tag ID
             if (btnClicked != null)
             {
-                String recordId = btnClicked.Tag.ToString();
-                String[] target = findRecordById(recordId);
+                String[] target = findRecordById(btnClicked.Tag.ToString());
                 if (target.Length != 0)
                 {
                     Form recordForm = new Record(user, passwd, userID, target);
@@ -61,29 +60,26 @@ namespace ReportSystemManagement
             if (btnClicked != null)
             {
                 string recordId = btnClicked.Tag.ToString();
-                String[] target = findRecordById(recordId);
+                String[] target = findRecordById(btnClicked.Tag.ToString());
                 String result = String.Join("|||", target);
                 if (findRecordById(recordId).Length != 0)
                 {
-                    start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
+                    start = new ProcessStartInfo("py", $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
+                    processConfig(start);
 
-                    start.UseShellExecute = false;
-                    start.CreateNoWindow = true;
-                    start.RedirectStandardOutput = true;
-                    start.RedirectStandardError = true;
                     using (Process process = Process.Start(start))
                     {
                         String output = process.StandardOutput.ReadToEnd();
                         String error = process.StandardError.ReadToEnd();
 
                         if (!String.IsNullOrEmpty(error))
-                        {
                             MessageBox.Show(error);
+                        else
+                        {
+                            Form loadForm = new Loading(user, passwd, userID);
+                            loadForm.Show();
+                            Close();
                         }
-
-                        Form loadForm = new Loading(user, passwd, userID);
-                        loadForm.Show();
-                        Close();
                     }
                 }
             }
@@ -96,14 +92,9 @@ namespace ReportSystemManagement
         // Create Button
         private void create_btn_Click(object sender, EventArgs e)
         {
-            Button btnClicked = sender as Button;
-
-            if (btnClicked != null)
-            {
-                Form recordForm = new Record(user, passwd, userID, getId());
-                recordForm.Show();
-                Close();
-            }
+            Form recordForm = new Record(user, passwd, userID, getRecordId());
+            recordForm.Show();
+            Close();
         }
 
         // Log out button
@@ -130,9 +121,7 @@ namespace ReportSystemManagement
             // Set new row
             records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F)); // 40px for header
             for (int i = 0; i < yourRecords.Length; i++)
-            {
                 records_table.RowStyles.Add(new RowStyle(SizeType.Absolute, 65F)); // 65px for height
-            }
 
             // Fill header row
             int colIndex = 0;
@@ -144,7 +133,7 @@ namespace ReportSystemManagement
                 label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Dock = DockStyle.Fill;
 
-                records_table.Controls.Add(label, colIndex, 0);
+                records_table.Controls.Add(label, colIndex, 0); // Row 0
                 colIndex++;
             }
 
@@ -155,65 +144,55 @@ namespace ReportSystemManagement
             foreach (String record in yourRecords)
             {
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
-                int last = fields.Length - 1;
-                if (String.Equals(fields[last], userID))
+                colIndex = 0;
+
+                // Fill each data in a record
+                foreach (int i in displayVals)
                 {
-                    colIndex = 0;
+                    Label label = new Label();
+                    label.Text = fields[i];
+                    label.TextAlign = ContentAlignment.MiddleCenter;
+                    label.Dock = DockStyle.Fill;
 
-                    // Fill each data in a record
-                    foreach (int i in displayVals)
-                    {
-                        Label label = new Label();
-                        label.Text = fields[i];
-                        label.TextAlign = ContentAlignment.MiddleCenter;
-                        label.Dock = DockStyle.Fill;
-
-                        records_table.Controls.Add(label, colIndex, rowIndex);
-                        colIndex++;
-                    }
-
-                    // Delete + edit btn
-                    FlowLayoutPanel buttonPanel = new FlowLayoutPanel();
-                    buttonPanel.AutoSize = true;
-                    buttonPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-                    buttonPanel.Anchor = AnchorStyles.Top;
-
-                    Button editBtn = new Button(), delBtn = new Button();
-
-                    editBtn.Text = "Edit record";
-                    editBtn.Tag = fields[0].Trim(); // Associate by ID
-                    editBtn.Click += edit_btn_Click;
-
-                    delBtn.Text = "Delete record";
-                    delBtn.Tag = fields[0].Trim();
-                    delBtn.Click += delete_btn_Click;
-
-                    buttonPanel.Controls.Add(editBtn);
-                    buttonPanel.Controls.Add(delBtn);
-                    records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
+                    records_table.Controls.Add(label, colIndex, rowIndex);
+                    colIndex++;
                 }
+
+                // Delete + edit btn
+                FlowLayoutPanel buttonPanel = new FlowLayoutPanel();
+                buttonPanel.AutoSize = true;
+                buttonPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                buttonPanel.Anchor = AnchorStyles.Top;
+
+                Button editBtn = new Button(), delBtn = new Button();
+                editBtn.Text = "Edit record";
+                editBtn.Tag = fields[0].Trim(); // Associate by RECORD ID
+                editBtn.Click += edit_btn_Click;
+
+                delBtn.Text = "Delete record";
+                delBtn.Tag = fields[0].Trim();
+                delBtn.Click += delete_btn_Click;
+
+                buttonPanel.Controls.Add(editBtn);
+                buttonPanel.Controls.Add(delBtn);
+                records_table.Controls.Add(buttonPanel, colIndex, rowIndex);
                 rowIndex++;
             }
         }
 
-        // This is where I'll get the id from Python
-        private String getId()
+        // This is where I'll get the RECORD id from Python
+        private String getRecordId()
         {
-            start = new ProcessStartInfo(PYTHON_EXE_FILE, $"..\\..\\main.py {0} {NOTHING} {NOTHING}"); // Option 0 = get the generated ID
+            start = new ProcessStartInfo("py", $"..\\..\\main.py {0} {NOTHING} {NOTHING}"); // Option 0 = get the generated ID
+            processConfig(start);
 
-            start.UseShellExecute = false;
-            start.CreateNoWindow = true;
-            start.RedirectStandardOutput = true;
-            start.RedirectStandardError = true;
             using (Process process = Process.Start(start))
             {
-                String output = process.StandardOutput.ReadToEnd(); // Use print() in Python so I can recieve the output
+                String output = process.StandardOutput.ReadToEnd();
                 String error = process.StandardError.ReadToEnd();
 
                 if (String.IsNullOrEmpty(error))
-                {
                     return output;
-                }
                 else
                 {
                     MessageBox.Show(error);
@@ -222,21 +201,9 @@ namespace ReportSystemManagement
             }
         }
 
-        // Get only the student's records
+        // Get only student's records by STUDENT ID
         private String[] fetchStudentByID()
         {
-            // Check if file exist
-            if (!File.Exists("..\\..\\report_records.txt"))
-            {
-                MessageBox.Show("Student data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return new string[] { };
-            }
-            if (!File.Exists($"..\\..\\main.py"))
-            {
-                MessageBox.Show("Main Python file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return new string[] { };
-            }
-
             // Read all records
             String[] all = File.ReadAllLines("..\\..\\report_records.txt").Skip(1).ToArray();
             List<string> ownerList = new List<string>();
@@ -245,19 +212,14 @@ namespace ReportSystemManagement
             {
                 // Filter out student's record
                 String[] fields = record.Split(delimiter, StringSplitOptions.None);
-                int last = fields.Length - 1;
 
                 if (fields.Length >= 2)
                 {
-                    if (String.Equals(userID, fields[last])) 
-                    {
+                    if (String.Equals(userID, fields[fields.Length - 1])) 
                         ownerList.Add(record);
-                    }
                 }
                 else if (!string.IsNullOrWhiteSpace(record))
-                {
-                    MessageBox.Show($"Skipped malformed record: {record}", "Fetch Name Error");
-                }
+                    MessageBox.Show($"Skipped malformed record: {record}", "Fetch ID Error");
             }
             return ownerList.ToArray();
         }
@@ -268,19 +230,22 @@ namespace ReportSystemManagement
             // Linear search
             foreach (String record in yourRecords)
             {
-                // Compare ids
+                // Compare RECORD ids
                 String[] current = record.Split(delimiter, StringSplitOptions.None);
                 if (String.Equals(id, current[0]))
-                {
                     return current;
-                }
             }
 
             return new String[] { };
         }
 
-        // Get new name data from "Change Your Name" Form
-        public string RecievedNewName { get; set; }
+        private void processConfig(ProcessStartInfo start)
+        {
+            start.UseShellExecute = false;
+            start.CreateNoWindow = true;
+            start.RedirectStandardOutput = true;
+            start.RedirectStandardError = true;
+        }
 
         // ###################################################################################
         // Window Closing Function
@@ -289,9 +254,7 @@ namespace ReportSystemManagement
         {
             // Check if there are any other open forms left.
             if (Application.OpenForms.Count == 0)
-            {
                 Application.Exit();
-            }
         }
     }
 }

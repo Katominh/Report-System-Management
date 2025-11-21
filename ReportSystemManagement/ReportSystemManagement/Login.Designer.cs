@@ -80,7 +80,7 @@
             this.login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_btn.Location = new System.Drawing.Point(144, 372);
             this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(394, 30);
+            this.login_btn.Size = new System.Drawing.Size(374, 30);
             this.login_btn.TabIndex = 8;
             this.login_btn.Text = "Login / Sign In";
             this.login_btn.UseVisualStyleBackColor = true;
@@ -107,8 +107,7 @@
             // 
             // test_btn
             // 
-            this.test_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.test_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.test_btn.BackColor = System.Drawing.SystemColors.Info;
             this.test_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.test_btn.Location = new System.Drawing.Point(562, 361);
