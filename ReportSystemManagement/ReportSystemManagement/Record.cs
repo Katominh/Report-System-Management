@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ReportSystemManagement
@@ -14,10 +9,11 @@ namespace ReportSystemManagement
     public partial class Record : Form
     {
         private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing;
-        private static String NOTHING = "X", PYTHON_EXE_FILE = "py", MAIN_FILE = $"..\\..\\main.py";
+        private static String NOTHING = "X";
         private static String delimiter = "|||";
         private String username, password, userID, recordID;
         private String[] data, newData;
+        private Dictionary<int, Control> inputMap = new Dictionary<int, Control>(); // For iteration over text inputs
 
         // ###################################################################################
         // Constructors
@@ -33,6 +29,7 @@ namespace ReportSystemManagement
             data = new String[] { };
             newData = new String[] { };
             this.recordID = recordID;
+
             isEditing = true;
             edit_mode_text.Text = "Edit Mode ON";
             edit_mode_text.ForeColor = Color.Green;
@@ -50,6 +47,7 @@ namespace ReportSystemManagement
             newData = new String[] { };
             recordID = data[0];
             loadText();
+
             isEditing = false;
             setAllReadOnly(true);
         }
@@ -61,17 +59,11 @@ namespace ReportSystemManagement
         // Save button listener
         private void save_btn_Click(object sender, EventArgs e)
         {
-            // Get changes
-            String changedIndices = GetChangedIndices();
+            // Get new data
             newData = getInputs();
-
             String result = String.Join(delimiter, newData);
-            var start = new ProcessStartInfo();
-            start.FileName = "py";
-            
-            start.Arguments = $"..\\..\\main.py {1} \"{result}\" {NOTHING}"; // Choice mode 1 -> addRecord (Or else saveRecord)
-            
 
+            var start = new ProcessStartInfo("py", $"..\\..\\main.py {1} \"{result}\" {NOTHING}"); // Choice mode 1 -> addRecord (Or else saveRecord)
             start.UseShellExecute = false;
             start.CreateNoWindow = true;
             start.RedirectStandardOutput = true;
@@ -83,9 +75,7 @@ namespace ReportSystemManagement
                 String error = process.StandardError.ReadToEnd();
 
                 if (!String.IsNullOrEmpty(error))
-                {
                     MessageBox.Show(error);
-                }
             }
         }
 
@@ -147,6 +137,7 @@ namespace ReportSystemManagement
                     aMain.Show();
                     Close();
                 }
+
                 else
                 {
                     Form sMain = new Student_Main_Page(username, password, userID);
@@ -168,13 +159,9 @@ namespace ReportSystemManagement
             {
                 isWrittentStatementChecked = !isWrittentStatementChecked;
                 if (isWrittentStatementChecked)
-                {
                     written_statement_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
-                }
                 else
-                {
                     written_statement_btn.BackgroundImage = Properties.Resources.unchecked_image;
-                }
             }
         }
 
@@ -185,13 +172,9 @@ namespace ReportSystemManagement
             {
                 isAdvicedChecked = !isAdvicedChecked;
                 if (isAdvicedChecked)
-                {
                     advice_btn.BackgroundImage = Properties.Resources.checked_image; // To show checkmark
-                }
                 else
-                {
                     advice_btn.BackgroundImage = Properties.Resources.unchecked_image;
-                }
             }
         }
 
@@ -213,16 +196,6 @@ namespace ReportSystemManagement
                 no_btn_page2.BackgroundImage = Properties.Resources.checked_image;
                 yes_btn_page2.BackgroundImage = Properties.Resources.unchecked_image;
             }
-        }
-
-        private void label100_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void edit_mode_text_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void chair_yes_btn_Click(object sender, EventArgs e)
@@ -312,7 +285,7 @@ namespace ReportSystemManagement
             student_comment_page5_input.Text = data[37];
         }
 
-       
+        // Get user input as list of Strings
         private String[] getInputs()
         {
             String[] inputs = {
@@ -410,15 +383,11 @@ namespace ReportSystemManagement
                 {
                     index = pair.Key;
                     if (!String.Equals(pair.Value, data[index]))
-                    {
                         changedIndices.Add(index);
-                    }
                 }
                 return String.Join(delimiter, changedIndices);
             } else
-            {
                 return "";
-            }
         }
 
         private String updateCheckState(String input, int questionIndex)
@@ -553,9 +522,7 @@ namespace ReportSystemManagement
         {
             // Check if there are any other open forms left.
             if (Application.OpenForms.Count == 0)
-            {
                 Application.Exit();
-            }
         }
     }
 }
