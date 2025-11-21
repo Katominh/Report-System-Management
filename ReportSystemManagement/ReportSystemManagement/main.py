@@ -6,7 +6,6 @@ FILENAME = "..\\..\\report_records.txt"
 DELIMITER = "|||"
 CHOICE_MODE = int(sys.argv[1])
 MAIN_DATA = sys.argv[2] # Often is the entire line of student's input
-EXTRA_DATA = sys.argv[3]
 CURRENT_RECORD_ID = "0"
 RECORDS = []
 SHORT_KEYS = [ # for dictionary keys
@@ -65,16 +64,17 @@ def getId():
 def addCaseReport():
     userInputs = MAIN_DATA
     id = MAIN_DATA.split(DELIMITER)[0]  
-    if searchRecord(id) != -1:
+
+    if searchRecord(id) != -1: # If id found = existing old record
         saveRecord()
         return
+
     with open(FILENAME, "a", encoding="utf-8") as f:
         f.write(userInputs + "\n")
     print("Add Done.", end="")
 
 # Return index of the record found in RECORDS list
 def searchRecord(targetID):
-
     for eachRecord in RECORDS:
         if eachRecord[0] == str(targetID):
             return RECORDS.index(eachRecord)
@@ -90,13 +90,15 @@ def deleteRecord():
     if indexLocation == -1:
         print("Delete Failed", end="")
         return
+
     RECORDS.pop(indexLocation)
     if len(RECORDS) == 0:
         # If no records left, just recreate the file with headers
         createFile()
         print("Delete Done", end="")
         return
-    # Then overwrite the text file with the new RECORDS (Because there's no way to shift lines of text up or dowb=n)
+
+    # Then overwrite the text file with the new RECORDS (Because there's no way to shift lines of text up or down)
     with open(FILENAME, "w", encoding="utf-8") as f:
         f.write(DELIMITER.join(SHORT_KEYS) + "\n") # Write headers
         for i, record in enumerate(RECORDS):
@@ -105,14 +107,16 @@ def deleteRecord():
 
 def saveRecord():
     id = MAIN_DATA.split(DELIMITER)[0]
-
     indexLocation = searchRecord(id)
+
     # We'll then overwrite the old record with the new record data from MAIN_INPUT
     if indexLocation == -1:
         print("Save Failed", end="")
         return
+
     newRecord = MAIN_DATA.split(DELIMITER)
     RECORDS[indexLocation] = newRecord
+
     # Then overwrite the text file with the new RECORDS
     with open(FILENAME, "w", encoding="utf-8") as f:
         f.write(DELIMITER.join(SHORT_KEYS) + "\n") # Write headers
@@ -120,7 +124,6 @@ def saveRecord():
             f.write(DELIMITER.join(record) + "\n")
     print("Save Done", end="")
     
-
 
 #===========================================================================
 # Supporting functions
@@ -131,7 +134,7 @@ def createFile():
             f.write(DELIMITER.join(SHORT_KEYS) + "\n") # Just write headers
 
 # Load all records from file into RECORDS list
-def loadRecords(): # Return everything from file
+def loadRecords():
     records = []
     with open(FILENAME, "r", encoding="utf-8") as f:
         lines = f.readlines()

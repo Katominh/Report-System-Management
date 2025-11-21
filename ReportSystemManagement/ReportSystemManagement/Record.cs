@@ -8,7 +8,6 @@ namespace ReportSystemManagement
 {
     public partial class Record : Form
     {
-        private static String NOTHING = "X";
         private String username, password, userID, recordID;
         private String[] data, newData;
         private Dictionary<int, Control> inputMap = new Dictionary<int, Control>(); // For iteration over text inputs
@@ -63,7 +62,7 @@ namespace ReportSystemManagement
             newData = getInputs();
             String result = String.Join("|||", newData);
 
-            var start = new ProcessStartInfo("py", $"..\\..\\main.py {1} \"{result}\" {NOTHING}"); // Choice mode 1 -> addRecord (Or else saveRecord)
+            var start = new ProcessStartInfo("py", $"..\\..\\main.py {1} \"{result}\""); // Choice mode 1 -> addRecord (Or else saveRecord)
             start.UseShellExecute = false;
             start.CreateNoWindow = true;
             start.RedirectStandardOutput = true;

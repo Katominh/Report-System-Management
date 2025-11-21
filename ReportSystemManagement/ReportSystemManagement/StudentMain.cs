@@ -10,7 +10,6 @@ namespace ReportSystemManagement
 {
     public partial class Student_Main_Page : Form
     {
-        private static String NOTHING = "X";
         private String user, passwd, userID;
         private String[] yourRecords;
         private String[] delimiter = { "|||" };
@@ -59,7 +58,7 @@ namespace ReportSystemManagement
                 String result = String.Join("|||", findRecordById(recordId));
                 if (findRecordById(recordId).Length != 0)
                 {
-                    start = new ProcessStartInfo("py", $"..\\..\\main.py {3} {result} {NOTHING}"); // Choice Mode 3 = Delete the record by record ID
+                    start = new ProcessStartInfo("py", $"..\\..\\main.py {3} {result}"); // Choice Mode 3 = Delete the record by record ID
                     processConfig(start);
 
                     using (Process process = Process.Start(start))
@@ -178,7 +177,8 @@ namespace ReportSystemManagement
         // This is where I'll get the RECORD id from Python
         private String getRecordId()
         {
-            start = new ProcessStartInfo("py", $"..\\..\\main.py {0} {NOTHING} {NOTHING}"); // Option 0 = get the generated ID
+            String NOTHING = "X";
+            start = new ProcessStartInfo("py", $"..\\..\\main.py {0} {NOTHING}"); // Option 0 = get the generated ID
             processConfig(start);
 
             using (Process process = Process.Start(start))

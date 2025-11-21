@@ -12,7 +12,6 @@ namespace ReportSystemManagement
         private String user, passwd, userID;
         private String[] allRecords;
         private String[] delimiter = { "|||" };
-        private static String NOTHING = "X";
 
         // ###################################################################################
         // Constructors
@@ -56,7 +55,7 @@ namespace ReportSystemManagement
                 String result = String.Join("|||", findRecordById(btnClicked.Tag.ToString()));
                 if (result.Length != 0)
                 {
-                    var start = new ProcessStartInfo("py", $"..\\..\\main.py {3} \"{result}\" {NOTHING}");
+                    var start = new ProcessStartInfo("py", $"..\\..\\main.py {3} \"{result}\"");
                     processConfig(start);
 
                     using (Process process = Process.Start(start))
