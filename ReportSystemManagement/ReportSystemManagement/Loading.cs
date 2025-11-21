@@ -12,17 +12,17 @@ namespace ReportSystemManagement
 {
     public partial class Loading : Form
     {
-        private String user, passwd, name;
+        private String user, passwd, userID;
 
         // ###################################################################################
         // Constructor
         // ###################################################################################
-        public Loading(String username, String password, String name)
+        public Loading(String username, String password, String userID)
         {
             InitializeComponent();
             user = username;
             passwd = password;
-            this.name = name;
+            this.userID = userID;
         }
 
         // ###################################################################################
@@ -44,19 +44,17 @@ namespace ReportSystemManagement
             // Go back to Main Page
             if (String.Equals(user.Substring(0,5), "admin"))
             {
-                Form mainForm = new Admin_Main_Page(user, passwd, name);
+                Form mainForm = new Admin_Main_Page(user, passwd, userID);
                 mainForm.Show();
                 Close();
             }
 
-            else if (String.Equals(user.Substring(0, 7), "student"))
+            else
             {
-                Form mainForm = new Student_Main_Page(user, passwd, name);
+                Form mainForm = new Student_Main_Page(user, passwd, userID);
                 mainForm.Show();
                 Close();
             }
-            
-            
         }
     }
 }

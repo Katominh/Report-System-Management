@@ -35,9 +35,7 @@ namespace ReportSystemManagement
         {
             // Check if there are any other open forms left.
             if (Application.OpenForms.Count == 0)
-            {
                 Application.Exit();
-            }
         }
     }
 }
