@@ -6,7 +6,6 @@ FILENAME = "..\\..\\report_records.txt"
 DELIMITER = "|||"
 CHOICE_MODE = int(sys.argv[1])
 MAIN_DATA = sys.argv[2] # Often is the entire line of student's input
-CURRENT_RECORD_ID = "0"
 RECORDS = []
 SHORT_KEYS = [ # for dictionary keys
     "RecordId", "StudentName", "StudentNumber", "StudentEmail", "FacultyName", "ReportDate",
@@ -40,9 +39,9 @@ def main():
         case 0:
             getId()
         case 1:
-            addCaseReport()
+            addOrUpdateCaseReport()
         case 2: 
-            searchRecord()
+            searchRecord(MAIN_DATA.split(DELIMITER)[0])
         case 3:
             deleteRecord()
         case 4:
@@ -57,11 +56,10 @@ def main():
 
 # Generate a unique ID based on current time
 def getId():
-    CURRENT_RECORD_ID = str(int(time.time()))
-    print(CURRENT_RECORD_ID, end="")
+    print(str(int(time.time())), end="")
 
 # Add a new case report to the file
-def addCaseReport():
+def addOrUpdateCaseReport():
     userInputs = MAIN_DATA
     id = MAIN_DATA.split(DELIMITER)[0]  
 
@@ -77,6 +75,7 @@ def addCaseReport():
 def searchRecord(targetID):
     for eachRecord in RECORDS:
         if eachRecord[0] == str(targetID):
+            print(RECORDS.index(eachRecord), end="")
             return RECORDS.index(eachRecord)
     print("Target record", targetID, "not found.", end="")
     return -1
@@ -138,7 +137,10 @@ def loadRecords():
     records = []
     with open(FILENAME, "r", encoding="utf-8") as f:
         lines = f.readlines()
-        if not lines: return []
+        if not lines: # If name matched but empty file
+            createFile()
+            return []
+
         for line in lines[1:]:
             records.append(line.strip().split(DELIMITER))
     return records
