@@ -264,7 +264,11 @@ namespace ReportSystemManagement
                     inputsList.Add(updateCheckState("get", index));
             }
 
-            inputsList.Add(userID);
+            if (String.Equals(userID, "0"))
+                inputsList.Add(data[38]);
+            else
+                inputsList.Add(userID);
+
             return inputsList.ToArray();
         }
 
