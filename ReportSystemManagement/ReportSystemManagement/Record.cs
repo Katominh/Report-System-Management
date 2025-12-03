@@ -10,7 +10,7 @@ namespace ReportSystemManagement
     {
         private String username, password, userID, recordID;
         private String[] data, newData;
-        private Dictionary<int, Control> inputMap = new Dictionary<int, Control>(); // For iteration over text inputs
+        private Dictionary<int, Control> inputMap = new Dictionary<int, Control>(); // For iteration over text & button inputs
         private bool isWrittentStatementChecked = false, isAdvicedChecked = false, isYesNoPage2Checked = false, isChairChecked = false, isDeanChecked = false, isEditing;
 
         // ###################################################################################
@@ -171,6 +171,7 @@ namespace ReportSystemManagement
                 advice_btn.BackgroundImage = Properties.Resources.unchecked_image;
         }
 
+        // Pairs of checbox buttons
         private void yes_btn_page2_Click(object sender, EventArgs e)
         {
             // Yes button state + images
@@ -223,6 +224,48 @@ namespace ReportSystemManagement
         // ###################################################################################
         // Supporting Functions
         // ###################################################################################
+
+        // Load the dictionary with all INPUT references. TEXTBOXES + "CHECKBOXES" BUTTONS
+        private void fillAllInputReference()
+        {
+            inputMap.Add(1, student_name_input);
+            inputMap.Add(2, student_number_input);
+            inputMap.Add(3, student_email_input);
+            inputMap.Add(4, fac_name_input);
+            inputMap.Add(5, date_input);
+            inputMap.Add(6, course_input);
+            inputMap.Add(7, ass_exam_input);
+            inputMap.Add(8, department_input);
+            inputMap.Add(9, term_sem_input);
+            inputMap.Add(10, desc_violation_input);
+            inputMap.Add(11, written_statement_btn);
+            inputMap.Add(12, advice_btn);
+            inputMap.Add(13, sign_fac_mem_input);
+            inputMap.Add(14, sign_fac_name_input);
+            inputMap.Add(15, sign_fac_date_input);
+            inputMap.Add(16, declare_input);
+            inputMap.Add(17, yes_btn_page2);
+            inputMap.Add(18, tru_input_page2);
+            inputMap.Add(19, sign_student_input);
+            inputMap.Add(20, date_student_input);
+            inputMap.Add(21, sign_fac_input);
+            inputMap.Add(22, name_fac_input);
+            inputMap.Add(23, date_fac_input_page2);
+            inputMap.Add(24, chair_yes_btn);
+            inputMap.Add(25, chair_check_no_input);
+            inputMap.Add(26, chair_comment_input);
+            inputMap.Add(27, sign_chair_input);
+            inputMap.Add(28, name_chair_input);
+            inputMap.Add(29, date_chair_input);
+            inputMap.Add(30, dean_yes_input);
+            inputMap.Add(31, dean_check_no_input);
+            inputMap.Add(32, dean_comment_input);
+            inputMap.Add(33, sign_dean_input);
+            inputMap.Add(34, name_dean_input);
+            inputMap.Add(35, date_dean_input);
+            inputMap.Add(36, fac_comment_page4_input);
+            inputMap.Add(37, student_comment_page5_input);
+        }
 
         // Pre-filling text inputs
         private void loadText()
@@ -323,7 +366,7 @@ namespace ReportSystemManagement
                 }
             }
 
-            else
+            else // If "n"
             {
                 switch (questionIndex)
                 {
@@ -372,47 +415,6 @@ namespace ReportSystemManagement
             }
         }
 
-        // Load the dictionary with all INPUT references. TEXTBOXES + "CHECKBOXES" BUTTONS
-        private void fillAllInputReference()
-        {
-            inputMap.Add(1, student_name_input);
-            inputMap.Add(2, student_number_input);
-            inputMap.Add(3, student_email_input);
-            inputMap.Add(4, fac_name_input);
-            inputMap.Add(5, date_input);
-            inputMap.Add(6, course_input);
-            inputMap.Add(7, ass_exam_input);
-            inputMap.Add(8, department_input);
-            inputMap.Add(9, term_sem_input);
-            inputMap.Add(10, desc_violation_input);
-            inputMap.Add(11, written_statement_btn);
-            inputMap.Add(12, advice_btn);
-            inputMap.Add(13, sign_fac_mem_input);
-            inputMap.Add(14, sign_fac_name_input);
-            inputMap.Add(15, sign_fac_date_input);
-            inputMap.Add(16, declare_input);
-            inputMap.Add(17, yes_btn_page2);
-            inputMap.Add(18, tru_input_page2);
-            inputMap.Add(19, sign_student_input);
-            inputMap.Add(20, date_student_input);
-            inputMap.Add(21, sign_fac_input);
-            inputMap.Add(22, name_fac_input);
-            inputMap.Add(23, date_fac_input_page2);
-            inputMap.Add(24, chair_yes_btn);
-            inputMap.Add(25, chair_check_no_input);
-            inputMap.Add(26, chair_comment_input);
-            inputMap.Add(27, sign_chair_input);
-            inputMap.Add(28, name_chair_input);
-            inputMap.Add(29, date_chair_input);
-            inputMap.Add(30, dean_yes_input);
-            inputMap.Add(31, dean_check_no_input);
-            inputMap.Add(32, dean_comment_input);
-            inputMap.Add(33, sign_dean_input);
-            inputMap.Add(34, name_dean_input);
-            inputMap.Add(35, date_dean_input);
-            inputMap.Add(36, fac_comment_page4_input);
-            inputMap.Add(37, student_comment_page5_input);
-        }
 
         // ###################################################################################
         // Window Closing Function

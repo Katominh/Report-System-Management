@@ -14,7 +14,7 @@ namespace ReportSystemManagement
         private String[] delimiter = { "|||" };
 
         // ###################################################################################
-        // Constructors
+        // Constructor
         // ###################################################################################
         public Admin_Main_Page(String username, String password, String userID)
         {

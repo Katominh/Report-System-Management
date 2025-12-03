@@ -24,7 +24,6 @@ namespace ReportSystemManagement
         // ###################################################################################
         private async void Loading_Load(object sender, EventArgs e)
         {
-
             progressBar1.Value = 0;
             for (int i = 0; i <= 100; i+=5)
             {
